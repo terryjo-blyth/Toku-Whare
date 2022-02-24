@@ -7,6 +7,9 @@ const server = express()
 
 server.use(express.json())
 server.use(express.static(path.join(__dirname, 'public')))
+//<<<<<<< async-function
 server.use('/api/v1/whare', routes)
+
+
 
 module.exports = server
