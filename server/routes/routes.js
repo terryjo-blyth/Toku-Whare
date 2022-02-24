@@ -27,7 +27,7 @@ router.get('/:id', (req, res) => {
     })
 })
 
-/* router.post('/', async (req, res) => {
+router.post('/', async (req, res) => {
   const newUser = req.body
   const { auth0Id, email } = newUser
   const user = {
@@ -41,7 +41,7 @@ router.get('/:id', (req, res) => {
     console.error(err)
     res.status(500).send(err.message)
   }
-}) */
+})
 
 /* router.post('/', (req, res) => {
   const data = req.body.data
