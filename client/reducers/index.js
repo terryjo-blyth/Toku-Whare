@@ -1,7 +1,11 @@
 import { combineReducers } from 'redux'
 
-// import stuff from './stuff'
+import loading from './loading'
+import errMessage from './errMessage'
+import whare from './whare'
 
 export default combineReducers({
-  // stuff
+  loading,
+  errMessage,
+  whare
 })
