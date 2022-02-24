@@ -666,8 +666,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var superagent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! superagent */ "./node_modules/superagent/lib/client.js");
 /* harmony import */ var superagent__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(superagent__WEBPACK_IMPORTED_MODULE_0__);
 
-var whareUrl = '/api/v1/'; // this depends on server routes
-
+var whareUrl = '/api/v1/whare';
 function getWhare() {
   return superagent__WEBPACK_IMPORTED_MODULE_0___default().get(whareUrl).then(function (response) {
     return response.body;
