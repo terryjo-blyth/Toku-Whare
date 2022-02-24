@@ -8,14 +8,14 @@ export function getWhare () {
     .then(response => response.body)
 }
 
-export function saveWhare (whareData) {
-  return request
-    .post(whareUrl)
-    .send(whareData)
-    .then(response => response.body)
-}
+// export function saveWhare (whareData) {
+//   return request
+//     .post(whareUrl)
+//     .send(whareData)
+//     .then(response => response.body)
+// }
 
-export function saveUser (userData) {
+export function saveUserData (userData) {
   return request
     .post(whareUrl)
     .send(userData)

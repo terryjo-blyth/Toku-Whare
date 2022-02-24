@@ -2,7 +2,7 @@ import { getWhare, saveWhare, saveUser } from '../apis'
 
 export const SET_WHARE_PENDING = 'SET_WHARE_PENDING'
 export const SET_WHARE_SUCCESS = 'SET_WHARE_SUCCESS'
-export const SET_USER_SUCCESS = 'SET_USER_SUCCESS'
+// export const SET_USER_SUCCESS = 'SET_USER_SUCCESS'
 export const SET_ERROR = 'SET_ERROR'
 
 export function fetchWhare () {
@@ -19,11 +19,11 @@ export function fetchWhare () {
   }
 }
 
-export function addWhare (newWhare) {
+export function addUserData (newData) {
   return dispatch => {
-    return saveWhare(newWhare)
-      .then(whare => {
-        dispatch(setWhareSuccess(whare))
+    return saveWhare(newData)
+      .then(data => {
+        dispatch(setWhareSuccess(data))
         return null
       })
       .catch(err => {
@@ -32,18 +32,18 @@ export function addWhare (newWhare) {
   }
 }
 
-export function addUser (newUser) {
-  return dispatch => {
-    return saveUser(newUser)
-      .then(user => {
-        dispatch(setUserSuccess(user))
-        return null
-      })
-      .catch(err => {
-        dispatch(setError(err.message))
-      })
-  }
-}
+// export function addUser (newUser) {
+//   return dispatch => {
+//     return saveUser(newUser)
+//       .then(user => {
+//         dispatch(setUserSuccess(user))
+//         return null
+//       })
+//       .catch(err => {
+//         dispatch(setError(err.message))
+//       })
+//   }
+// }
 
 export function setWharePending () {
   return {
@@ -58,12 +58,12 @@ export function setWhareSuccess (whare) {
   }
 }
 
-export function setUserSuccess (user) {
-  return {
-    type: SET_USER_SUCCESS,
-    user
-  }
-}
+// export function setUserSuccess (user) {
+//   return {
+//     type: SET_USER_SUCCESS,
+//     user
+//   }
+// }
 
 export function setError (errMessage) {
   return {
