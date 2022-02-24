@@ -1,35 +1,49 @@
-// import { getBlogs, saveBlog } from '../api'
+import { getWhare, saveWhare, saveUser } from '../apis'
 
 export const SET_WHARE_PENDING = 'SET_WHARE_PENDING'
-// export const SET_BLOGS_SUCCESS = 'SET_BLOGS_SUCCESS'
-// export const SET_ERROR = 'SET_ERROR'
+export const SET_WHARE_SUCCESS = 'SET_WHARE_SUCCESS'
+export const SET_USER_SUCCESS = 'SET_USER_SUCCESS'
+export const SET_ERROR = 'SET_ERROR'
 
-// export function fetchBlogs () {
-//   return (dispatch, getState) => {
-//     dispatch(setBlogsPending())
-//     return getBlogs()
-//       .then(blogs => {
-//         dispatch(setBlogsSuccess(blogs))
-//         return null
-//       })
-//       .catch(err => {
-//         dispatch(setError(err.message))
-//       })
-//   }
-// }
+export function fetchWhare () {
+  return (dispatch, getState) => {
+    dispatch(setWharePending())
+    return getWhare()
+      .then(whare => {
+        dispatch(setWhareSuccess(whare))
+        return null
+      })
+      .catch(err => {
+        dispatch(setError(err.message))
+      })
+  }
+}
 
-// export function addBlog (newBlog) {
-//   return dispatch => {
-//     return saveBlog(newBlog)
-//       .then(blogs => {
-//         dispatch(setBlogsSuccess(blogs))
-//         return null
-//       })
-//       .catch(err => {
-//         dispatch(setError(err.message))
-//       })
-//   }
-// }
+export function addWhare (newWhare) {
+  return dispatch => {
+    return saveWhare(newWhare)
+      .then(whare => {
+        dispatch(setWhareSuccess(whare))
+        return null
+      })
+      .catch(err => {
+        dispatch(setError(err.message))
+      })
+  }
+}
+
+export function addUser (newUser) {
+  return dispatch => {
+    return saveUser(newUser)
+      .then(user => {
+        dispatch(setUserSuccess(user))
+        return null
+      })
+      .catch(err => {
+        dispatch(setError(err.message))
+      })
+  }
+}
 
 export function setWharePending () {
   return {
@@ -37,16 +51,23 @@ export function setWharePending () {
   }
 }
 
-// export function setBlogsSuccess (blogs) {
-//   return {
-//     type: SET_BLOGS_SUCCESS,
-//     blogs
-//   }
-// }
+export function setWhareSuccess (whare) {
+  return {
+    type: SET_WHARE_SUCCESS,
+    whare
+  }
+}
 
-// export function setError (errMessage) {
-//   return {
-//     type: SET_ERROR,
-//     errMessage
-//   }
-// }
+export function setUserSuccess (user) {
+  return {
+    type: SET_USER_SUCCESS,
+    user
+  }
+}
+
+export function setError (errMessage) {
+  return {
+    type: SET_ERROR,
+    errMessage
+  }
+}

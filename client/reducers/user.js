@@ -1,13 +1,11 @@
-import {
-  SET_WHARE_PENDING
-} from '../actions'
+import { SET_USER_SUCCESS } from '../actions'
 
-const initialState = false
+const initialState = []
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case SET_WHARE_PENDING:
-      return true
+    case SET_USER_SUCCESS:
+      return action.user
     default:
       return state
   }

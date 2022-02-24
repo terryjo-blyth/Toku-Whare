@@ -1,13 +1,11 @@
-import {
-  SET_WHARE_PENDING
-} from '../actions'
+import { SET_ERROR } from '../actions'
 
-const initialState = false
+const initialState = null
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case SET_WHARE_PENDING:
-      return true
+    case SET_ERROR:
+      return action.errMessage
     default:
       return state
   }
