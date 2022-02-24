@@ -1,4 +1,4 @@
-import { getWhare, saveWhare, saveUser } from '../apis'
+import { getWhare, saveUserData } from '../apis'
 
 export const SET_WHARE_PENDING = 'SET_WHARE_PENDING'
 export const SET_WHARE_SUCCESS = 'SET_WHARE_SUCCESS'
@@ -21,7 +21,7 @@ export function fetchWhare () {
 
 export function addUserData (newData) {
   return dispatch => {
-    return saveWhare(newData)
+    return saveUserData(newData)
       .then(data => {
         dispatch(setWhareSuccess(data))
         return null
