@@ -1,43 +1,42 @@
-const request = require('supertest')
-const server = require('../../server')
-const checkJwt = require('../../auth0')
-const userDb = require('../../db/users')
+import request from 'supertest'
+const server = require('../server')
+// const checkJwt = require('../auth0')
+const userDb = require('../db/whare')
+console.log(userDb)
+// const { getUsers } = require('../db/whare')
 
-const { getListing, getListings, addListing } = require('../../db/listings')
+jest.mock('../db/whare')
+// jest.mock('../../auth0')
 
-jest.mock('../../db/connections')
-jest.mock('../../db/users')
-jest.mock('../../auth0')
-
-checkJwt.mockImplementation((req, res, next) => {
+/* checkJwt.mockImplementation((req, res, next) => {
   next()
-})
-userDb.getUserByGithubId.mockReturnValue(Promise.resolve({}))
+}) */
+userDb.getUsers.mockReturnValue(Promise.resolve({}))
 
 beforeEach(() => jest.clearAllMocks())
 
 describe('get/api/v1/whare', () => {
-  test('return Listings from db', () => {
-    getListings.mockReturnValue(Promise.resolve([{ id: 1, user_id: 1, title: 'Junior Dev', employer: 'Xero', link: 'https://xero.com/come-work-for-us', description: 'You can write tonnes of code', active: true }]))
+  it('return Users from db', () => {
+    userDb.getUsers.mockReturnValue(Promise.resolve([{ id: 1, auth0_id: 1, is_upportert: 0, name: 'Grogu', dob: '41 BBY', description: 'grogu@tattoine.boba.com' }]))
     expect.assertions(1)
     return request(server)
       .get('/api/v1/whare')
       .expect(200)
       .then(res => {
-        expect(res.body).toEqual([{ id: 1, user_id: 1, t: 'Junior Dev', employer: 'Xero', link: 'https://xero.com/come-work-for-us', description: 'You can write tonnes of code', active: true }])
+        expect(res.body).toEqual([{ id: 1, auth0_id: 1, is_upportert: 0, name: 'Grogu', dob: '41 BBY', description: 'grogu@tattoine.boba.com' }])
         return null
       })
       .catch(err => {
         console.log(err)
       })
   })
-  test('returns 500 if hits an error', () => {
-    getListings.mockImplementation(() => Promise.reject(new Error('DB error')))
+  it('returns 500 if hits an error', () => {
+    userDb.getUsers.mockImplementation(() => Promise.reject(new Error('DB error')))
     jest.spyOn(console, 'log')
     console.log.mockImplementation(() => {})
     expect.assertions(2)
     return request(server)
-      .get('/api/v1/listings')
+      .get('/api/v1/whare')
       .then(res => {
         expect(res.status).toEqual(500)
         expect(console.log).toHaveBeenCalled()
@@ -47,7 +46,7 @@ describe('get/api/v1/whare', () => {
   })
 })
 
-describe('POST/api/v1/listings', () => {
+/* escribe('POST/api/v1/listings', () => {
   test('Add Listings to db', () => {
     const list = { id: 1, user_id: 1, title: 'Junior Dev', employer: 'Xero', link: 'https://xero.com/come-work-for-us', description: 'You can write tonnes of code', active: true }
     const sendList = { user_id: 1, title: 'Junior Dev', employer: 'Xero', link: 'https://xero.com/come-work-for-us', description: 'You can write tonnes of code', active: true }
@@ -97,3 +96,4 @@ describe('GET /api/v1/listings/:id', () => {
       })
   })
 })
+ */
