@@ -44,8 +44,6 @@ function logError (err) {
   }
 }
 
-// import request from 'superagent'
-
 // const whareUrl = '/api/v1/whare'
 
 // export function getWhare () {
