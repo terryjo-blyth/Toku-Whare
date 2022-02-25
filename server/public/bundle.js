@@ -2545,19 +2545,6 @@ module.exports = hoistNonReactStatics;
 
 /***/ }),
 
-/***/ "./client/styles/index.scss":
-/*!**********************************!*\
-  !*** ./client/styles/index.scss ***!
-  \**********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
 /***/ "./node_modules/object-assign/index.js":
 /*!*********************************************!*\
   !*** ./node_modules/object-assign/index.js ***!
@@ -41339,7 +41326,6 @@ function symbolObservablePonyfill(root) {
 /******/ 	// Load entry module
 /******/ 	__webpack_require__("./client/index.js");
 /******/ 	// This entry module used 'exports' so it can't be inlined
-/******/ 	__webpack_require__("./client/styles/index.scss");
 /******/ })()
 ;
 //# sourceMappingURL=bundle.js.map
