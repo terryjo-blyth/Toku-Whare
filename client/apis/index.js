@@ -1,4 +1,3 @@
-import request from 'superagent'
 
 const whareUrl = '/api/v1/whare'
 
@@ -43,3 +42,4 @@ function logError (err) {
     throw err
   }
 }
+
