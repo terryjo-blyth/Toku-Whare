@@ -1,9 +1,9 @@
 body {
-  position: absolute;
   top: 0;
   left: 0;
   margin: 0;
   padding: 0px;
+  width:100%;
 }
 
 /* fonts */
@@ -12,11 +12,16 @@ body {
   src: url('/fonts/lfl.TTF');
 }
 
+@font-face {
+  font-family: lflo;
+  src: url('/fonts/lfl-outline.TTF');
+}
+
 /* Template colours */
-$darkblue:#1f7eaa;
+$darkBlue:#1f7eaa;
 $yellow:#fbe02b;
-$lightblue:#66cbe4;
-$textshadow:#81b2d4;
+$lightBlue:#66cbe4;
+$textShadow:#81b2d4;
 
 /* Whare colours */
 $whareOrange:#e85624;
@@ -25,4 +30,159 @@ $whareLightblue:#66cbe4;
 $whareGreen:#73bf44;
 $whareDarkblue:#3e53a4;
 $wharePurple:#994d9e;
+
+/* Headings */
+h1,h2,h3,h4{
+  font-family: lfl;
+}
+
+/* template */
+header{
+  width:100%;
+  margin:0px;
+  box-sizing: border-box;
+  height:86px;
+  background-image:url('/images/taniko_headertile.svg');
+  background-size:contain;
+  background-repeat:repeat-x;
+  position:relative;
+  h1{
+    font-size:86px;
+    color:$darkBlue;
+    font-weight:bolder;
+    filter:drop-shadow(4px 4px 0px $textShadow);
+    text-transform: uppercase;
+    font-weight:bold;
+    -webkit-text-stroke: 3px $darkBlue;
+    -webkit-text-fill-color: $darkBlue;
+    margin:0px auto;
+    position: relative;
+    bottom:-26px;
+    text-align:center;
+    z-index:10;
+  }
+  .login{
+    position:absolute;
+    right:70px;
+    top:38px;
+    border:3px $lightBlue solid;
+    font-family:lfl;
+    color:$darkBlue;
+    background-color: #fff;
+    font-size:24px;
+    padding:14px;
+    box-sizing: border-box;
+    z-index:10;
+  }
+}
+
+main{
+  background-color:$yellow;
+  padding:80px 0px 0px 0px;
+  position: relative;
+}
+
+.aspectsNav{
+  position:absolute;
+  width:calc(100% - 140px);
+  border:1px pink solid;
+  left:70px;
+  top:170px;
+  a{
+    font-family:lfl;
+    color:$darkBlue;
+    font-size:50px;
+    text-decoration: none;
+    filter:drop-shadow(2px 2px 0px #fff);
+    -webkit-text-stroke: 1px $darkBlue;
+    -webkit-text-fill-color: $darkBlue;
+  }
+  .wairua{
+    height:150px;
+    width:50%;
+    position:absolute;
+    border:1px lime solid;
+    left:0px;
+    top:0px;
+  }
+  .tinana{
+    height:150px;
+    width:50%;
+    position:absolute;
+    border:1px lime solid;
+    left:0px;
+    top:150px;
+  }
+  .hinegaro{
+    height:150px;
+    width:50%;
+    position:absolute;
+    border:1px magenta solid;
+    right:0px;
+    top:0px;
+  }
+  .whanau{
+    height:150px;
+    width:50%;
+    position:absolute;
+    border:1px magenta solid;
+    right:0px;
+    top:150px;
+  }
+  .whenua{
+    border:1px aqua solid;
+    top:300px;
+    width:100%;
+    position:absolute;
+  }
+}
+
+/* whare */
+.whareContainer{
+  position: relative;
+  width: 643px;
+  height: 449px;
+  margin:0px auto;
+  svg {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+  #whareBg {
+    display: inline;
+    fill: #ffffff;
+    stroke: #ffffff;
+    stroke-width: 12;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+  }
+  #paepae {
+    display: inline;
+    fill: #994d9e;
+  }
+  #maihi-l {
+    display: inline;
+    fill: #e75725;
+  }
+  #maihi-r {
+    display: inline;
+    fill: #66cbe4;
+  }
+  #po-l {
+    display: inline;
+    fill: #ac2124;
+  }
+  #po-r {
+    display: inline;
+    fill: #74c044;
+  }
+  #tekoteko {
+    fill: #e4e41d;
+  }
+  #kuwaha {
+    display: inline;
+    fill: #3e54a4;
+  }
+}
 
