@@ -1,17 +1,1 @@
-body {
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: 0;
-  padding: 0px;
-}
 
-/* fonts */
-@font-face {
-  font-family: lfl;
-  src: url("/fonts/lfl.TTF");
-}
-/* Template colours */
-/* Whare colours */
-
-/*# sourceMappingURL=styles.css.map */
