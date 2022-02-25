@@ -5,7 +5,7 @@ const initialState = []
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case SET_WHARE_SUCCESS:
-      return action.whare
+      return action.whare.users
     default:
       return state
   }

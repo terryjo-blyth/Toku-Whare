@@ -17,7 +17,7 @@ export function saveWhare (whareData) {
     .catch(logError)
 }
 
-export function saveUser (userData) {
+export function saveUserData (userData) {
   return request
     .post(whareUrl)
     .send(userData)
