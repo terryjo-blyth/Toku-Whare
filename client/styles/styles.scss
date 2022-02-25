@@ -1,0 +1,28 @@
+body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0px;
+}
+
+/* fonts */
+@font-face {
+  font-family: lfl;
+  src: url('/fonts/lfl.TTF');
+}
+
+/* Template colours */
+$darkblue:#1f7eaa;
+$yellow:#fbe02b;
+$lightblue:#66cbe4;
+$textshadow:#81b2d4;
+
+/* Whare colours */
+$whareOrange:#e85624;
+$whareYellow:#e5e519;
+$whareLightblue:#66cbe4;
+$whareGreen:#73bf44;
+$whareDarkblue:#3e53a4;
+$wharePurple:#994d9e;
+
