@@ -8,8 +8,8 @@ exports.seed = function (knex) {
     .then(function () {
       // Inserts seed entries
       return knex('connections').insert([
-        { client_id: 1, supporter_id: 3 },
-        { client_id: 2, supporter_id: 3 }
+        { clientId: 1, supporterId: 3 },
+        { clientId: 2, supporterId: 3 }
 
       ])
     })
