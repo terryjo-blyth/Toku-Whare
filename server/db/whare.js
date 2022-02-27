@@ -69,9 +69,10 @@ function getQuestionPrompts (db = connection) {
     .select('questionPrompts')
 }
 
-function getColor (db = connection) {
+function getColor (id, db = connection) {
   return db('whare')
     .select('color')
+    .where('id', id)
 }
 
 function getResourceLinks (db = connection) {
