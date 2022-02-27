@@ -6,7 +6,6 @@ exports.up = function (knex) {
     table.string('name')
     table.date('dob')
     table.string('email')
-    table.string('whare')
     table.string('svgAvatar')
     table.string('tahaWairua')
     table.string('tahaWhanau')

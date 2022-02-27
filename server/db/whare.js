@@ -4,7 +4,12 @@ module.exports = {
   getUsers,
   getUser,
   updateEntry,
-  addUser
+  addUser,
+  getWhareDB,
+  getDescription,
+  getQuestionPrompts,
+  getColor,
+  getResourceLinks
 }
 
 function getUsers (db = connection) {
@@ -47,4 +52,29 @@ function updateEntry (id, section, entry, db = connection) {
     .update({
       [section]: entry
     })
+}
+
+function getWhareDB (db = connection) {
+  return db('whare')
+    .select()
+}
+
+function getDescription (db = connection) {
+  return db('whare')
+    .select('description')
+}
+
+function getQuestionPrompts (db = connection) {
+  return db('whare')
+    .select('questionPrompts')
+}
+
+function getColor (db = connection) {
+  return db('whare')
+    .select('color')
+}
+
+function getResourceLinks (db = connection) {
+  return db('whare')
+    .select('resourceLinks')
 }
