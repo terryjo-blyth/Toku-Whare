@@ -128,7 +128,7 @@ main{
       margin:auto;
     }
   }
-  .wairua,.hinegaro{
+  .wairua,.hinengaro{
     top:0px;
   }
   .tinana, .whanau{
@@ -139,21 +139,21 @@ main{
       padding-top:3vw;
     }
   }
-  .hinegaro,.whanau{
+  .hinengaro,.whanau{
     right:0px;
     text-align:right;
   }
   .wairua,.tinana{
     left:0px;
   }
-  .wairua,.tinana,.hinegaro,.whanau{
+  .wairua,.tinana,.hinengaro,.whanau{
     height:150px;
     width:50%;
     @media (max-width: 1200px) {
       height:10vw;
     }
   }
-  .wairua,.tinana,.hinegaro,.whanau,.whenua{
+  .wairua,.tinana,.hinengaro,.whanau,.whenua{
     position:absolute;
     @media (max-width: $tablet) {
       position:relative;
