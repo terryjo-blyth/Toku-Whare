@@ -1,4 +1,4 @@
-import { setUser } from './actions/user'
+import { setUserSuccess } from './actions'
 import store from './store'
 
 export async function cacheUser (useAuth0, state) {
@@ -16,7 +16,7 @@ export async function cacheUser (useAuth0, state) {
         token: token
       }
 
-      store.dispatch(setUser(userToSave))
+      store.dispatch(setUserSuccess(userToSave))
     } catch (err) {
       console.error(err)
     }

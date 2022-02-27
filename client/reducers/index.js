@@ -2,10 +2,10 @@ import { combineReducers } from 'redux'
 
 import loading from './loading'
 import errMessage from './errMessage'
-import whare from './whare'
+import user from './user'
 
 export default combineReducers({
   loading,
   errMessage,
-  whare
+  user
 })

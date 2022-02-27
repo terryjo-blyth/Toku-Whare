@@ -1,7 +1,8 @@
 const connection = require('./connection')
 
 module.exports = {
-  getUsers
+  getUsers,
+  createUser
   // getWhare,
   // getSingleUser,
   // addData
@@ -11,6 +12,10 @@ function getUsers (db = connection) {
   return db('users').select()
 }
 
+function createUser (user, db = connection) {
+  return db('users')
+    .insert({ email: user.email, auth0_id: user.auth0_id })
+}
 /* function getEachWhare (id, db = connection) {
   return db('users').select('taha_tinana as tahaTinana', 'taha_wairua as tahaWairua', 'taha_whanau as tahaWhanau', 'taha_hinengaro as tahaHinengaro', 'whenua').where([id]).first()
 } */
