@@ -1,0 +1,237 @@
+body {
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0px;
+  width: 100%;
+}
+
+/* breakpoints */
+/* fonts */
+@font-face {
+  font-family: lfl;
+  src: url("/fonts/lfl.TTF");
+}
+@font-face {
+  font-family: lflo;
+  src: url("/fonts/lfl-outline.TTF");
+}
+/* Template colours */
+/* Whare colours */
+/* Headings */
+h1, h2, h3, h4 {
+  font-family: lfl;
+}
+
+/* template */
+header {
+  width: 100%;
+  margin: 0px;
+  box-sizing: border-box;
+  height: 86px;
+  background-image: url("/images/taniko_headertile.svg");
+  background-size: contain;
+  background-repeat: repeat-x;
+  position: relative;
+}
+header h1 {
+  font-size: 86px;
+  color: #1f7eaa;
+  font-weight: bolder;
+  filter: drop-shadow(4px 4px 0px #81b2d4);
+  text-transform: uppercase;
+  font-weight: bold;
+  -webkit-text-stroke: 3px #1f7eaa;
+  -webkit-text-fill-color: #1f7eaa;
+  margin: 0px auto;
+  position: relative;
+  bottom: -26px;
+  text-align: center;
+  z-index: 10;
+}
+header .login {
+  position: absolute;
+  right: 70px;
+  top: 38px;
+  border: 3px #66cbe4 solid;
+  font-family: lfl;
+  color: #1f7eaa;
+  background-color: #fff;
+  font-size: 24px;
+  padding: 14px;
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+main {
+  background-color: #fbe02b;
+  padding: 80px 0px;
+  position: relative;
+}
+
+.aspectsNav {
+  position: absolute;
+  width: calc(100% - 140px);
+  left: 70px;
+  top: 170px;
+}
+@media (min-width: 1200px) {
+  .aspectsNav {
+    width: 1042px;
+    left: calc(50% - 521px);
+  }
+}
+@media (max-width: 1200px) {
+  .aspectsNav {
+    top: 10vw;
+  }
+}
+@media (max-width: 800px) {
+  .aspectsNav {
+    position: relative;
+    width: 100%;
+    border: 1px magenta solid;
+    top: 0px;
+    left: 0px;
+    margin: 0px;
+    padding: 0px;
+  }
+}
+.aspectsNav a {
+  font-family: lfl;
+  color: #1f7eaa;
+  font-size: 50px;
+  text-decoration: none;
+  filter: drop-shadow(2px 2px 0px #fff);
+  -webkit-text-stroke: 1px #1f7eaa;
+  -webkit-text-fill-color: #1f7eaa;
+}
+.aspectsNav .whenua {
+  top: 330px;
+  width: 100%;
+  padding-top: 50px;
+  text-align: center;
+}
+@media (max-width: 1200px) {
+  .aspectsNav .whenua {
+    padding-top: 4vw;
+    top: calc(55vw - 330px);
+    border: 1px red solid;
+    width: calc(100vw - 600px);
+    margin: auto;
+  }
+}
+.aspectsNav .wairua, .aspectsNav .hinengaro {
+  top: 0px;
+}
+.aspectsNav .tinana, .aspectsNav .whanau {
+  top: 150px;
+  padding-top: 30px;
+}
+@media (max-width: 1200px) {
+  .aspectsNav .tinana, .aspectsNav .whanau {
+    top: 10vw;
+    padding-top: 3vw;
+  }
+}
+.aspectsNav .hinengaro, .aspectsNav .whanau {
+  right: 0px;
+  text-align: right;
+}
+.aspectsNav .wairua, .aspectsNav .tinana {
+  left: 0px;
+}
+.aspectsNav .wairua, .aspectsNav .tinana, .aspectsNav .hinengaro, .aspectsNav .whanau {
+  height: 150px;
+  width: 50%;
+}
+@media (max-width: 1200px) {
+  .aspectsNav .wairua, .aspectsNav .tinana, .aspectsNav .hinengaro, .aspectsNav .whanau {
+    height: 10vw;
+  }
+}
+.aspectsNav .wairua, .aspectsNav .tinana, .aspectsNav .hinengaro, .aspectsNav .whanau, .aspectsNav .whenua {
+  position: absolute;
+}
+@media (max-width: 800px) {
+  .aspectsNav .wairua, .aspectsNav .tinana, .aspectsNav .hinengaro, .aspectsNav .whanau, .aspectsNav .whenua {
+    position: relative;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    display: block;
+    height: auto;
+    text-align: center;
+    top: 0px;
+    left: 0px;
+  }
+}
+
+/* whare */
+.whareContainer {
+  position: relative;
+  width: 643px;
+  height: 449px;
+  margin: 0px auto;
+}
+@media (max-width: 1200px) {
+  .whareContainer {
+    width: calc(100% - 600px);
+    height: calc((100vw - 600px) * 0.7);
+  }
+}
+@media (max-width: 800px) {
+  .whareContainer {
+    width: calc(100vw - 200px);
+    height: calc((100vw - 200px) * 0.7);
+    border: 1px lime solid;
+  }
+}
+.whareContainer svg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+@media (max-width: 800px) {
+  .whareContainer svg {
+    width: 100%;
+  }
+}
+.whareContainer #whareBg {
+  display: inline;
+  fill: #ffffff;
+  stroke: #ffffff;
+  stroke-width: 12;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+}
+.whareContainer #paepae {
+  display: inline;
+  fill: #994d9e;
+}
+.whareContainer #maihi-l {
+  display: inline;
+  fill: #e75725;
+}
+.whareContainer #maihi-r {
+  display: inline;
+  fill: #66cbe4;
+}
+.whareContainer #po-l {
+  display: inline;
+  fill: #ac2124;
+}
+.whareContainer #po-r {
+  display: inline;
+  fill: #74c044;
+}
+.whareContainer #tekoteko {
+  fill: #e4e41d;
+}
+.whareContainer #kuwaha {
+  display: inline;
+  fill: #3e54a4;
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -9,7 +9,6 @@ module.exports = {
   updateEntry,
   createUser,
   isInDb,
-  addUser,
   getWhareDB,
   getDescription,
   getQuestionPrompts,

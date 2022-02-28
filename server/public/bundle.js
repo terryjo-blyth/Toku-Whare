@@ -1164,7 +1164,7 @@ function Home() {
     dispatch((0,_actions__WEBPACK_IMPORTED_MODULE_2__.fetchWhare)(1));
   }, []);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "This is the HomePage"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
-    to: "TahaTinana"
+    to: "tahaTinana"
   }, "This link takes you to the particular aspect"));
 }
 

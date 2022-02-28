@@ -14,7 +14,7 @@ function Home () {
   return (
     <>
       <div>This is the HomePage</div>
-      <Link to='TahaTinana'>This link takes you to the particular aspect</Link>
+      <Link to='tahaTinana'>This link takes you to the particular aspect</Link>
       {/* <ul>
         {users.map((user) => <li key={user.id}> {user.taha_tinana} {user.taha_whanau} {user.taha_hinengaro} {user.taha_wairua} {user.whenua}</li>)}
       </ul> */}
