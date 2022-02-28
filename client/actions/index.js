@@ -1,4 +1,4 @@
-import { getWhare, addUser } from '../apis'
+import { getWhare, addUser, updateAspect } from '../apis'
 
 export const SET_WHARE_PENDING = 'SET_WHARE_PENDING'
 export const SET_USER_SUCCESS = 'SET_USER_SUCCESS'
@@ -32,6 +32,18 @@ export function addUserData (newData) {
   }
 }
 
+export function addAspectData (newData, token) {
+  return dispatch => {
+    return updateAspect(newData, token)
+      .then(() => {
+        dispatch(setUserSuccess(newData))
+        return null
+      })
+      .catch(err => {
+        dispatch(setError(err.message))
+      })
+  }
+}
 // export function addUser (newUser) {
 //   return dispatch => {
 //     return saveUser(newUser)

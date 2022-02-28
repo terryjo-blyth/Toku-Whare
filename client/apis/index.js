@@ -23,7 +23,7 @@ export async function addUser (user) {
 }
 
 export function updateAspect (aspect, token) {
-  return request.put(`${whareUrl}/${aspect}`)
+  return request.patch(`${whareUrl}/${aspect}`)
     .set('authorization', `Bearer ${token}`)
     .send({ aspect })
     .then(res => res.body.aspect)
