@@ -2,32 +2,22 @@ const express = require('express')
 // const request = require('superagent')
 const db = require('../db/whare')
 const router = express.Router()
+const checkJwt = require('../auth0')
 
 module.exports = router
 
-router.get('/', async (req, res) => {
-  try {
-    const users = await db.getUsers()
-    res.json({ users })
-  } catch (err) {
-    console.error(err)
-    res.status(500).send(err.message)
-  }
-})
+// be careful, this lets any user get ALL of the information of all other users
+// router.get('/', async (req, res) => {
+//   try {
+//     const users = await db.getUsers()
+//     res.json({ users })
+//   } catch (err) {
+//     console.error(err)
+//     res.status(500).send(err.message)
+//   }
+// })
 
-// API routes - use DB functions in here
-router.get('/:id', (req, res) => {
-  db.getWhare(req.params.id)
-    .then(whare => {
-      res.json(whare)
-      return null
-    })
-    .catch(err => {
-      res.status(500).send(err.message)
-    })
-})
-
-router.post('/', async (req, res) => {
+router.post('/', checkJwt, async (req, res) => {
   const newUser = req.body
   const { auth0Id, email } = newUser
   const user = {
@@ -43,36 +33,27 @@ router.post('/', async (req, res) => {
   }
 })
 
-/* router.post('/', (req, res) => {
-  const data = req.body.data
-  db.addData(data)
-    .then((data) => {
-      res.json(data)
+// use checkJwt
+router.get('/user', checkJwt, (req, res) => {
+  const id = req.user?.sub
+  db.getUser(id)
+    .then(user => {
+      res.json({ user })
       return null
     })
     .catch(err => {
       res.status(500).send(err.message)
     })
 })
- */
-// router.post('/', (req, res) => {
-//   db.removeWhare(req.body.id)
-//     .then((remove) => {
-//       res.json(remove)
-//       return null
-//     })
-//     .catch(err => {
-//       res.status(500).send(err.message)
-//     })
-// })
 
-// router.post('/', (req, res) => {
-//   db.updateWhare(req.body.id)
-//     .then((update) => {
-//       res.json(update)
-//       return null
-//     })
-//     .catch(err => {
-//       res.status(500).send(err.message)
-//     })
-// })
+// use checkJwt
+router.patch('/entry', checkJwt, (req, res) => {
+  const id = req.user?.sub
+  const { section, entry } = req.body
+  db.updateEntry(id, section, entry)
+    .then(() => {
+      res.sendStatus(204)
+      return null
+    })
+    .catch(err => res.status(500).send(err.message))
+})
