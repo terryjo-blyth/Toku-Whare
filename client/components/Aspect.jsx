@@ -28,7 +28,7 @@ function Aspect () {
     dispatch(addAspectData({
       section: name,
       entry: value,
-      token: currentUser.token
+      token: user.token
     }))
   }
 
@@ -37,7 +37,7 @@ function Aspect () {
       <div>This is where user inputs personal info</div>
       <form action="">
         <label htmlFor={aspect}>user entry for {aspect}:</label><br />
-        <input id="aspectDescr" defaultValue={currentUser[aspect]} type="text" name={aspect} /><br />
+        <input id="aspectDescr" defaultValue={user[aspect]} type="text" name={aspect} /><br />
         <button onClick={(e) => updateClickHandler(e)}>update {aspect}</button><br />
         <button>delete {aspect}</button>
       </form>
