@@ -2,15 +2,13 @@ import request from 'superagent'
 
 const whareUrl = '/api/v1/whare'
 
-export function getWhare (id) {
+export function getWhare (user) {
   return request
-    .get(whareUrl)
+    .get(`${whareUrl}/user`)
+    .set('authorization', `Bearer ${user}`)
     .then((response) => {
-      const userArray = response.body.users
-      const user = userArray.find((user) => {
-        return user.id === id
-      })
-      return user
+      console.log('api getwhare: ', response.body)
+      return response.body
     })
     .catch(logError)
 }
@@ -22,9 +20,10 @@ export async function addUser (user) {
     .catch(logError)
 }
 
-export function updateAspect (aspect, token) {
-  return request.patch(`${whareUrl}/${aspect}`)
-    .set('authorization', `Bearer ${token}`)
+export function updateAspect (aspect) {
+  console.log(aspect)
+  return request.patch(`${whareUrl}/entry`)
+    .set('authorization', `Bearer ${aspect.token}`)
     .send({ aspect })
     .then(res => res.body.aspect)
     .catch(logError)

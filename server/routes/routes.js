@@ -53,7 +53,8 @@ router.get('/user', checkJwt, (req, res) => {
 })
 
 // use checkJwt
-router.patch('/entry', checkJwt, (req, res) => {
+// router.patch('/entry', checkJwt, (req, res) => {
+router.patch('/entry', (req, res) => {
   const id = req.user?.sub
   const { section, entry } = req.body
   db.updateEntry(id, section, entry)

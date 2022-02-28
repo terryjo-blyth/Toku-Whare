@@ -5,10 +5,10 @@ export const SET_USER_SUCCESS = 'SET_USER_SUCCESS'
 // export const SET_USER_SUCCESS = 'SET_USER_SUCCESS'
 export const SET_ERROR = 'SET_ERROR'
 
-export function fetchWhare (id) {
+export function fetchWhare (user) {
   return (dispatch, getState) => {
     dispatch(setWharePending())
-    return getWhare(id)
+    return getWhare(user)
       .then(userData => {
         dispatch(setUserSuccess(userData))
         return null
@@ -32,9 +32,22 @@ export function addUserData (newData) {
   }
 }
 
-export function addAspectData (newData, token) {
+// export function addAspectData (newData, token) {
+//   return dispatch => {
+//     return updateAspect(newData, token)
+//       .then(() => {
+//         dispatch(setUserSuccess(newData))
+//         return null
+//       })
+//       .catch(err => {
+//         dispatch(setError(err.message))
+//       })
+//   }
+// }
+
+export function addAspectData (newData) {
   return dispatch => {
-    return updateAspect(newData, token)
+    return updateAspect(newData)
       .then(() => {
         dispatch(setUserSuccess(newData))
         return null
@@ -44,18 +57,6 @@ export function addAspectData (newData, token) {
       })
   }
 }
-// export function addUser (newUser) {
-//   return dispatch => {
-//     return saveUser(newUser)
-//       .then(user => {
-//         dispatch(setUserSuccess(user))
-//         return null
-//       })
-//       .catch(err => {
-//         dispatch(setError(err.message))
-//       })
-//   }
-// }
 
 export function setWharePending () {
   return {

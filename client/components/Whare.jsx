@@ -4,11 +4,11 @@ import { useDispatch, useSelector } from 'react-redux'
 import { fetchWhare } from '../actions'
 
 function Home () {
-  const user = useSelector(state => state.userData)
+  const user = useSelector(state => state.user)
   const dispatch = useDispatch()
   console.log(user)
   useEffect(() => {
-    dispatch(fetchWhare(1))
+    dispatch(fetchWhare(user))
   }, [])
 
   return (

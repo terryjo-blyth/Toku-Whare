@@ -801,10 +801,10 @@ var SET_WHARE_PENDING = 'SET_WHARE_PENDING';
 var SET_USER_SUCCESS = 'SET_USER_SUCCESS'; // export const SET_USER_SUCCESS = 'SET_USER_SUCCESS'
 
 var SET_ERROR = 'SET_ERROR';
-function fetchWhare(id) {
+function fetchWhare(user) {
   return function (dispatch, getState) {
     dispatch(setWharePending());
-    return (0,_apis__WEBPACK_IMPORTED_MODULE_0__.getWhare)(id).then(function (userData) {
+    return (0,_apis__WEBPACK_IMPORTED_MODULE_0__.getWhare)(user).then(function (userData) {
       dispatch(setUserSuccess(userData));
       return null;
     })["catch"](function (err) {
@@ -821,21 +821,11 @@ function addUserData(newData) {
       dispatch(setError(err.message));
     });
   };
-}
-function addAspectData(newData, token) {
-  return function (dispatch) {
-    return (0,_apis__WEBPACK_IMPORTED_MODULE_0__.updateAspect)(newData, token).then(function () {
-      dispatch(setUserSuccess(newData));
-      return null;
-    })["catch"](function (err) {
-      dispatch(setError(err.message));
-    });
-  };
-} // export function addUser (newUser) {
+} // export function addAspectData (newData, token) {
 //   return dispatch => {
-//     return saveUser(newUser)
-//       .then(user => {
-//         dispatch(setUserSuccess(user))
+//     return updateAspect(newData, token)
+//       .then(() => {
+//         dispatch(setUserSuccess(newData))
 //         return null
 //       })
 //       .catch(err => {
@@ -844,6 +834,16 @@ function addAspectData(newData, token) {
 //   }
 // }
 
+function addAspectData(newData) {
+  return function (dispatch) {
+    return (0,_apis__WEBPACK_IMPORTED_MODULE_0__.updateAspect)(newData).then(function () {
+      dispatch(setUserSuccess(newData));
+      return null;
+    })["catch"](function (err) {
+      dispatch(setError(err.message));
+    });
+  };
+}
 function setWharePending() {
   return {
     type: SET_WHARE_PENDING
@@ -893,13 +893,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var whareUrl = '/api/v1/whare';
-function getWhare(id) {
-  return superagent__WEBPACK_IMPORTED_MODULE_2___default().get(whareUrl).then(function (response) {
-    var userArray = response.body.users;
-    var user = userArray.find(function (user) {
-      return user.id === id;
-    });
-    return user;
+function getWhare(user) {
+  return superagent__WEBPACK_IMPORTED_MODULE_2___default().get("".concat(whareUrl, "/user")).set('authorization', "Bearer ".concat(user)).then(function (response) {
+    console.log('api getwhare: ', response.body);
+    return response.body;
   })["catch"](logError);
 }
 function addUser(_x) {
@@ -924,8 +921,9 @@ function _addUser() {
   return _addUser.apply(this, arguments);
 }
 
-function updateAspect(aspect, token) {
-  return superagent__WEBPACK_IMPORTED_MODULE_2___default().patch("".concat(whareUrl, "/").concat(aspect)).set('authorization', "Bearer ".concat(token)).send({
+function updateAspect(aspect) {
+  console.log(aspect);
+  return superagent__WEBPACK_IMPORTED_MODULE_2___default().patch("".concat(whareUrl, "/entry")).set('authorization', "Bearer ".concat(aspect.token)).send({
     aspect: aspect
   }).then(function (res) {
     return res.body.aspect;
@@ -1088,7 +1086,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../actions */ "./client/actions/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/index.js");
+/* harmony import */ var _auth0_auth0_react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @auth0/auth0-react */ "./node_modules/@auth0/auth0-react/dist/auth0-react.esm.js");
 
 
 
@@ -1101,33 +1100,42 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 
 
+
 function Aspect() {
-  var user = (0,react_redux__WEBPACK_IMPORTED_MODULE_3__.useSelector)(function (state) {
+  var currentUser = (0,react_redux__WEBPACK_IMPORTED_MODULE_3__.useSelector)(function (state) {
     return state.user;
   });
-  var token = (0,react_redux__WEBPACK_IMPORTED_MODULE_3__.useSelector)(function (state) {
-    return state.token;
-  });
+
+  var _useAuth = (0,_auth0_auth0_react__WEBPACK_IMPORTED_MODULE_5__.useAuth0)(),
+      user = _useAuth.user,
+      getAccessTokenSilently = _useAuth.getAccessTokenSilently;
+
   var dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_3__.useDispatch)();
-  var aspect = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_5__.useParams)().aspect;
+  var aspect = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_6__.useParams)().aspect;
 
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)({}),
       _useState2 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1___default()(_useState, 2),
       formData = _useState2[0],
       setFormData = _useState2[1];
 
-  console.log(aspect);
+  var token = getAccessTokenSilently();
   (0,react__WEBPACK_IMPORTED_MODULE_2__.useEffect)(function () {
-    dispatch((0,_actions__WEBPACK_IMPORTED_MODULE_4__.fetchWhare)(1));
+    dispatch((0,_actions__WEBPACK_IMPORTED_MODULE_4__.fetchWhare)(token));
   }, []);
 
   function updateClickHandler(e) {
     e.preventDefault();
-    var _e$target = e.target,
-        name = _e$target.name,
-        value = _e$target.value;
-    setFormData(_objectSpread(_objectSpread({}, formData), {}, _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()({}, name, value)));
-    dispatch((0,_actions__WEBPACK_IMPORTED_MODULE_4__.addAspectData)(formData, token));
+    console.log('aspect user ' + user.token); // const { name, value } = e.target
+
+    var value = document.getElementById('aspectDescr').value;
+    var name = document.getElementById('aspectDescr').name;
+    setFormData(_objectSpread(_objectSpread({}, formData), {}, _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()({}, name, value))); // dispatch(addAspectData(formData, token))
+
+    dispatch((0,_actions__WEBPACK_IMPORTED_MODULE_4__.addAspectData)({
+      section: name,
+      entry: value,
+      token: currentUser.token
+    }));
   }
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(react__WEBPACK_IMPORTED_MODULE_2__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("div", null, "This is where user inputs personal info"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("form", {
@@ -1135,7 +1143,8 @@ function Aspect() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("label", {
     htmlFor: aspect
   }, "user entry for ", aspect, ":"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("input", {
-    defaultValue: user[aspect],
+    id: "aspectDescr",
+    defaultValue: currentUser[aspect],
     type: "text",
     name: aspect
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("button", {
@@ -1326,7 +1335,7 @@ function UserProfile() {
   });
   var dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useDispatch)();
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    dispatch((0,_actions__WEBPACK_IMPORTED_MODULE_2__.fetchWhare)(1));
+    dispatch((0,_actions__WEBPACK_IMPORTED_MODULE_2__.fetchWhare)(user));
   }, []);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "This is where user inputs personal info"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("form", {
     action: ""
@@ -1377,12 +1386,12 @@ __webpack_require__.r(__webpack_exports__);
 
 function Home() {
   var user = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useSelector)(function (state) {
-    return state.userData;
+    return state.user;
   });
   var dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useDispatch)();
   console.log(user);
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    dispatch((0,_actions__WEBPACK_IMPORTED_MODULE_2__.fetchWhare)(1));
+    dispatch((0,_actions__WEBPACK_IMPORTED_MODULE_2__.fetchWhare)(user));
   }, []);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "This is the HomePage"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
     to: "tahaTinana"
@@ -1538,7 +1547,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions */ "./client/actions/index.js");
 
-var initialState = {};
+var initialState = {
+  auth0Id: 'fghd',
+  email: 'fghgf',
+  token: '13123'
+};
 
 var reducer = function reducer() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
@@ -1546,6 +1559,7 @@ var reducer = function reducer() {
 
   switch (action.type) {
     case _actions__WEBPACK_IMPORTED_MODULE_0__.SET_USER_SUCCESS:
+      console.log(action.userData);
       return action.userData;
 
     default:
