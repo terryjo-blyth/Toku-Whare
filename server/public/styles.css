@@ -1,5 +1,11 @@
+body {
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0px;
+  width: 100%;
+}
 
-<<<<<<< HEAD
 /* breakpoints */
 /* fonts */
 @font-face {
@@ -308,7 +314,7 @@ footer nav a {
 }
 .whareContainer #maihi-l {
   display: inline;
-  fill: #e75725;
+  fill: #e85624;
 }
 .whareContainer #maihi-r {
   display: inline;
@@ -320,14 +326,14 @@ footer nav a {
 }
 .whareContainer #po-r {
   display: inline;
-  fill: #74c044;
+  fill: #73bf44;
 }
 .whareContainer #tekoteko {
-  fill: #e4e41d;
+  fill: #e5e519;
 }
 .whareContainer #kuwaha {
   display: inline;
-  fill: #3e54a4;
+  fill: #3e53a4;
 }
 
 /* User page */
@@ -511,26 +517,59 @@ footer nav a {
   display: block;
   cursor: pointer;
 }
-#userAspect .userEntry .radioWrap:hover label, #userAspect .userEntry .radioWrap .active label {
-  color: #fbe02b;
-}
-#userAspect .userEntry .radioWrap:hover path, #userAspect .userEntry .radioWrap .active path {
-  fill: #fbe02b;
+#userAspect .userEntry .radioWrap svg g .st0 {
+  fill: #1f7eaa;
+  transition: fill 0.3s;
 }
 #userAspect .userEntry .radioWrap label {
   box-sizing: border-box;
   width: 100%;
+  pointer-events: none;
+  transition: color 0.3s;
 }
-#userAspect .userEntry svg {
+#userAspect .userEntry .radioWrap.active label, #userAspect .userEntry .radioWrap:hover label {
+  color: #fbe02b;
+}
+#userAspect .userEntry .radioWrap.active svg g .st0, #userAspect .userEntry .radioWrap:hover svg g .st0 {
+  fill: #fbe02b;
+}
+#userAspect .userEntry .radioWrap svg {
   width: 100px;
   height: 68px;
   display: block;
-}
-#userAspect .userEntry svg path {
-  fill: #1f7eaa;
+  pointer-events: none;
 }
 #userAspect .userEntry input[type=radio] {
   opacity: 0;
+  pointer-events: none;
+}
+#userAspect .userEntry button {
+  border: 0px;
+  font-family: lfl;
+  color: #fff;
+  font-size: 36px;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 6px;
+}
+@media (max-width: 582px) {
+  #userAspect .userEntry button {
+    width: 100%;
+    margin: 0px 0px 10px 0px;
+  }
+}
+#userAspect .userEntry #delete {
+  background-color: #ac2124;
+}
+#userAspect .userEntry #save {
+  background-color: #2b8f17;
+  margin-left: 10px;
+}
+@media (max-width: 582px) {
+  #userAspect .userEntry #save {
+    margin-left: 0px;
+  }
 }
 
 #aspectLinks {
@@ -911,5 +950,3 @@ footer nav a {
 }
 
 /*# sourceMappingURL=styles.css.map */
-=======
->>>>>>> 3d0509bd18d5a7b3f56781c5b049fbfe1ddc64a2

@@ -36,6 +36,7 @@ $whareLightblue:#66cbe4;
 $whareGreen:#73bf44;
 $whareDarkblue:#3e53a4;
 $wharePurple:#994d9e;
+$whareRed:#ac2124;
 
 /* Headings */
 h1,h2,h3,h4{
@@ -295,30 +296,30 @@ footer{
   }
   #paepae {
     display: inline;
-    fill: #994d9e;
+    fill: $wharePurple;
   }
   #maihi-l {
     display: inline;
-    fill: #e75725;
+    fill:$whareOrange;
   }
   #maihi-r {
     display: inline;
-    fill: #66cbe4;
+    fill: $whareLightblue;
   }
   #po-l {
     display: inline;
-    fill: #ac2124;
+    fill: $whareRed;
   }
   #po-r {
     display: inline;
-    fill: #74c044;
+    fill: $whareGreen;
   }
   #tekoteko {
-    fill: #e4e41d;
+    fill: $whareYellow;
   }
   #kuwaha {
     display: inline;
-    fill: #3e54a4;
+    fill: $whareDarkblue;
   }
 }
 
@@ -483,29 +484,58 @@ footer{
     .radioWrap{
       display:block;
       cursor:pointer;
-      &:hover, .active{
-        label{
-          color: $yellow;
-        }
-        path{
-          fill: $yellow;
-        }
+      svg g .st0{
+        fill: $darkBlue;
+        transition:fill 0.3s;
       }
       label{
         box-sizing: border-box;
         width:100%;
+        pointer-events: none;
+        transition:color 0.3s;
       }
-    }
-    svg{
-      width:100px;
-      height:calc(100px * 0.68);
-      display:block;
-      path{
-        fill: $darkBlue;
+      &.active, &:hover{
+        label{
+          color: $yellow;
+        }
+        svg g .st0{
+          fill: $yellow;
+        }
+      }
+      svg{
+        width:100px;
+        height:calc(100px * 0.68);
+        display:block;
+        pointer-events: none;
       }
     }
     input[type="radio"]{
-      opacity:0;
+     opacity:0;
+      pointer-events: none;
+    }
+    button{
+      border:0px;
+      font-family: lfl;
+      color:#fff;
+      font-size:36px;
+      text-transform: uppercase;
+      cursor:pointer;
+      padding:8px;
+      border-radius:6px;
+      @media (max-width: $mobile) {
+        width:100%;
+        margin:0px 0px 10px 0px;
+      }
+    }
+    #delete{
+      background-color:$whareRed;
+    }
+    #save{
+      background-color:#2b8f17;
+      margin-left:10px;
+      @media (max-width: $mobile) {
+        margin-left:0px;
+      }
     }
   }
 }

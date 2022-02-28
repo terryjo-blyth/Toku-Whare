@@ -1862,10 +1862,15 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function checkBox() {
-  alert('hey'); // alert(e.target.classList)
-  // e.target.classList.add('active')
-  // e.target.querySelector('input').checked = true
+function checkBox(e) {
+  var radios = document.getElementsByClassName('radioWrap');
+
+  for (var i = 0; i < radios.length; i++) {
+    radios.item(i).classList.remove('active');
+  }
+
+  e.target.classList.add('active');
+  e.target.querySelector('input').checked = true;
 }
 
 function TemplateAspect() {
@@ -1887,9 +1892,9 @@ function TemplateAspect() {
     action: ""
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", {
     htmlFor: "userEntry"
-  }, "My Idea:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("textarea", {
+  }, "My Ideas:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("textarea", {
     name: "userEntry",
-    placeholder: "This is my idea...",
+    placeholder: "These are my ideas...",
     id: "userEntry",
     cols: "30",
     rows: "3"
@@ -1899,7 +1904,9 @@ function TemplateAspect() {
     id: "player",
     controls: true
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("fieldset", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("legend", null, "It makes me feel:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    onClick: checkBox.bind(),
+    onClick: function onClick(e) {
+      return checkBox(e);
+    },
     className: "radioWrap"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
     version: "1.1",
@@ -1923,6 +1930,9 @@ function TemplateAspect() {
     name: "userFeeling",
     id: "ok"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    onClick: function onClick(e) {
+      return checkBox(e);
+    },
     className: "radioWrap"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
     version: "1.1",
@@ -1946,6 +1956,9 @@ function TemplateAspect() {
     name: "userFeeling",
     id: "cool"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    onClick: function onClick(e) {
+      return checkBox(e);
+    },
     className: "radioWrap"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
     version: "1.1",
@@ -1969,6 +1982,9 @@ function TemplateAspect() {
     name: "userFeeling",
     id: "happy"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    onClick: function onClick(e) {
+      return checkBox(e);
+    },
     className: "radioWrap"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
     version: "1.1",
@@ -1992,6 +2008,9 @@ function TemplateAspect() {
     name: "userFeeling",
     id: "wow"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    onClick: function onClick(e) {
+      return checkBox(e);
+    },
     className: "radioWrap"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
     version: "1.1",
@@ -2015,6 +2034,9 @@ function TemplateAspect() {
     name: "userFeeling",
     id: "silly"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    onClick: function onClick(e) {
+      return checkBox(e);
+    },
     className: "radioWrap"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
     version: "1.1",
@@ -2038,8 +2060,10 @@ function TemplateAspect() {
     name: "userFeeling",
     id: "tired"
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
-    id: "clearAspect"
-  }, "Delete \xD7")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
+    id: "delete"
+  }, "Delete \xD7"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    id: "save"
+  }, "Save")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
     className: "aspectSection",
     id: "aspectLinks"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Useful Links"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
