@@ -2,7 +2,7 @@ const connection = require('./connection')
 
 module.exports = {
   getUsers,
-  createUser
+  createUser,
   // getWhare,
   // getSingleUser,
   // addData
