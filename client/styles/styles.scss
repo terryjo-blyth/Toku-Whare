@@ -14,11 +14,13 @@ $mobile:582px;
 @font-face {
   font-family: lfl;
   src: url('/fonts/lfl.TTF');
+  font-display: swap;
 }
 
 @font-face {
   font-family: lflo;
   src: url('/fonts/lfl-outline.TTF');
+  font-display: swap;
 }
 
 /* Template colours */
@@ -146,6 +148,7 @@ footer{
         border-bottom:1px $darkBlue solid;
         padding:23px 10px;
         margin:0px;
+        color:#053f5a;
         &:last-child{
           border:0px;
         }
@@ -214,7 +217,7 @@ footer{
       left:calc(50vw - (50vw - 225px));
     }
   }
-  .wairua,.hinegaro{
+  .wairua,.hinengaro{
     top:0px;
   }
   .tinana, .whanau{
@@ -225,21 +228,21 @@ footer{
       padding-top:3vw;
     }
   }
-  .hinegaro,.whanau{
+  .hinengaro,.whanau{
     right:0px;
     text-align:right;
   }
   .wairua,.tinana{
     left:0px;
   }
-  .wairua,.tinana,.hinegaro,.whanau{
+  .wairua,.tinana,.hinengaro,.whanau{
     height:150px;
     width:50%;
     @media (max-width: 1200px) {
       height:10vw;
     }
   }
-  .wairua,.tinana,.hinegaro,.whanau,.whenua{
+  .wairua,.tinana,.hinengaro,.whanau,.whenua{
     position:absolute;
     @media (max-width: $tablet) {
       position:relative;
@@ -364,6 +367,12 @@ footer{
     }
   }
 }
+fieldset{
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
 
 /* Aspect Page */
 #aspectPage{
@@ -442,7 +451,7 @@ footer{
     }
   }
   .userEntry{
-    label{
+    label, legend{
       font-size:30px;
       width:100%;
       font-weight:bold;
@@ -454,7 +463,7 @@ footer{
       width:100%;
       resize: vertical;
       background-color:#aeeaef;
-      border:#fff;
+      border:3px #aeeaef solid;
       margin-top:10px;
       font-size:30px;
       font-family:lfl;
@@ -462,7 +471,7 @@ footer{
       box-sizing: border-box;
       color:$darkBlue;
       &:focus, &:hover, &:active{
-        border-color:$darkBlue;
+        border:3px $darkBlue solid;
         outline-color:$darkBlue;
       }
     }

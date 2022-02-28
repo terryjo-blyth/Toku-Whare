@@ -11,10 +11,12 @@ body {
 @font-face {
   font-family: lfl;
   src: url("/fonts/lfl.TTF");
+  font-display: swap;
 }
 @font-face {
   font-family: lflo;
   src: url("/fonts/lfl-outline.TTF");
+  font-display: swap;
 }
 /* Template colours */
 /* Whare colours */
@@ -139,6 +141,7 @@ footer nav a {
     border-bottom: 1px #1f7eaa solid;
     padding: 23px 10px;
     margin: 0px;
+    color: #053f5a;
   }
   footer nav a:last-child {
     border: 0px;
@@ -215,7 +218,7 @@ footer nav a {
     left: calc(50vw - (50vw - 225px));
   }
 }
-.aspectsNav .wairua, .aspectsNav .hinegaro {
+.aspectsNav .wairua, .aspectsNav .hinengaro {
   top: 0px;
 }
 .aspectsNav .tinana, .aspectsNav .whanau {
@@ -228,27 +231,27 @@ footer nav a {
     padding-top: 3vw;
   }
 }
-.aspectsNav .hinegaro, .aspectsNav .whanau {
+.aspectsNav .hinengaro, .aspectsNav .whanau {
   right: 0px;
   text-align: right;
 }
 .aspectsNav .wairua, .aspectsNav .tinana {
   left: 0px;
 }
-.aspectsNav .wairua, .aspectsNav .tinana, .aspectsNav .hinegaro, .aspectsNav .whanau {
+.aspectsNav .wairua, .aspectsNav .tinana, .aspectsNav .hinengaro, .aspectsNav .whanau {
   height: 150px;
   width: 50%;
 }
 @media (max-width: 1200px) {
-  .aspectsNav .wairua, .aspectsNav .tinana, .aspectsNav .hinegaro, .aspectsNav .whanau {
+  .aspectsNav .wairua, .aspectsNav .tinana, .aspectsNav .hinengaro, .aspectsNav .whanau {
     height: 10vw;
   }
 }
-.aspectsNav .wairua, .aspectsNav .tinana, .aspectsNav .hinegaro, .aspectsNav .whanau, .aspectsNav .whenua {
+.aspectsNav .wairua, .aspectsNav .tinana, .aspectsNav .hinengaro, .aspectsNav .whanau, .aspectsNav .whenua {
   position: absolute;
 }
 @media (max-width: 800px) {
-  .aspectsNav .wairua, .aspectsNav .tinana, .aspectsNav .hinegaro, .aspectsNav .whanau, .aspectsNav .whenua {
+  .aspectsNav .wairua, .aspectsNav .tinana, .aspectsNav .hinengaro, .aspectsNav .whanau, .aspectsNav .whenua {
     position: relative;
     width: 100%;
     margin: 0px;
@@ -379,6 +382,13 @@ footer nav a {
   outline: #1f7eaa;
 }
 
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+
 /* Aspect Page */
 #aspectPage {
   display: flex;
@@ -475,7 +485,7 @@ footer nav a {
 #userAspect .intro p {
   margin: 0px;
 }
-#userAspect .userEntry label {
+#userAspect .userEntry label, #userAspect .userEntry legend {
   font-size: 30px;
   width: 100%;
   font-weight: bold;
@@ -487,7 +497,7 @@ footer nav a {
   width: 100%;
   resize: vertical;
   background-color: #aeeaef;
-  border: #fff;
+  border: 3px #aeeaef solid;
   margin-top: 10px;
   font-size: 30px;
   font-family: lfl;
@@ -496,7 +506,7 @@ footer nav a {
   color: #1f7eaa;
 }
 #userAspect .userEntry textarea:focus, #userAspect .userEntry textarea:hover, #userAspect .userEntry textarea:active {
-  border-color: #1f7eaa;
+  border: 3px #1f7eaa solid;
   outline-color: #1f7eaa;
 }
 #userAspect .userEntry input[type=radio] {
