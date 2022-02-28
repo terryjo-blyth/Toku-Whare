@@ -3,19 +3,24 @@ import { useDispatch, useSelector } from 'react-redux'
 import { fetchWhare } from '../actions'
 
 function UserProfile () {
-  const users = useSelector(state => state.whare)
+  const user = useSelector(state => state.user)
   const dispatch = useDispatch()
 
   useEffect(() => {
-    dispatch(fetchWhare())
+    dispatch(fetchWhare(1))
   }, [])
 
   return (
     <>
       <div>This is where user inputs personal info</div>
-      <ul>
-        {users.map((user) => <li key={user.id}> {user.name} {user.email} {user.dob} </li>)}
-      </ul>
+      <form action="">
+        <label htmlFor="name">Name:</label><br />
+        <input defaultValue={user.name} type="text" name="name" /><br />
+        <label htmlFor="email">Email:</label><br />
+        <input defaultValue={user.email} type="email" name="email" /><br />
+        <label htmlFor="dob">Birthday:</label><br />
+        <input defaultValue={user.dob} type="date" name="dob" />
+      </form>
     </>
   )
 }
