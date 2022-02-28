@@ -2,13 +2,18 @@ const connection = require('./connection')
 
 module.exports = {
   getUsers,
-  getUser,
-  updateEntry,
-  addUser,
-  createUser
+  createUser,
   // getWhare,
   // getSingleUser,
   // addData
+  getUser,
+  updateEntry,
+  addUser,
+  getWhareDB,
+  getDescription,
+  getQuestionPrompts,
+  getColor,
+  getResourceLinks
 }
 
 function getUsers (db = connection) {
@@ -64,4 +69,30 @@ function updateEntry (id, section, entry, db = connection) {
     .update({
       [section]: entry
     })
+}
+
+function getWhareDB (db = connection) {
+  return db('whare')
+    .select()
+}
+
+function getDescription (db = connection) {
+  return db('whare')
+    .select('description')
+}
+
+function getQuestionPrompts (db = connection) {
+  return db('whare')
+    .select('questionPrompts')
+}
+
+function getColor (id, db = connection) {
+  return db('whare')
+    .select('color')
+    .where('id', id)
+}
+
+function getResourceLinks (db = connection) {
+  return db('whare')
+    .select('resourceLinks')
 }
