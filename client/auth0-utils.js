@@ -1,4 +1,4 @@
-import { addUserData } from './actions'
+import { addUserData, fetchUser, fetchWhare } from './actions'
 import store from './store'
 
 export async function cacheUser (useAuth0, state) {
@@ -14,8 +14,9 @@ export async function cacheUser (useAuth0, state) {
         email: user.email,
         token: token
       }
-      console.log(userToSave)
       store.dispatch(addUserData(userToSave))
+      store.dispatch(fetchUser(userToSave))
+      store.dispatch(fetchWhare(userToSave))
     } catch (err) {
       console.error(err)
     }
