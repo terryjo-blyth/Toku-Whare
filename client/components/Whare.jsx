@@ -4,20 +4,20 @@ import { useDispatch, useSelector } from 'react-redux'
 import { fetchWhare } from '../actions'
 
 function Home () {
-  const users = useSelector(state => state.whare)
+  const user = useSelector(state => state.userData)
   const dispatch = useDispatch()
-
+  console.log(user)
   useEffect(() => {
-    dispatch(fetchWhare())
+    dispatch(fetchWhare(1))
   }, [])
 
   return (
     <>
       <div>This is the HomePage</div>
       <Link to='TahaTinana'>This link takes you to the particular aspect</Link>
-      <ul>
+      {/* <ul>
         {users.map((user) => <li key={user.id}> {user.taha_tinana} {user.taha_whanau} {user.taha_hinengaro} {user.taha_wairua} {user.whenua}</li>)}
-      </ul>
+      </ul> */}
     </>
   )
 }

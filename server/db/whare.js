@@ -2,6 +2,10 @@ const connection = require('./connection')
 
 module.exports = {
   getUsers,
+  createUser
+  // getWhare,
+  // getSingleUser,
+  // addData
   getUser,
   updateEntry,
   addUser,
@@ -16,6 +20,19 @@ function getUsers (db = connection) {
   return db('users').select()
 }
 
+function createUser (user, db = connection) {
+  return db('users')
+    .insert({ email: user.email, auth0_id: user.auth0_id })
+}
+/* function getEachWhare (id, db = connection) {
+  return db('users').select('taha_tinana as tahaTinana', 'taha_wairua as tahaWairua', 'taha_whanau as tahaWhanau', 'taha_hinengaro as tahaHinengaro', 'whenua').where([id]).first()
+} */
+
+// function getSingleUser (id, db = connection) {
+//   return db('users').select()
+//     .where({ id })
+//     .first()
+// }
 function getUser (id, db = connection) {
   return db('users')
     .select(

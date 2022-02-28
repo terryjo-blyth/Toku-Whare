@@ -1,16 +1,16 @@
-import { getWhare, saveUser } from '../apis'
+import { getWhare, addUser } from '../apis'
 
 export const SET_WHARE_PENDING = 'SET_WHARE_PENDING'
-export const SET_WHARE_SUCCESS = 'SET_WHARE_SUCCESS'
+export const SET_USER_SUCCESS = 'SET_USER_SUCCESS'
 // export const SET_USER_SUCCESS = 'SET_USER_SUCCESS'
 export const SET_ERROR = 'SET_ERROR'
 
-export function fetchWhare () {
+export function fetchWhare (id) {
   return (dispatch, getState) => {
     dispatch(setWharePending())
-    return getWhare()
-      .then(whare => {
-        dispatch(setWhareSuccess(whare))
+    return getWhare(id)
+      .then(userData => {
+        dispatch(setUserSuccess(userData))
         return null
       })
       .catch(err => {
@@ -21,9 +21,9 @@ export function fetchWhare () {
 
 export function addUserData (newData) {
   return dispatch => {
-    return saveUser(newData)
+    return addUser(newData)
       .then(data => {
-        dispatch(setWhareSuccess(data))
+        dispatch(setUserSuccess(data))
         return null
       })
       .catch(err => {
@@ -51,10 +51,10 @@ export function setWharePending () {
   }
 }
 
-export function setWhareSuccess (whare) {
+export function setUserSuccess (userData) {
   return {
-    type: SET_WHARE_SUCCESS,
-    whare
+    type: SET_USER_SUCCESS,
+    userData
   }
 }
 
