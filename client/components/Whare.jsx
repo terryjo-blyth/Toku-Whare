@@ -8,11 +8,13 @@ function Home () {
   const user = useSelector(state => state.user)
   const whare = useSelector(state => state.whare)
   const dispatch = useDispatch()
+  console.log(user)
+  console.log(whare)
 
-  useEffect(() => {
-    dispatch(fetchUser(user))
-    dispatch(fetchWhare(user))
-  }, [])
+  // useEffect(() => {
+  //   dispatch(fetchUser(user))
+  //   dispatch(fetchWhare(user))
+  // }, [])
 
   return (
     <>

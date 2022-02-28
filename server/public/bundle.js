@@ -998,7 +998,7 @@ function _cacheUser() {
             _useAuth = useAuth0(), getAccessTokenSilently = _useAuth.getAccessTokenSilently, isAuthenticated = _useAuth.isAuthenticated, user = _useAuth.user;
 
             if (!(isAuthenticated && !(state !== null && state !== void 0 && state.token))) {
-              _context.next = 13;
+              _context.next = 15;
               break;
             }
 
@@ -1014,20 +1014,22 @@ function _cacheUser() {
               token: token
             };
             _store__WEBPACK_IMPORTED_MODULE_3__.default.dispatch((0,_actions__WEBPACK_IMPORTED_MODULE_2__.addUserData)(userToSave));
-            _context.next = 13;
+            _store__WEBPACK_IMPORTED_MODULE_3__.default.dispatch((0,_actions__WEBPACK_IMPORTED_MODULE_2__.fetchUser)(userToSave));
+            _store__WEBPACK_IMPORTED_MODULE_3__.default.dispatch((0,_actions__WEBPACK_IMPORTED_MODULE_2__.fetchWhare)(userToSave));
+            _context.next = 15;
             break;
 
-          case 10:
-            _context.prev = 10;
+          case 12:
+            _context.prev = 12;
             _context.t0 = _context["catch"](2);
             console.error(_context.t0);
 
-          case 13:
+          case 15:
           case "end":
             return _context.stop();
         }
       }
-    }, _callee, null, [[2, 10]]);
+    }, _callee, null, [[2, 12]]);
   }));
   return _cacheUser.apply(this, arguments);
 }
@@ -1404,10 +1406,12 @@ function Home() {
     return state.whare;
   });
   var dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useDispatch)();
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    dispatch((0,_actions__WEBPACK_IMPORTED_MODULE_2__.fetchUser)(user));
-    dispatch((0,_actions__WEBPACK_IMPORTED_MODULE_2__.fetchWhare)(user));
-  }, []);
+  console.log(user);
+  console.log(whare); // useEffect(() => {
+  //   dispatch(fetchUser(user))
+  //   dispatch(fetchWhare(user))
+  // }, [])
+
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "This is the HomePage"), "Taha tinana: ", whare.tahaTinana, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
     to: "tahaTinana"
   }, "This link takes you to the particular aspect"));
@@ -1601,11 +1605,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions */ "./client/actions/index.js");
 
 var initialState = {
-  tahaTinana: '',
-  tahaWairua: '',
-  tahaWhanau: '',
-  tahaHinengaro: '',
-  whenua: ''
+  tahaTinana: '1',
+  tahaWairua: '2',
+  tahaWhanau: '3',
+  tahaHinengaro: '4',
+  whenua: '5'
 };
 
 var reducer = function reducer() {

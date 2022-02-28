@@ -1,11 +1,11 @@
 import { SET_WHARE_SUCCESS } from '../actions'
 
 const initialState = {
-  tahaTinana: '',
-  tahaWairua: '',
-  tahaWhanau: '',
-  tahaHinengaro: '',
-  whenua: ''
+  tahaTinana: '1',
+  tahaWairua: '2',
+  tahaWhanau: '3',
+  tahaHinengaro: '4',
+  whenua: '5'
 }
 
 const reducer = (state = initialState, action) => {
