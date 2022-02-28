@@ -382,13 +382,6 @@ footer nav a {
   outline: #1f7eaa;
 }
 
-fieldset {
-  border: 0;
-  padding: 0;
-  margin: 0;
-  min-width: 0;
-}
-
 /* Aspect Page */
 #aspectPage {
   display: flex;
@@ -509,8 +502,41 @@ fieldset {
   border: 3px #1f7eaa solid;
   outline-color: #1f7eaa;
 }
+#userAspect .userEntry fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
 #userAspect .userEntry input[type=radio] {
   cursor: pointer;
+}
+#userAspect .userEntry .radioWrap {
+  display: block;
+  cursor: pointer;
+}
+#userAspect .userEntry .radioWrap:hover label, #userAspect .userEntry .radioWrap .active label {
+  color: #fbe02b;
+}
+#userAspect .userEntry .radioWrap:hover path, #userAspect .userEntry .radioWrap .active path {
+  fill: #fbe02b;
+}
+#userAspect .userEntry .radioWrap label {
+  box-sizing: border-box;
+  width: 100%;
+}
+#userAspect .userEntry svg {
+  width: 100px;
+  height: 68px;
+  display: block;
+}
+#userAspect .userEntry svg path {
+  fill: #1f7eaa;
+}
+#userAspect .userEntry input[type=radio] {
+  opacity: 0;
 }
 
 #aspectLinks {
