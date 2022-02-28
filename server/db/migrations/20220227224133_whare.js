@@ -7,7 +7,7 @@ exports.up = function (knex) {
     table.increments('id')
     table.string('description')
     table.string('questionPrompts')
-    table.integer('color')
+    table.string('color')
     table.string('resourceLinks')
   })
 }
