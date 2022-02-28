@@ -1,11 +1,5 @@
-body {
-  top: 0;
-  left: 0;
-  margin: 0;
-  padding: 0px;
-  width: 100%;
-}
 
+<<<<<<< HEAD
 /* breakpoints */
 /* fonts */
 @font-face {
@@ -917,3 +911,5 @@ footer nav a {
 }
 
 /*# sourceMappingURL=styles.css.map */
+=======
+>>>>>>> 3d0509bd18d5a7b3f56781c5b049fbfe1ddc64a2
