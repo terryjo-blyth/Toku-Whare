@@ -356,6 +356,13 @@ footer nav a {
   display: block;
   margin: 10px 0px 3px 0px;
 }
+#userPage h2 {
+  font-family: lflo;
+  color: #1f7eaa;
+  font-size: 56px;
+  margin: 0px 0px 30px 0px;
+  line-height: 38px;
+}
 #userPage input {
   border: 3px #66cbe4 solid;
   background-color: #fff;
@@ -363,6 +370,9 @@ footer nav a {
   font-family: lfl;
   font-size: 30px;
   color: #1f7eaa;
+}
+#userPage input svg {
+  fill: pink;
 }
 #userPage input:hover, #userPage input:focus, #userPage input:active {
   border-color: #1f7eaa;

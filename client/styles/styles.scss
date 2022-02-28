@@ -341,6 +341,13 @@ footer{
     display:block;
     margin:10px 0px 3px 0px;
   }
+  h2{
+    font-family:lflo;
+    color:$darkBlue;
+    font-size:56px;
+    margin:0px 0px 30px 0px;
+    line-height:38px;
+  }
   input{
     border:3px $lightBlue solid;
     background-color:#fff;
@@ -348,6 +355,9 @@ footer{
     font-family:lfl;
     font-size:30px;
     color:$darkBlue;
+    svg{
+      fill:pink;
+    }
     &:hover, &:focus, &:active{
       border-color:$darkBlue;
       outline:$darkBlue;

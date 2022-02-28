@@ -11,9 +11,9 @@ function TemplateUser () {
         <input type="text" name="name" id="" />
         <label htmlFor="dob">My Birthday</label>
         <input type="date" name="dob" id="" />
+        <Avatar />
+        <Hairstyles />
       </form>
-      <Avatar />
-      <Hairstyles />
     </section>
   )
 }
