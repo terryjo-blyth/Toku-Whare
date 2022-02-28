@@ -112,6 +112,37 @@ main {
   }
 }
 
+#delete, #save {
+  border: 0px;
+  font-family: lfl;
+  color: #fff;
+  font-size: 36px;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 6px;
+}
+@media (max-width: 582px) {
+  #delete, #save {
+    width: 100%;
+    margin: 0px 0px 10px 0px;
+  }
+}
+
+#delete {
+  background-color: #ac2124;
+}
+
+#save {
+  background-color: #2b8f17;
+  margin-left: 10px;
+}
+@media (max-width: 582px) {
+  #save {
+    margin-left: 0px;
+  }
+}
+
 footer nav {
   width: 100%;
   padding: 10px;
@@ -343,12 +374,18 @@ footer nav a {
   padding: 0px 70px;
   font-family: lfl;
 }
+@media (max-width: 582px) {
+  #userPage {
+    padding: 20px;
+  }
+}
 #userPage form {
   border: 3px #66cbe4 solid;
   background-color: #fff;
   max-width: 800px;
   width: calc(100vw - 140px);
   padding: 18px 30px;
+  margin: 0px auto;
 }
 #userPage label {
   font-family: lflo;
@@ -373,6 +410,8 @@ footer nav a {
   font-family: lfl;
   font-size: 30px;
   color: #1f7eaa;
+  max-width: 300px;
+  width: 100%;
 }
 #userPage input svg {
   fill: pink;
@@ -380,6 +419,12 @@ footer nav a {
 #userPage input:hover, #userPage input:focus, #userPage input:active {
   border-color: #1f7eaa;
   outline: #1f7eaa;
+}
+#userPage .avatarContainer {
+  border: 1px aqua solid;
+}
+#userPage .avatarContainer.chooseHair {
+  border: 1px lime solid;
 }
 
 /* Aspect Page */
@@ -543,33 +588,8 @@ footer nav a {
   opacity: 0;
   pointer-events: none;
 }
-#userAspect .userEntry button {
-  border: 0px;
-  font-family: lfl;
-  color: #fff;
-  font-size: 36px;
-  text-transform: uppercase;
-  cursor: pointer;
-  padding: 8px;
-  border-radius: 6px;
-}
-@media (max-width: 582px) {
-  #userAspect .userEntry button {
-    width: 100%;
-    margin: 0px 0px 10px 0px;
-  }
-}
-#userAspect .userEntry #delete {
-  background-color: #ac2124;
-}
-#userAspect .userEntry #save {
-  background-color: #2b8f17;
-  margin-left: 10px;
-}
-@media (max-width: 582px) {
-  #userAspect .userEntry #save {
-    margin-left: 0px;
-  }
+#userAspect #player {
+  max-width: 100%;
 }
 
 #aspectLinks {

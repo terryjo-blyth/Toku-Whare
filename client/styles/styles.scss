@@ -124,6 +124,31 @@ main{
   }
 }
 
+#delete,#save{
+  border:0px;
+  font-family: lfl;
+  color:#fff;
+  font-size:36px;
+  text-transform: uppercase;
+  cursor:pointer;
+  padding:8px;
+  border-radius:6px;
+  @media (max-width: $mobile) {
+    width:100%;
+    margin:0px 0px 10px 0px;
+  }
+}
+#delete{
+  background-color:$whareRed;
+}
+#save{
+  background-color:#2b8f17;
+  margin-left:10px;
+  @media (max-width: $mobile) {
+    margin-left:0px;
+  }
+}
+
 footer{
   nav{
     width:100%;
@@ -329,12 +354,16 @@ footer{
   box-sizing: border-box;
   padding:0px 70px;
   font-family:lfl;
+  @media (max-width: $mobile) {
+    padding:20px;
+  }
   form{
     border:3px $lightBlue solid;
     background-color: #fff;
     max-width:800px;
     width:calc(100vw - 140px);
     padding:18px 30px;
+    margin:0px auto;
   }
   label{
     font-family:lflo;
@@ -359,6 +388,8 @@ footer{
     font-family:lfl;
     font-size:30px;
     color:$darkBlue;
+    max-width:300px;
+    width:100%;
     svg{
       fill:pink;
     }
@@ -366,6 +397,12 @@ footer{
       border-color:$darkBlue;
       outline:$darkBlue;
     }
+  }
+  .avatarContainer{
+    border:1px aqua solid;
+  }
+  .avatarContainer.chooseHair{
+    border:1px lime solid;
   }
 }
 
@@ -513,30 +550,9 @@ footer{
      opacity:0;
       pointer-events: none;
     }
-    button{
-      border:0px;
-      font-family: lfl;
-      color:#fff;
-      font-size:36px;
-      text-transform: uppercase;
-      cursor:pointer;
-      padding:8px;
-      border-radius:6px;
-      @media (max-width: $mobile) {
-        width:100%;
-        margin:0px 0px 10px 0px;
-      }
-    }
-    #delete{
-      background-color:$whareRed;
-    }
-    #save{
-      background-color:#2b8f17;
-      margin-left:10px;
-      @media (max-width: $mobile) {
-        margin-left:0px;
-      }
-    }
+  }
+  #player{
+    max-width:100%;
   }
 }
 #aspectLinks{

@@ -13,6 +13,8 @@ function TemplateUser () {
         <input type="date" name="dob" id="" />
         <Avatar />
         <Hairstyles />
+        <button id="delete">Delete &times;</button>
+        <button id="save">Save</button>
       </form>
     </section>
   )
