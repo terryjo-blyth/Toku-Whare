@@ -7,7 +7,7 @@ function UserProfile () {
   const dispatch = useDispatch()
 
   useEffect(() => {
-    dispatch(fetchWhare(1))
+    dispatch(fetchWhare(user))
   }, [])
 
   return (
