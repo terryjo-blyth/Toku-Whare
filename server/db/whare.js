@@ -3,6 +3,7 @@ const connection = require('./connection')
 module.exports = {
   getUsers,
   getUser,
+  getWhare,
   updateEntry,
   createUser,
   isInDb,
@@ -19,6 +20,20 @@ function getUsers (db = connection) {
 
 function getUser (id, db = connection) {
   return db('users')
+    .select()
+    // .select(
+    //   'tahaTinana',
+    //   'tahaWairua',
+    //   'tahaWhanau',
+    //   'tahaHinengaro',
+    //   'whenua'
+    // )
+    .where('auth0Id', id)
+    .first()
+}
+
+function getWhare (id, db = connection) {
+  return db('users')
     .select(
       'tahaTinana',
       'tahaWairua',
@@ -26,7 +41,7 @@ function getUser (id, db = connection) {
       'tahaHinengaro',
       'whenua'
     )
-    .where({ id })
+    .where('auth0Id', id)
     .first()
 }
 

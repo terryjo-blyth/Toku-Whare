@@ -1,23 +1,25 @@
 import { Link } from 'react-router-dom'
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchWhare } from '../actions'
+import { fetchWhare, fetchUser } from '../actions'
+import { useAuth0 } from '@auth0/auth0-react'
 
 function Home () {
   const user = useSelector(state => state.user)
+  const whare = useSelector(state => state.whare)
   const dispatch = useDispatch()
-  console.log(user)
+
   useEffect(() => {
+    dispatch(fetchUser(user))
     dispatch(fetchWhare(user))
   }, [])
 
   return (
     <>
       <div>This is the HomePage</div>
+      Taha tinana: {whare.tahaTinana}
       <Link to='tahaTinana'>This link takes you to the particular aspect</Link>
-      {/* <ul>
-        {users.map((user) => <li key={user.id}> {user.taha_tinana} {user.taha_whanau} {user.taha_hinengaro} {user.taha_wairua} {user.whenua}</li>)}
-      </ul> */}
+      {/* {user.taha_tinana} {user.taha_whanau} {user.taha_hinengaro} {user.taha_wairua} {user.whenua} */}
     </>
   )
 }

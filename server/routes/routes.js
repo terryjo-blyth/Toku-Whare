@@ -40,8 +40,9 @@ router.post('/', checkJwt, async (req, res) => {
 })
 
 // use checkJwt
-router.get('/user', checkJwt, (req, res) => {
+router.get('/user', checkJwt, async (req, res) => {
   const id = req.user?.sub
+  console.log('id', id)
   db.getUser(id)
     .then(user => {
       res.json({ user })
@@ -52,6 +53,18 @@ router.get('/user', checkJwt, (req, res) => {
     })
 })
 
+router.get('/whare', checkJwt, async (req, res) => {
+  const id = req.user?.sub
+  console.log('id', id)
+  db.getWhare(id)
+    .then(whare => {
+      res.json({ whare })
+      return null
+    })
+    .catch(err => {
+      res.status(500).send(err.message)
+    })
+})
 // use checkJwt
 // router.patch('/entry', checkJwt, (req, res) => {
 router.patch('/entry', (req, res) => {

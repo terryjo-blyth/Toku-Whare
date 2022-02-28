@@ -14,7 +14,6 @@ export async function cacheUser (useAuth0, state) {
         email: user.email,
         token: token
       }
-      console.log(userToSave)
       store.dispatch(addUserData(userToSave))
     } catch (err) {
       console.error(err)

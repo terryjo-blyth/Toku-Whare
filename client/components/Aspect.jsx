@@ -5,19 +5,18 @@ import { useParams } from 'react-router-dom'
 import { useAuth0 } from '@auth0/auth0-react'
 
 function Aspect () {
-  const currentUser = useSelector(state => state.user)
-  const { user, getAccessTokenSilently } = useAuth0()
+  const user = useSelector(state => state.user)
+
   const dispatch = useDispatch()
   const aspect = useParams().aspect
   const [formData, setFormData] = useState({})
-  const token = getAccessTokenSilently()
+
   useEffect(() => {
-    dispatch(fetchWhare(token))
+    dispatch(fetchWhare(user))
   }, [])
 
   function updateClickHandler (e) {
     e.preventDefault()
-    console.log('aspect user ' + user.token)
     // const { name, value } = e.target
     const value = document.getElementById('aspectDescr').value
     const name = document.getElementById('aspectDescr').name

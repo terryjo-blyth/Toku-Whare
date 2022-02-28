@@ -787,25 +787,39 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "SET_WHARE_PENDING": () => (/* binding */ SET_WHARE_PENDING),
 /* harmony export */   "SET_USER_SUCCESS": () => (/* binding */ SET_USER_SUCCESS),
+/* harmony export */   "SET_WHARE_SUCCESS": () => (/* binding */ SET_WHARE_SUCCESS),
 /* harmony export */   "SET_ERROR": () => (/* binding */ SET_ERROR),
+/* harmony export */   "fetchUser": () => (/* binding */ fetchUser),
 /* harmony export */   "fetchWhare": () => (/* binding */ fetchWhare),
 /* harmony export */   "addUserData": () => (/* binding */ addUserData),
 /* harmony export */   "addAspectData": () => (/* binding */ addAspectData),
 /* harmony export */   "setWharePending": () => (/* binding */ setWharePending),
 /* harmony export */   "setUserSuccess": () => (/* binding */ setUserSuccess),
+/* harmony export */   "setWhareSuccess": () => (/* binding */ setWhareSuccess),
 /* harmony export */   "setError": () => (/* binding */ setError)
 /* harmony export */ });
 /* harmony import */ var _apis__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../apis */ "./client/apis/index.js");
 
 var SET_WHARE_PENDING = 'SET_WHARE_PENDING';
-var SET_USER_SUCCESS = 'SET_USER_SUCCESS'; // export const SET_USER_SUCCESS = 'SET_USER_SUCCESS'
-
+var SET_USER_SUCCESS = 'SET_USER_SUCCESS';
+var SET_WHARE_SUCCESS = 'SET_WHARE_SUCCESS';
 var SET_ERROR = 'SET_ERROR';
+function fetchUser(user) {
+  return function (dispatch, getState) {
+    dispatch(setWharePending());
+    return (0,_apis__WEBPACK_IMPORTED_MODULE_0__.getUser)(user).then(function (userData) {
+      dispatch(setUserSuccess(userData));
+      return null;
+    })["catch"](function (err) {
+      dispatch(setError(err.message));
+    });
+  };
+}
 function fetchWhare(user) {
   return function (dispatch, getState) {
     dispatch(setWharePending());
-    return (0,_apis__WEBPACK_IMPORTED_MODULE_0__.getWhare)(user).then(function (userData) {
-      dispatch(setUserSuccess(userData));
+    return (0,_apis__WEBPACK_IMPORTED_MODULE_0__.getWhare)(user).then(function (whareData) {
+      dispatch(setWhareSuccess(whareData));
       return null;
     })["catch"](function (err) {
       dispatch(setError(err.message));
@@ -854,13 +868,13 @@ function setUserSuccess(userData) {
     type: SET_USER_SUCCESS,
     userData: userData
   };
-} // export function setUserSuccess (user) {
-//   return {
-//     type: SET_USER_SUCCESS,
-//     user
-//   }
-// }
-
+}
+function setWhareSuccess(whareData) {
+  return {
+    type: SET_WHARE_SUCCESS,
+    whareData: whareData
+  };
+}
 function setError(errMessage) {
   return {
     type: SET_ERROR,
@@ -880,6 +894,7 @@ function setError(errMessage) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "getWhare": () => (/* binding */ getWhare),
+/* harmony export */   "getUser": () => (/* binding */ getUser),
 /* harmony export */   "addUser": () => (/* binding */ addUser),
 /* harmony export */   "updateAspect": () => (/* binding */ updateAspect)
 /* harmony export */ });
@@ -894,8 +909,12 @@ __webpack_require__.r(__webpack_exports__);
 
 var whareUrl = '/api/v1/whare';
 function getWhare(user) {
-  return superagent__WEBPACK_IMPORTED_MODULE_2___default().get("".concat(whareUrl, "/user")).set('authorization', "Bearer ".concat(user)).then(function (response) {
-    console.log('api getwhare: ', response.body);
+  return superagent__WEBPACK_IMPORTED_MODULE_2___default().get("".concat(whareUrl, "/whare")).set('authorization', "Bearer ".concat(user.token)).then(function (response) {
+    return response.body;
+  })["catch"](logError);
+}
+function getUser(user) {
+  return superagent__WEBPACK_IMPORTED_MODULE_2___default().get("".concat(whareUrl, "/user")).set('authorization', "Bearer ".concat(user.token)).then(function (response) {
     return response.body;
   })["catch"](logError);
 }
@@ -922,7 +941,6 @@ function _addUser() {
 }
 
 function updateAspect(aspect) {
-  console.log(aspect);
   return superagent__WEBPACK_IMPORTED_MODULE_2___default().patch("".concat(whareUrl, "/entry")).set('authorization', "Bearer ".concat(aspect.token)).send({
     aspect: aspect
   }).then(function (res) {
@@ -980,7 +998,7 @@ function _cacheUser() {
             _useAuth = useAuth0(), getAccessTokenSilently = _useAuth.getAccessTokenSilently, isAuthenticated = _useAuth.isAuthenticated, user = _useAuth.user;
 
             if (!(isAuthenticated && !(state !== null && state !== void 0 && state.token))) {
-              _context.next = 14;
+              _context.next = 13;
               break;
             }
 
@@ -995,22 +1013,21 @@ function _cacheUser() {
               email: user.email,
               token: token
             };
-            console.log(userToSave);
             _store__WEBPACK_IMPORTED_MODULE_3__.default.dispatch((0,_actions__WEBPACK_IMPORTED_MODULE_2__.addUserData)(userToSave));
-            _context.next = 14;
+            _context.next = 13;
             break;
 
-          case 11:
-            _context.prev = 11;
+          case 10:
+            _context.prev = 10;
             _context.t0 = _context["catch"](2);
             console.error(_context.t0);
 
-          case 14:
+          case 13:
           case "end":
             return _context.stop();
         }
       }
-    }, _callee, null, [[2, 11]]);
+    }, _callee, null, [[2, 10]]);
   }));
   return _cacheUser.apply(this, arguments);
 }
@@ -1102,14 +1119,9 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 
 function Aspect() {
-  var currentUser = (0,react_redux__WEBPACK_IMPORTED_MODULE_3__.useSelector)(function (state) {
+  var user = (0,react_redux__WEBPACK_IMPORTED_MODULE_3__.useSelector)(function (state) {
     return state.user;
   });
-
-  var _useAuth = (0,_auth0_auth0_react__WEBPACK_IMPORTED_MODULE_5__.useAuth0)(),
-      user = _useAuth.user,
-      getAccessTokenSilently = _useAuth.getAccessTokenSilently;
-
   var dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_3__.useDispatch)();
   var aspect = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_6__.useParams)().aspect;
 
@@ -1118,14 +1130,12 @@ function Aspect() {
       formData = _useState2[0],
       setFormData = _useState2[1];
 
-  var token = getAccessTokenSilently();
   (0,react__WEBPACK_IMPORTED_MODULE_2__.useEffect)(function () {
-    dispatch((0,_actions__WEBPACK_IMPORTED_MODULE_4__.fetchWhare)(token));
+    dispatch((0,_actions__WEBPACK_IMPORTED_MODULE_4__.fetchWhare)(user));
   }, []);
 
   function updateClickHandler(e) {
-    e.preventDefault();
-    console.log('aspect user ' + user.token); // const { name, value } = e.target
+    e.preventDefault(); // const { name, value } = e.target
 
     var value = document.getElementById('aspectDescr').value;
     var name = document.getElementById('aspectDescr').name;
@@ -1375,10 +1385,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../actions */ "./client/actions/index.js");
+/* harmony import */ var _auth0_auth0_react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @auth0/auth0-react */ "./node_modules/@auth0/auth0-react/dist/auth0-react.esm.js");
+
 
 
 
@@ -1388,12 +1400,15 @@ function Home() {
   var user = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useSelector)(function (state) {
     return state.user;
   });
+  var whare = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useSelector)(function (state) {
+    return state.whare;
+  });
   var dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useDispatch)();
-  console.log(user);
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    dispatch((0,_actions__WEBPACK_IMPORTED_MODULE_2__.fetchUser)(user));
     dispatch((0,_actions__WEBPACK_IMPORTED_MODULE_2__.fetchWhare)(user));
   }, []);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "This is the HomePage"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "This is the HomePage"), "Taha tinana: ", whare.tahaTinana, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
     to: "tahaTinana"
   }, "This link takes you to the particular aspect"));
 }
@@ -1413,32 +1428,31 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
-/* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! redux-thunk */ "./node_modules/redux-thunk/es/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/index.js");
-/* harmony import */ var _auth0_auth0_react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @auth0/auth0-react */ "./node_modules/@auth0/auth0-react/dist/auth0-react.esm.js");
-/* harmony import */ var _reducers__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./reducers */ "./client/reducers/index.js");
-/* harmony import */ var _components_App__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/App */ "./client/components/App.jsx");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/index.js");
+/* harmony import */ var _auth0_auth0_react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @auth0/auth0-react */ "./node_modules/@auth0/auth0-react/dist/auth0-react.esm.js");
+/* harmony import */ var _components_App__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/App */ "./client/components/App.jsx");
+/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./store */ "./client/store.js");
 
 
+ // import { createStore, applyMiddleware, compose } from 'redux'
+// import thunk from 'redux-thunk'
 
 
+ // import reducers from './reducers'
 
 
+ // const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
+// const store = createStore(reducers, composeEnhancers(applyMiddleware(thunk)))
 
-
-
-var composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || redux__WEBPACK_IMPORTED_MODULE_7__.compose;
-var store = (0,redux__WEBPACK_IMPORTED_MODULE_7__.createStore)(_reducers__WEBPACK_IMPORTED_MODULE_5__.default, composeEnhancers((0,redux__WEBPACK_IMPORTED_MODULE_7__.applyMiddleware)(redux_thunk__WEBPACK_IMPORTED_MODULE_3__.default)));
 document.addEventListener('DOMContentLoaded', function () {
-  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_auth0_auth0_react__WEBPACK_IMPORTED_MODULE_4__.Auth0Provider, {
+  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_auth0_auth0_react__WEBPACK_IMPORTED_MODULE_3__.Auth0Provider, {
     domain: 'https://tohora22-terryjo.au.auth0.com',
     clientId: 'p8ucQhswnlxpukdQDwq0WeSgBm16pnSK',
     redirectUri: window.location.origin,
     audience: "https://whare/api"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_redux__WEBPACK_IMPORTED_MODULE_2__.Provider, {
-    store: store
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.BrowserRouter, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_App__WEBPACK_IMPORTED_MODULE_6__.default, null)))), document.getElementById('app'));
+    store: _store__WEBPACK_IMPORTED_MODULE_5__.default
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.BrowserRouter, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_App__WEBPACK_IMPORTED_MODULE_4__.default, null)))), document.getElementById('app'));
 });
 
 /***/ }),
@@ -1486,18 +1500,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
 /* harmony import */ var _loading__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./loading */ "./client/reducers/loading.js");
 /* harmony import */ var _errMessage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./errMessage */ "./client/reducers/errMessage.js");
 /* harmony import */ var _user__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./user */ "./client/reducers/user.js");
+/* harmony import */ var _whare__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./whare */ "./client/reducers/whare.js");
 
 
 
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,redux__WEBPACK_IMPORTED_MODULE_3__.combineReducers)({
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,redux__WEBPACK_IMPORTED_MODULE_4__.combineReducers)({
   loading: _loading__WEBPACK_IMPORTED_MODULE_0__.default,
   errMessage: _errMessage__WEBPACK_IMPORTED_MODULE_1__.default,
-  user: _user__WEBPACK_IMPORTED_MODULE_2__.default
+  user: _user__WEBPACK_IMPORTED_MODULE_2__.default,
+  whare: _whare__WEBPACK_IMPORTED_MODULE_3__.default
 }));
 
 /***/ }),
@@ -1548,9 +1565,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions */ "./client/actions/index.js");
 
 var initialState = {
-  auth0Id: 'fghd',
-  email: 'fghgf',
-  token: '13123'
+  auth0Id: '',
+  email: '',
+  token: ''
 };
 
 var reducer = function reducer() {
@@ -1559,8 +1576,45 @@ var reducer = function reducer() {
 
   switch (action.type) {
     case _actions__WEBPACK_IMPORTED_MODULE_0__.SET_USER_SUCCESS:
-      console.log(action.userData);
       return action.userData;
+
+    default:
+      return state;
+  }
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (reducer);
+
+/***/ }),
+
+/***/ "./client/reducers/whare.js":
+/*!**********************************!*\
+  !*** ./client/reducers/whare.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions */ "./client/actions/index.js");
+
+var initialState = {
+  tahaTinana: '',
+  tahaWairua: '',
+  tahaWhanau: '',
+  tahaHinengaro: '',
+  whenua: ''
+};
+
+var reducer = function reducer() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+
+  switch (action.type) {
+    case _actions__WEBPACK_IMPORTED_MODULE_0__.SET_WHARE_SUCCESS:
+      return action.whareData;
 
     default:
       return state;
