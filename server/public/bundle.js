@@ -914,6 +914,746 @@ function IfNotAuthenticated(_ref2) {
 
 /***/ }),
 
+/***/ "./client/components/Avatar.jsx":
+/*!**************************************!*\
+  !*** ./client/components/Avatar.jsx ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+
+function Avatar() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
+    className: "avatarContainer"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "head"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 200 253.9"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    id: "headPath",
+    className: "a",
+    d: "M162.1,136c0-35.3-26.6-64-62-64a63.81,63.81,0,0,0-48,21.7A56.62,56.62,0,0,0,36.3,131c-.1,1.6-.2,3.3-.2,5,0,1.4.1,2.9.2,4.3v6.4a60,60,0,0,0,.5,7.4,30,30,0,0,0-7.2,19.5h0a30.3,30.3,0,0,0,30.2,30.2h58c14.7,0,25.6-5.4,32.2-14.3C162.1,172.7,162.1,152.6,162.1,136Z"
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "face"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    xmlnsXlink: "http://www.w3.org/1999/xlink",
+    viewBox: "0 0 200 253.9"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("clipPath", {
+    id: "a"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    className: "a",
+    d: "M61,163h0a5,5,0,0,1-5-5V128.3a5,5,0,0,1,5-5h0a5,5,0,0,1,5,5V158A5.08,5.08,0,0,1,61,163Z"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("clipPath", {
+    id: "b"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    className: "a",
+    d: "M105,163h0a5,5,0,0,1-5-5V128.3a5.08,5.08,0,0,1,5-5h0a5.08,5.08,0,0,1,5,5V158A5.08,5.08,0,0,1,105,163Z"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("clipPath", {
+    id: "c"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    className: "a",
+    d: "M83.1,188.2A14.19,14.19,0,0,1,68.9,174v0a2,2,0,0,1,4,0,10.2,10.2,0,0,0,20.4,0,2,2,0,0,1,4,0A14.25,14.25,0,0,1,83.1,188.2Z"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("title", null, "face"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("g", {
+    className: "b"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "c",
+    points: "58.2 123.3 56 125.44 56 123.3 58.2 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "c",
+    points: "58.44 123.3 56 125.67 56 125.44 58.2 123.3 58.44 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "d",
+    points: "58.68 123.3 56 125.91 56 125.67 58.44 123.3 58.68 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "e",
+    points: "58.93 123.3 56 126.14 56 125.91 58.68 123.3 58.93 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "f",
+    points: "59.17 123.3 56 126.38 56 126.14 58.93 123.3 59.17 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "g",
+    points: "59.41 123.3 56 126.61 56 126.38 59.17 123.3 59.41 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "h",
+    points: "59.65 123.3 56 126.85 56 126.61 59.41 123.3 59.65 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "i",
+    points: "59.89 123.3 56 127.08 56 126.85 59.65 123.3 59.89 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "j",
+    points: "60.13 123.3 56 127.32 56 127.08 59.89 123.3 60.13 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "k",
+    points: "60.38 123.3 56 127.56 56 127.32 60.13 123.3 60.38 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "l",
+    points: "60.62 123.3 56 127.79 56 127.56 60.38 123.3 60.62 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "m",
+    points: "60.86 123.3 56 128.03 56 127.79 60.62 123.3 60.86 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "n",
+    points: "61.1 123.3 56 128.26 56 128.03 60.86 123.3 61.1 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "o",
+    points: "61.34 123.3 56 128.5 56 128.26 61.1 123.3 61.34 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "p",
+    points: "61.59 123.3 56 128.73 56 128.5 61.34 123.3 61.59 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "q",
+    points: "61.83 123.3 56 128.97 56 128.73 61.59 123.3 61.83 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "r",
+    points: "62.07 123.3 56 129.2 56 128.97 61.83 123.3 62.07 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "s",
+    points: "62.31 123.3 56 129.44 56 129.2 62.07 123.3 62.31 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "t",
+    points: "62.55 123.3 56 129.67 56 129.44 62.31 123.3 62.55 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "u",
+    points: "62.8 123.3 56 129.91 56 129.67 62.55 123.3 62.8 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "v",
+    points: "63.04 123.3 56 130.14 56 129.91 62.8 123.3 63.04 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "w",
+    points: "63.28 123.3 56 130.38 56 130.14 63.04 123.3 63.28 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "x",
+    points: "63.52 123.3 56 130.61 56 130.38 63.28 123.3 63.52 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "y",
+    points: "63.76 123.3 56 130.85 56 130.61 63.52 123.3 63.76 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "z",
+    points: "64 123.3 56 131.08 56 130.85 63.76 123.3 64 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "aa",
+    points: "64.25 123.3 56 131.32 56 131.08 64 123.3 64.25 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "ab",
+    points: "64.49 123.3 56 131.55 56 131.32 64.25 123.3 64.49 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "ac",
+    points: "64.73 123.3 56 131.79 56 131.55 64.49 123.3 64.73 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "ad",
+    points: "64.97 123.3 56 132.02 56 131.79 64.73 123.3 64.97 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "ae",
+    points: "65.21 123.3 56 132.26 56 132.02 64.97 123.3 65.21 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "af",
+    points: "65.45 123.3 56 132.49 56 132.26 65.21 123.3 65.45 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "ag",
+    points: "65.7 123.3 56 132.73 56 132.49 65.45 123.3 65.7 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "ah",
+    points: "65.94 123.3 56 132.96 56 132.73 65.7 123.3 65.94 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "ai",
+    points: "66 123.47 56 133.2 56 132.96 65.94 123.3 66 123.3 66 123.47"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "aj",
+    points: "66 123.71 56 133.43 56 133.2 66 123.47 66 123.71"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "ak",
+    points: "66 123.95 56 133.67 56 133.43 66 123.71 66 123.95"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "al",
+    points: "66 124.18 56 133.9 56 133.67 66 123.95 66 124.18"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "am",
+    points: "66 124.42 56 134.14 56 133.9 66 124.18 66 124.42"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "an",
+    points: "66 124.65 56 134.37 56 134.14 66 124.42 66 124.65"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "ao",
+    points: "66 124.89 56 134.61 56 134.37 66 124.65 66 124.89"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "ap",
+    points: "66 125.12 56 134.84 56 134.61 66 124.89 66 125.12"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "aq",
+    points: "66 125.36 56 135.08 56 134.84 66 125.12 66 125.36"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "ar",
+    points: "66 125.59 56 135.31 56 135.08 66 125.36 66 125.59"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "as",
+    points: "66 125.83 56 135.55 56 135.31 66 125.59 66 125.83"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "at",
+    points: "66 126.06 56 135.78 56 135.55 66 125.83 66 126.06"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "au",
+    points: "66 126.3 56 136.02 56 135.78 66 126.06 66 126.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "av",
+    points: "66 126.53 56 136.25 56 136.02 66 126.3 66 126.53"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "aw",
+    points: "66 126.77 56 136.49 56 136.25 66 126.53 66 126.77"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "ax",
+    points: "66 127 56 136.72 56 136.49 66 126.77 66 127"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "ay",
+    points: "66 127.24 56 136.96 56 136.72 66 127 66 127.24"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "az",
+    points: "66 127.47 56 137.19 56 136.96 66 127.24 66 127.47"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "ba",
+    points: "66 127.71 56 137.43 56 137.19 66 127.47 66 127.71"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "bb",
+    points: "66 127.94 56 137.66 56 137.43 66 127.71 66 127.94"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "bc",
+    points: "66 128.18 56 137.9 56 137.66 66 127.94 66 128.18"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "bd",
+    points: "66 128.41 56 138.13 56 137.9 66 128.18 66 128.41"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "be",
+    points: "66 128.65 56 138.37 56 138.13 66 128.41 66 128.65"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "bf",
+    points: "66 128.88 56 138.6 56 138.37 66 128.65 66 128.88"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "bg",
+    points: "66 129.12 56 138.84 56 138.6 66 128.88 66 129.12"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "bh",
+    points: "66 129.35 56 139.07 56 138.84 66 129.12 66 129.35"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "bi",
+    points: "66 129.59 56 139.31 56 139.07 66 129.35 66 129.59"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "bj",
+    points: "66 129.82 56 139.54 56 139.31 66 129.59 66 129.82"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "bk",
+    points: "66 130.06 56 139.78 56 139.54 66 129.82 66 130.06"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "bl",
+    points: "66 130.29 56 140.01 56 139.78 66 130.06 66 130.29"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "bm",
+    points: "66 130.53 56 140.25 56 140.01 66 130.29 66 130.53"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "bn",
+    points: "66 130.76 56 140.49 56 140.25 66 130.53 66 130.76"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "bo",
+    points: "66 131 56 140.72 56 140.49 66 130.76 66 131"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "bp",
+    points: "66 131.23 56 140.96 56 140.72 66 131 66 131.23"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "bq",
+    points: "66 131.47 56 141.19 56 140.96 66 131.23 66 131.47"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "br",
+    points: "66 131.7 56 141.43 56 141.19 66 131.47 66 131.7"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "bs",
+    points: "66 131.94 56 141.66 56 141.43 66 131.7 66 131.94"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    points: "66 132.17 56 141.9 56 141.66 66 131.94 66 132.17"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    points: "56 141.9 66 132.17 66 163 56 163 56 141.9"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("g", {
+    className: "bt"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "c",
+    points: "102.21 123.3 100 125.45 100 123.3 102.21 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "c",
+    points: "102.45 123.3 100 125.69 100 125.45 102.21 123.3 102.45 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "d",
+    points: "102.69 123.3 100 125.92 100 125.69 102.45 123.3 102.69 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "e",
+    points: "102.94 123.3 100 126.16 100 125.92 102.69 123.3 102.94 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "f",
+    points: "103.18 123.3 100 126.39 100 126.16 102.94 123.3 103.18 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "g",
+    points: "103.42 123.3 100 126.63 100 126.39 103.18 123.3 103.42 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "h",
+    points: "103.66 123.3 100 126.86 100 126.63 103.42 123.3 103.66 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "i",
+    points: "103.9 123.3 100 127.09 100 126.86 103.66 123.3 103.9 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "j",
+    points: "104.14 123.3 100 127.33 100 127.09 103.9 123.3 104.14 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "k",
+    points: "104.39 123.3 100 127.56 100 127.33 104.14 123.3 104.39 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "l",
+    points: "104.63 123.3 100 127.8 100 127.56 104.39 123.3 104.63 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "m",
+    points: "104.87 123.3 100 128.04 100 127.8 104.63 123.3 104.87 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "n",
+    points: "105.11 123.3 100 128.27 100 128.04 104.87 123.3 105.11 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "o",
+    points: "105.36 123.3 100 128.51 100 128.27 105.11 123.3 105.36 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "p",
+    points: "105.6 123.3 100 128.74 100 128.51 105.36 123.3 105.6 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "q",
+    points: "105.84 123.3 100 128.98 100 128.74 105.6 123.3 105.84 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "r",
+    points: "106.08 123.3 100 129.21 100 128.98 105.84 123.3 106.08 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "s",
+    points: "106.32 123.3 100 129.45 100 129.21 106.08 123.3 106.32 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "t",
+    points: "106.56 123.3 100 129.68 100 129.45 106.32 123.3 106.56 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "u",
+    points: "106.81 123.3 100 129.92 100 129.68 106.56 123.3 106.81 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "v",
+    points: "107.05 123.3 100 130.15 100 129.92 106.81 123.3 107.05 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "w",
+    points: "107.29 123.3 100 130.39 100 130.15 107.05 123.3 107.29 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "x",
+    points: "107.53 123.3 100 130.62 100 130.39 107.29 123.3 107.53 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "y",
+    points: "107.77 123.3 100 130.86 100 130.62 107.53 123.3 107.77 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "z",
+    points: "108.01 123.3 100 131.09 100 130.86 107.77 123.3 108.01 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "aa",
+    points: "108.26 123.3 100 131.33 100 131.09 108.01 123.3 108.26 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "ab",
+    points: "108.5 123.3 100 131.56 100 131.33 108.26 123.3 108.5 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "ac",
+    points: "108.74 123.3 100 131.8 100 131.56 108.5 123.3 108.74 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "ad",
+    points: "108.98 123.3 100 132.03 100 131.8 108.74 123.3 108.98 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "ae",
+    points: "109.22 123.3 100 132.27 100 132.03 108.98 123.3 109.22 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "af",
+    points: "109.47 123.3 100 132.5 100 132.27 109.22 123.3 109.47 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "ag",
+    points: "109.71 123.3 100 132.74 100 132.5 109.47 123.3 109.71 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "ah",
+    points: "109.95 123.3 100 132.97 100 132.74 109.71 123.3 109.95 123.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "ai",
+    points: "110 123.48 100 133.21 100 132.97 109.95 123.3 110 123.3 110 123.48"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "aj",
+    points: "110 123.72 100 133.44 100 133.21 110 123.48 110 123.72"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "ak",
+    points: "110 123.96 100 133.68 100 133.44 110 123.72 110 123.96"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "al",
+    points: "110 124.19 100 133.91 100 133.68 110 123.96 110 124.19"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "am",
+    points: "110 124.43 100 134.15 100 133.91 110 124.19 110 124.43"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "an",
+    points: "110 124.66 100 134.38 100 134.15 110 124.43 110 124.66"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "ao",
+    points: "110 124.9 100 134.62 100 134.38 110 124.66 110 124.9"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "ap",
+    points: "110 125.13 100 134.85 100 134.62 110 124.9 110 125.13"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "aq",
+    points: "110 125.37 100 135.09 100 134.85 110 125.13 110 125.37"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "ar",
+    points: "110 125.6 100 135.32 100 135.09 110 125.37 110 125.6"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "as",
+    points: "110 125.84 100 135.56 100 135.32 110 125.6 110 125.84"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "at",
+    points: "110 126.07 100 135.79 100 135.56 110 125.84 110 126.07"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "au",
+    points: "110 126.31 100 136.03 100 135.79 110 126.07 110 126.31"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "av",
+    points: "110 126.54 100 136.26 100 136.03 110 126.31 110 126.54"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "aw",
+    points: "110 126.78 100 136.5 100 136.26 110 126.54 110 126.78"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "ax",
+    points: "110 127.01 100 136.73 100 136.5 110 126.78 110 127.01"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "ay",
+    points: "110 127.25 100 136.97 100 136.73 110 127.01 110 127.25"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "az",
+    points: "110 127.48 100 137.2 100 136.97 110 127.25 110 127.48"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "ba",
+    points: "110 127.72 100 137.44 100 137.2 110 127.48 110 127.72"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "bb",
+    points: "110 127.95 100 137.67 100 137.44 110 127.72 110 127.95"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "bc",
+    points: "110 128.19 100 137.91 100 137.67 110 127.95 110 128.19"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "bd",
+    points: "110 128.42 100 138.15 100 137.91 110 128.19 110 128.42"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "be",
+    points: "110 128.66 100 138.38 100 138.15 110 128.42 110 128.66"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "bf",
+    points: "110 128.89 100 138.62 100 138.38 110 128.66 110 128.89"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "bg",
+    points: "110 129.13 100 138.85 100 138.62 110 128.89 110 129.13"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "bh",
+    points: "110 129.36 100 139.09 100 138.85 110 129.13 110 129.36"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "bi",
+    points: "110 129.6 100 139.32 100 139.09 110 129.36 110 129.6"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "bj",
+    points: "110 129.83 100 139.56 100 139.32 110 129.6 110 129.83"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "bk",
+    points: "110 130.07 100 139.79 100 139.56 110 129.83 110 130.07"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "bl",
+    points: "110 130.3 100 140.03 100 139.79 110 130.07 110 130.3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "bm",
+    points: "110 130.54 100 140.26 100 140.03 110 130.3 110 130.54"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "bn",
+    points: "110 130.77 100 140.5 100 140.26 110 130.54 110 130.77"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "bo",
+    points: "110 131.01 100 140.73 100 140.5 110 130.77 110 131.01"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "bp",
+    points: "110 131.24 100 140.97 100 140.73 110 131.01 110 131.24"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "bq",
+    points: "110 131.48 100 141.2 100 140.97 110 131.24 110 131.48"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "br",
+    points: "110 131.71 100 141.44 100 141.2 110 131.48 110 131.71"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "bs",
+    points: "110 131.95 100 141.67 100 141.44 110 131.71 110 131.95"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    points: "110 132.18 100 141.91 100 141.67 110 131.95 110 132.18"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    points: "100 141.91 110 132.18 110 163 100 163 100 141.91"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("g", {
+    className: "bu"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "c",
+    points: "78.31 172 68.9 176.13 68.9 172 78.31 172"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "c",
+    points: "78.68 172 68.9 176.29 68.9 176.13 78.31 172 78.68 172"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "d",
+    points: "79.06 172 68.9 176.46 68.9 176.29 78.68 172 79.06 172"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "e",
+    points: "79.43 172 68.9 176.62 68.9 176.46 79.06 172 79.43 172"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "f",
+    points: "79.8 172 68.9 176.79 68.9 176.62 79.43 172 79.8 172"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "g",
+    points: "80.18 172 68.9 176.95 68.9 176.79 79.8 172 80.18 172"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "h",
+    points: "80.55 172 68.9 177.12 68.9 176.95 80.18 172 80.55 172"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "i",
+    points: "80.92 172 68.9 177.28 68.9 177.12 80.55 172 80.92 172"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "j",
+    points: "81.3 172 68.9 177.44 68.9 177.28 80.92 172 81.3 172"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "k",
+    points: "81.67 172 68.9 177.61 68.9 177.44 81.3 172 81.67 172"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "l",
+    points: "82.05 172 68.9 177.77 68.9 177.61 81.67 172 82.05 172"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "m",
+    points: "82.42 172 68.9 177.94 68.9 177.77 82.05 172 82.42 172"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "n",
+    points: "82.79 172 68.9 178.1 68.9 177.94 82.42 172 82.79 172"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "o",
+    points: "83.17 172 68.9 178.26 68.9 178.1 82.79 172 83.17 172"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "p",
+    points: "83.54 172 68.9 178.43 68.9 178.26 83.17 172 83.54 172"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "q",
+    points: "83.92 172 68.9 178.59 68.9 178.43 83.54 172 83.92 172"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "r",
+    points: "84.29 172 68.9 178.76 68.9 178.59 83.92 172 84.29 172"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "s",
+    points: "84.66 172 68.9 178.92 68.9 178.76 84.29 172 84.66 172"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "t",
+    points: "85.04 172 68.9 179.09 68.9 178.92 84.66 172 85.04 172"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "u",
+    points: "85.41 172 68.9 179.25 68.9 179.09 85.04 172 85.41 172"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "v",
+    points: "85.79 172 68.9 179.41 68.9 179.25 85.41 172 85.79 172"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "w",
+    points: "86.16 172 68.9 179.58 68.9 179.41 85.79 172 86.16 172"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "x",
+    points: "86.53 172 68.9 179.74 68.9 179.58 86.16 172 86.53 172"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "y",
+    points: "86.91 172 68.9 179.91 68.9 179.74 86.53 172 86.91 172"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "z",
+    points: "87.28 172 68.9 180.07 68.9 179.91 86.91 172 87.28 172"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "aa",
+    points: "87.66 172 68.9 180.23 68.9 180.07 87.28 172 87.66 172"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "ab",
+    points: "88.03 172 68.9 180.4 68.9 180.23 87.66 172 88.03 172"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "ac",
+    points: "88.4 172 68.9 180.56 68.9 180.4 88.03 172 88.4 172"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "ad",
+    points: "88.78 172 68.9 180.73 68.9 180.56 88.4 172 88.78 172"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "ae",
+    points: "89.15 172 68.9 180.89 68.9 180.73 88.78 172 89.15 172"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "af",
+    points: "89.53 172 68.9 181.06 68.9 180.89 89.15 172 89.53 172"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "ag",
+    points: "89.9 172 68.9 181.22 68.9 181.06 89.53 172 89.9 172"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "ah",
+    points: "90.27 172 68.9 181.38 68.9 181.22 89.9 172 90.27 172"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "ai",
+    points: "90.65 172 68.9 181.55 68.9 181.38 90.27 172 90.65 172"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "aj",
+    points: "91.02 172 68.9 181.71 68.9 181.55 90.65 172 91.02 172"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "ak",
+    points: "91.39 172 68.9 181.88 68.9 181.71 91.02 172 91.39 172"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "al",
+    points: "91.77 172 68.9 182.04 68.9 181.88 91.39 172 91.77 172"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "am",
+    points: "92.14 172 68.9 182.2 68.9 182.04 91.77 172 92.14 172"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "an",
+    points: "92.52 172 68.9 182.37 68.9 182.2 92.14 172 92.52 172"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "ao",
+    points: "92.89 172 68.9 182.53 68.9 182.37 92.52 172 92.89 172"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "ap",
+    points: "93.27 172 68.9 182.7 68.9 182.53 92.89 172 93.27 172"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "aq",
+    points: "93.64 172 68.9 182.86 68.9 182.7 93.27 172 93.64 172"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "ar",
+    points: "94.01 172 68.9 183.03 68.9 182.86 93.64 172 94.01 172"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "as",
+    points: "94.39 172 68.9 183.19 68.9 183.03 94.01 172 94.39 172"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "at",
+    points: "94.76 172 68.9 183.35 68.9 183.19 94.39 172 94.76 172"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "au",
+    points: "95.14 172 68.9 183.52 68.9 183.35 94.76 172 95.14 172"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "av",
+    points: "95.51 172 68.9 183.68 68.9 183.52 95.14 172 95.51 172"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "aw",
+    points: "95.88 172 68.9 183.85 68.9 183.68 95.51 172 95.88 172"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "ax",
+    points: "96.26 172 68.9 184.01 68.9 183.85 95.88 172 96.26 172"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "ay",
+    points: "96.63 172 68.9 184.17 68.9 184.01 96.26 172 96.63 172"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "az",
+    points: "97 172 68.9 184.34 68.9 184.17 96.63 172 97 172"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "ba",
+    points: "97.3 172.03 68.9 184.5 68.9 184.34 97 172 97.3 172 97.3 172.03"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "bb",
+    points: "97.3 172.2 68.9 184.67 68.9 184.5 97.3 172.03 97.3 172.2"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "bc",
+    points: "97.3 172.36 68.9 184.83 68.9 184.67 97.3 172.2 97.3 172.36"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "bd",
+    points: "97.3 172.53 68.9 185 68.9 184.83 97.3 172.36 97.3 172.53"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "be",
+    points: "97.3 172.69 68.9 185.16 68.9 185 97.3 172.53 97.3 172.69"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "bf",
+    points: "97.3 172.85 68.9 185.32 68.9 185.16 97.3 172.69 97.3 172.85"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "bg",
+    points: "97.3 173.02 68.9 185.49 68.9 185.32 97.3 172.85 97.3 173.02"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "bh",
+    points: "97.3 173.18 68.9 185.65 68.9 185.49 97.3 173.02 97.3 173.18"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "bi",
+    points: "97.3 173.35 68.9 185.82 68.9 185.65 97.3 173.18 97.3 173.35"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "bj",
+    points: "97.3 173.51 68.9 185.98 68.9 185.82 97.3 173.35 97.3 173.51"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "bk",
+    points: "97.3 173.68 68.9 186.14 68.9 185.98 97.3 173.51 97.3 173.68"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "bl",
+    points: "97.3 173.84 68.9 186.31 68.9 186.14 97.3 173.68 97.3 173.84"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "bm",
+    points: "97.3 174 68.9 186.47 68.9 186.31 97.3 173.84 97.3 174"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "bn",
+    points: "97.3 174.17 68.9 186.64 68.9 186.47 97.3 174 97.3 174.17"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "bo",
+    points: "97.3 174.33 68.9 186.8 68.9 186.64 97.3 174.17 97.3 174.33"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "bp",
+    points: "97.3 174.5 68.95 186.94 68.9 186.82 68.9 186.8 97.3 174.33 97.3 174.5"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "bq",
+    points: "97.3 174.66 69.01 187.08 68.95 186.94 97.3 174.5 97.3 174.66"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "br",
+    points: "97.3 174.82 69.07 187.22 69.01 187.08 97.3 174.66 97.3 174.82"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    className: "bs",
+    points: "97.3 174.99 69.14 187.35 69.07 187.22 97.3 174.82 97.3 174.99"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    points: "97.3 175.15 69.19 187.49 69.14 187.35 97.3 174.99 97.3 175.15"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("polygon", {
+    points: "69.51 188.21 69.19 187.49 97.3 175.15 97.3 188.21 69.51 188.21"
+  })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "hairBox"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
+    className: "hair hair1",
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 200 253.9"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("title", null, "Hair 1"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    d: "M190.8,98.5a15.63,15.63,0,0,0-2.6-24.4,16.16,16.16,0,0,0,1-5.4A15.66,15.66,0,0,0,177,53.4a17.05,17.05,0,0,0,.9-5.1,15.66,15.66,0,0,0-15.7-15.7h-.1A15.84,15.84,0,0,0,146.5,19a16.16,16.16,0,0,0-5.4,1,15.61,15.61,0,0,0-26.2-4.8,15.68,15.68,0,0,0-26.5-2.7A15.25,15.25,0,0,0,77.5,8,15.63,15.63,0,0,0,61.9,22.5a15.36,15.36,0,0,0-7.4-1.9A15.67,15.67,0,0,0,38.9,34.9,15.74,15.74,0,0,0,20.1,50.3,16.45,16.45,0,0,0,21.6,57,15.68,15.68,0,0,0,11.4,71.7a16.12,16.12,0,0,0,2.2,8.1,15.62,15.62,0,0,0,1,28.8,15.17,15.17,0,0,0-3.1,9.4,15.56,15.56,0,0,0,10.1,14.6,9.7,9.7,0,0,0-.1,1.7c0,5.7,10.6,9.9,13.8,9.1.2-.1.4-.1.6-.2,0,0,2.9-23.5,3.4-26.9h0c5.9-.3,8.2-3.4,10.7-8.5a18.44,18.44,0,0,0,4.1.6,15.82,15.82,0,0,0,13-6.9,16.29,16.29,0,0,0,5.5,1A15.09,15.09,0,0,0,81,100a15.73,15.73,0,0,0,9.3,3.1,15.47,15.47,0,0,0,10.1-3.7,15.72,15.72,0,0,0,11.7,5.3,16.41,16.41,0,0,0,7.3-1.8,15.72,15.72,0,0,0,12.5,6.3,17.52,17.52,0,0,0,4-.5v.5a15.59,15.59,0,0,0,12.8,15.4,15.43,15.43,0,0,0,7.5,11.2,15,15,0,0,0-1.4,6.4,15.65,15.65,0,0,0,6,12.3,16.42,16.42,0,0,0,7.4,3.2,15,15,0,0,0,2.2.2A15.65,15.65,0,0,0,186,143.2a15.8,15.8,0,0,0,7.4-13.3,15.53,15.53,0,0,0-2.7-8.8,15.54,15.54,0,0,0,4.7-11.2A15.21,15.21,0,0,0,190.8,98.5Z"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
+    className: "hair hair2",
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 200 253.9"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("title", null, "hair 2"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    d: "M101.8,60.2h0A70,70,0,0,0,32,129.9v32a29.27,29.27,0,0,1,4.8-7.7,60,60,0,0,1-.5-7.4v-6.4c-.1-1.4-.2-2.9-.2-4.3,0-1.7.1-3.3.2-5a57.38,57.38,0,0,1,8.9-28.6c-.6,1.1-.9,1.7-.9,1.7s28.5,3.4,45.1-8.7a45.81,45.81,0,0,0,6-5.2A46,46,0,0,0,111.6,105c17.7,9.8,39.4,9.6,46.8,9.2A67.79,67.79,0,0,1,162,136c0,16.6,0,36.7-12.1,53.3-6.5,9-17.5,14.3-32.2,14.3H59.8a30.33,30.33,0,0,1-27.2-17.1,70,70,0,0,0,69.2,61h0a70,70,0,0,0,69.8-69.7v-48C171.6,91.6,140.2,60.2,101.8,60.2Z"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
+    className: "hair hair3",
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 200 253.9"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("title", null, "hair 3"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    d: "M172.4,122c0-37.2-29.3-67.6-65-67.6H97.7c-35.8,0-65,30.4-65,67.6h0a69.84,69.84,0,0,0,3.9,23v-8.7A65.12,65.12,0,0,1,48.2,99.1a71.9,71.9,0,0,0,6.4,13.5c5.8,9.5,9.6,2,8-2.3-1.3-3.5-2.7-13.6-3.2-17.1.4,2,1.8,6.6,7.2,14.5,7.5,11.1,9.7.7,9.7.7l-1.6-4.2c-1.6-4.2-3.1-15.3-3.1-15.3S76,102,81.3,107.5s7.5,1.3,5.7-4.6-2.2-14.4-2.2-14.4A43.5,43.5,0,0,0,95.9,110c9.5,10.1,11.5-2.6,9.4-7.2S102.5,87,102.5,87s4.9,12.2,10.2,19.1,11,2.3,8.8-2.9-2.8-13.7-2.8-13.7l10.4,15.7c10.4,15.7,17.6,16.3,17.6,16.3v19s4.6,2,8.5,8.6a48.35,48.35,0,0,1,5.3,14.3,5.2,5.2,0,0,1,.3-.5v.1c8.2-11.2,11.6-25.8,11.6-41Z"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
+    className: "hair hair4",
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 200 253.9"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("title", null, "hair 4"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    d: "M172.8,78.8a15.83,15.83,0,0,0-4.1-10.5,14.56,14.56,0,0,0,.9-5.2,15.66,15.66,0,0,0-15.7-15.7h-.3a15.6,15.6,0,0,0-21.1-11.7A15.6,15.6,0,0,0,109.7,32a15.5,15.5,0,0,0-12.3-6,15.78,15.78,0,0,0-13.8,8.2,15.45,15.45,0,0,0-12.7-6.5A15.76,15.76,0,0,0,55.5,40.3a15.75,15.75,0,0,0-21,14.8A15.66,15.66,0,0,0,18.8,70.8a15.47,15.47,0,0,0,7.8,13.5A15,15,0,0,0,25.1,91a15.61,15.61,0,0,0,9.5,14.4,16,16,0,0,0,6.2,1.3,15.72,15.72,0,0,0,13.6-7.9,15.58,15.58,0,0,0,8.1-5.4,15.62,15.62,0,0,0,20.7,1.8,15.62,15.62,0,0,0,22.7-1.7,15.63,15.63,0,0,0,11.3,4.8,15.35,15.35,0,0,0,9.2-3,15.67,15.67,0,0,0,11.8,5.4h.1a15.62,15.62,0,0,0,10.4,13.5v19.4s4.8,2.1,9,8.8a28.3,28.3,0,0,1,4,14.2s19.4-28.1,6.2-66.3A16.48,16.48,0,0,0,172.8,78.8Z"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
+    className: "hair hair5",
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 200 253.9"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("title", null, "hair 5"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    d: "M172.7,138.4a61.13,61.13,0,0,0,3.4-20.1v-9.9A62.29,62.29,0,0,0,114,46.3H91.9A62,62,0,0,0,38.6,76.7a18.53,18.53,0,0,0-8.8,15.8,16.93,16.93,0,0,0,.9,5.6,59.3,59.3,0,0,0-.9,10.3v9.9a50.54,50.54,0,0,0,.3,5.5,50.54,50.54,0,0,0-.3,5.5h0a13.34,13.34,0,0,0,.1,2h-.1a27.8,27.8,0,0,0,0,55.6c1,0,2-.1,3-.2a30.46,30.46,0,0,1-3-13.2h0A30,30,0,0,1,37,154a59.09,59.09,0,0,1-.5-7.4v-6.4c-.1-1.4-.2-2.9-.2-4.3,0-1.7.1-3.3.2-5a56.92,56.92,0,0,1,5-21.4,19.38,19.38,0,0,0,6.9,1.3,18.58,18.58,0,0,0,13.5-5.9,18.39,18.39,0,0,0,26,1c.35-.32.69-.66,1-1a18.39,18.39,0,0,0,26,1c.35-.32.69-.66,1-1a18.51,18.51,0,0,0,31.9-10.2A65.73,65.73,0,0,1,162,135.9c0,16.4,0,36.3-11.8,52.8a27.75,27.75,0,0,0,42.1-23.8A27.19,27.19,0,0,0,172.7,138.4Z"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
+    className: "hair hair6",
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 200 253.9"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("title", null, "hair 6"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    d: "M171.1,92.1a40.12,40.12,0,0,0-40-40H74.6a40.12,40.12,0,0,0-40,40v38.1a37.69,37.69,0,0,0,1.8,11.7v-1c-.1-1.4-.2-2.9-.2-4.3,0-1.7.1-3.3.2-5A56.62,56.62,0,0,1,52.2,94.3a.1.1,0,0,1,.1-.1,15.37,15.37,0,0,0,9.6,3.4,15.67,15.67,0,0,0,8.5-2.5,15.18,15.18,0,0,0,8.5,2.5,15.42,15.42,0,0,0,8.5-2.5,15.18,15.18,0,0,0,8.5,2.5,15.42,15.42,0,0,0,8.5-2.5,15.18,15.18,0,0,0,8.5,2.5,15.42,15.42,0,0,0,8.5-2.5,15.18,15.18,0,0,0,8.5,2.5,16.55,16.55,0,0,0,3.2-.3c4.2,5.7,12.5,17.8,13.6,26.1l1.5,11.2s13.9,23.6,14.1,21.5a42.4,42.4,0,0,0,8.9-25.8V92.1Z"
+  }))));
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Avatar);
+
+/***/ }),
+
 /***/ "./client/components/Footer.jsx":
 /*!**************************************!*\
   !*** ./client/components/Footer.jsx ***!
@@ -937,6 +1677,86 @@ function Footer() {
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Footer);
+
+/***/ }),
+
+/***/ "./client/components/Hairstyles.jsx":
+/*!******************************************!*\
+  !*** ./client/components/Hairstyles.jsx ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+
+function Hairstyles() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
+    className: "avatarContainer chooseHair"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "hairBox"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
+    style: {
+      display: 'block'
+    },
+    className: "hair hair1",
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 200 253.9"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("title", null, "Hair 1"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    d: "M190.8,98.5a15.63,15.63,0,0,0-2.6-24.4,16.16,16.16,0,0,0,1-5.4A15.66,15.66,0,0,0,177,53.4a17.05,17.05,0,0,0,.9-5.1,15.66,15.66,0,0,0-15.7-15.7h-.1A15.84,15.84,0,0,0,146.5,19a16.16,16.16,0,0,0-5.4,1,15.61,15.61,0,0,0-26.2-4.8,15.68,15.68,0,0,0-26.5-2.7A15.25,15.25,0,0,0,77.5,8,15.63,15.63,0,0,0,61.9,22.5a15.36,15.36,0,0,0-7.4-1.9A15.67,15.67,0,0,0,38.9,34.9,15.74,15.74,0,0,0,20.1,50.3,16.45,16.45,0,0,0,21.6,57,15.68,15.68,0,0,0,11.4,71.7a16.12,16.12,0,0,0,2.2,8.1,15.62,15.62,0,0,0,1,28.8,15.17,15.17,0,0,0-3.1,9.4,15.56,15.56,0,0,0,10.1,14.6,9.7,9.7,0,0,0-.1,1.7c0,5.7,10.6,9.9,13.8,9.1.2-.1.4-.1.6-.2,0,0,2.9-23.5,3.4-26.9h0c5.9-.3,8.2-3.4,10.7-8.5a18.44,18.44,0,0,0,4.1.6,15.82,15.82,0,0,0,13-6.9,16.29,16.29,0,0,0,5.5,1A15.09,15.09,0,0,0,81,100a15.73,15.73,0,0,0,9.3,3.1,15.47,15.47,0,0,0,10.1-3.7,15.72,15.72,0,0,0,11.7,5.3,16.41,16.41,0,0,0,7.3-1.8,15.72,15.72,0,0,0,12.5,6.3,17.52,17.52,0,0,0,4-.5v.5a15.59,15.59,0,0,0,12.8,15.4,15.43,15.43,0,0,0,7.5,11.2,15,15,0,0,0-1.4,6.4,15.65,15.65,0,0,0,6,12.3,16.42,16.42,0,0,0,7.4,3.2,15,15,0,0,0,2.2.2A15.65,15.65,0,0,0,186,143.2a15.8,15.8,0,0,0,7.4-13.3,15.53,15.53,0,0,0-2.7-8.8,15.54,15.54,0,0,0,4.7-11.2A15.21,15.21,0,0,0,190.8,98.5Z"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
+    style: {
+      display: 'block'
+    },
+    className: "hair hair2",
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 200 253.9"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("title", null, "hair 2"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    d: "M101.8,60.2h0A70,70,0,0,0,32,129.9v32a29.27,29.27,0,0,1,4.8-7.7,60,60,0,0,1-.5-7.4v-6.4c-.1-1.4-.2-2.9-.2-4.3,0-1.7.1-3.3.2-5a57.38,57.38,0,0,1,8.9-28.6c-.6,1.1-.9,1.7-.9,1.7s28.5,3.4,45.1-8.7a45.81,45.81,0,0,0,6-5.2A46,46,0,0,0,111.6,105c17.7,9.8,39.4,9.6,46.8,9.2A67.79,67.79,0,0,1,162,136c0,16.6,0,36.7-12.1,53.3-6.5,9-17.5,14.3-32.2,14.3H59.8a30.33,30.33,0,0,1-27.2-17.1,70,70,0,0,0,69.2,61h0a70,70,0,0,0,69.8-69.7v-48C171.6,91.6,140.2,60.2,101.8,60.2Z"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
+    style: {
+      display: 'block'
+    },
+    className: "hair hair3",
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 200 253.9"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("title", null, "hair 3"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    d: "M172.4,122c0-37.2-29.3-67.6-65-67.6H97.7c-35.8,0-65,30.4-65,67.6h0a69.84,69.84,0,0,0,3.9,23v-8.7A65.12,65.12,0,0,1,48.2,99.1a71.9,71.9,0,0,0,6.4,13.5c5.8,9.5,9.6,2,8-2.3-1.3-3.5-2.7-13.6-3.2-17.1.4,2,1.8,6.6,7.2,14.5,7.5,11.1,9.7.7,9.7.7l-1.6-4.2c-1.6-4.2-3.1-15.3-3.1-15.3S76,102,81.3,107.5s7.5,1.3,5.7-4.6-2.2-14.4-2.2-14.4A43.5,43.5,0,0,0,95.9,110c9.5,10.1,11.5-2.6,9.4-7.2S102.5,87,102.5,87s4.9,12.2,10.2,19.1,11,2.3,8.8-2.9-2.8-13.7-2.8-13.7l10.4,15.7c10.4,15.7,17.6,16.3,17.6,16.3v19s4.6,2,8.5,8.6a48.35,48.35,0,0,1,5.3,14.3,5.2,5.2,0,0,1,.3-.5v.1c8.2-11.2,11.6-25.8,11.6-41Z"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
+    style: {
+      display: 'block'
+    },
+    className: "hair hair4",
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 200 253.9"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("title", null, "hair 4"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    d: "M172.8,78.8a15.83,15.83,0,0,0-4.1-10.5,14.56,14.56,0,0,0,.9-5.2,15.66,15.66,0,0,0-15.7-15.7h-.3a15.6,15.6,0,0,0-21.1-11.7A15.6,15.6,0,0,0,109.7,32a15.5,15.5,0,0,0-12.3-6,15.78,15.78,0,0,0-13.8,8.2,15.45,15.45,0,0,0-12.7-6.5A15.76,15.76,0,0,0,55.5,40.3a15.75,15.75,0,0,0-21,14.8A15.66,15.66,0,0,0,18.8,70.8a15.47,15.47,0,0,0,7.8,13.5A15,15,0,0,0,25.1,91a15.61,15.61,0,0,0,9.5,14.4,16,16,0,0,0,6.2,1.3,15.72,15.72,0,0,0,13.6-7.9,15.58,15.58,0,0,0,8.1-5.4,15.62,15.62,0,0,0,20.7,1.8,15.62,15.62,0,0,0,22.7-1.7,15.63,15.63,0,0,0,11.3,4.8,15.35,15.35,0,0,0,9.2-3,15.67,15.67,0,0,0,11.8,5.4h.1a15.62,15.62,0,0,0,10.4,13.5v19.4s4.8,2.1,9,8.8a28.3,28.3,0,0,1,4,14.2s19.4-28.1,6.2-66.3A16.48,16.48,0,0,0,172.8,78.8Z"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
+    style: {
+      display: 'block'
+    },
+    className: "hair hair5",
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 200 253.9"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("title", null, "hair 5"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    d: "M172.7,138.4a61.13,61.13,0,0,0,3.4-20.1v-9.9A62.29,62.29,0,0,0,114,46.3H91.9A62,62,0,0,0,38.6,76.7a18.53,18.53,0,0,0-8.8,15.8,16.93,16.93,0,0,0,.9,5.6,59.3,59.3,0,0,0-.9,10.3v9.9a50.54,50.54,0,0,0,.3,5.5,50.54,50.54,0,0,0-.3,5.5h0a13.34,13.34,0,0,0,.1,2h-.1a27.8,27.8,0,0,0,0,55.6c1,0,2-.1,3-.2a30.46,30.46,0,0,1-3-13.2h0A30,30,0,0,1,37,154a59.09,59.09,0,0,1-.5-7.4v-6.4c-.1-1.4-.2-2.9-.2-4.3,0-1.7.1-3.3.2-5a56.92,56.92,0,0,1,5-21.4,19.38,19.38,0,0,0,6.9,1.3,18.58,18.58,0,0,0,13.5-5.9,18.39,18.39,0,0,0,26,1c.35-.32.69-.66,1-1a18.39,18.39,0,0,0,26,1c.35-.32.69-.66,1-1a18.51,18.51,0,0,0,31.9-10.2A65.73,65.73,0,0,1,162,135.9c0,16.4,0,36.3-11.8,52.8a27.75,27.75,0,0,0,42.1-23.8A27.19,27.19,0,0,0,172.7,138.4Z"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
+    style: {
+      display: 'block'
+    },
+    className: "hair hair6",
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 200 253.9"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("title", null, "hair 6"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    d: "M171.1,92.1a40.12,40.12,0,0,0-40-40H74.6a40.12,40.12,0,0,0-40,40v38.1a37.69,37.69,0,0,0,1.8,11.7v-1c-.1-1.4-.2-2.9-.2-4.3,0-1.7.1-3.3.2-5A56.62,56.62,0,0,1,52.2,94.3a.1.1,0,0,1,.1-.1,15.37,15.37,0,0,0,9.6,3.4,15.67,15.67,0,0,0,8.5-2.5,15.18,15.18,0,0,0,8.5,2.5,15.42,15.42,0,0,0,8.5-2.5,15.18,15.18,0,0,0,8.5,2.5,15.42,15.42,0,0,0,8.5-2.5,15.18,15.18,0,0,0,8.5,2.5,15.42,15.42,0,0,0,8.5-2.5,15.18,15.18,0,0,0,8.5,2.5,16.55,16.55,0,0,0,3.2-.3c4.2,5.7,12.5,17.8,13.6,26.1l1.5,11.2s13.9,23.6,14.1,21.5a42.4,42.4,0,0,0,8.9-25.8V92.1Z"
+  }))));
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Hairstyles);
 
 /***/ }),
 
@@ -1055,7 +1875,47 @@ function TemplateAspect() {
     id: "userAspect"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, "Taha Tinana", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("small", null, "Our Body")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
     className: "intro"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "What are some ways you can use your tinana (body) to feel good? Do you like to dance, or play sports? How about eating your favourite healthy kai? What are your ideas?"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "What are some ways you can use your tinana (body) to feel good? Do you like to dance, or play sports? How about eating your favourite healthy kai? What are your ideas?")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
+    className: "userEntry"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", {
+    htmlFor: "userEntry"
+  }, "My Idea:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("textarea", {
+    name: "userEntry",
+    id: "",
+    cols: "30",
+    rows: "3"
+  }, "This is my idea... "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", {
+    htmlFor: "userRecording"
+  }, "Record:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("audio", {
+    id: "player",
+    controls: true
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", {
+    htmlFor: "userFeeling"
+  }, "It makes me feel:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+    type: "radio",
+    name: "feeling",
+    id: "1"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+    type: "radio",
+    name: "feeling",
+    id: "2"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+    type: "radio",
+    name: "feeling",
+    id: "3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+    type: "radio",
+    name: "feeling",
+    id: "4"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+    type: "radio",
+    name: "feeling",
+    id: "5"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+    type: "radio",
+    name: "feeling",
+    id: "6"
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
     className: "aspectSection",
     id: "aspectLinks"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Useful Links"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
@@ -1124,10 +1984,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _Avatar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Avatar */ "./client/components/Avatar.jsx");
+/* harmony import */ var _Hairstyles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Hairstyles */ "./client/components/Hairstyles.jsx");
+
+
 
 
 function TemplateUser() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "User");
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
+    id: "userPage"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("form", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, "My Info"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", {
+    htmlFor: "name"
+  }, "My Name"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+    type: "text",
+    name: "name",
+    id: ""
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", {
+    htmlFor: "dob"
+  }, "My Birthday"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+    type: "date",
+    name: "dob",
+    id: ""
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Avatar__WEBPACK_IMPORTED_MODULE_1__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Hairstyles__WEBPACK_IMPORTED_MODULE_2__.default, null));
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (TemplateUser);

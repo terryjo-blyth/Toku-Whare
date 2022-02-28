@@ -333,6 +333,42 @@ footer nav a {
   fill: #3e54a4;
 }
 
+/* User page */
+#userPage {
+  display: flex;
+  box-sizing: border-box;
+  padding: 0px 70px;
+  font-family: lfl;
+}
+#userPage form {
+  border: 3px #66cbe4 solid;
+  background-color: #fff;
+  max-width: 800px;
+  width: calc(100vw - 140px);
+  padding: 18px 30px;
+}
+#userPage label {
+  font-family: lflo;
+  color: #1f7eaa;
+  font-size: 36px;
+  font-weight: bold;
+  width: 100%;
+  display: block;
+  margin: 10px 0px 3px 0px;
+}
+#userPage input {
+  border: 3px #66cbe4 solid;
+  background-color: #fff;
+  padding: 6px;
+  font-family: lfl;
+  font-size: 30px;
+  color: #1f7eaa;
+}
+#userPage input:hover, #userPage input:focus, #userPage input:active {
+  border-color: #1f7eaa;
+  outline: #1f7eaa;
+}
+
 /* Aspect Page */
 #aspectPage {
   display: flex;
@@ -427,7 +463,34 @@ footer nav a {
   line-height: 30px;
 }
 #userAspect .intro p {
-  margin-top: 0px;
+  margin: 0px;
+}
+#userAspect .userEntry label {
+  font-size: 30px;
+  width: 100%;
+  font-weight: bold;
+  color: #1f7eaa;
+  float: left;
+  margin-top: 10px;
+}
+#userAspect .userEntry textarea {
+  width: 100%;
+  resize: vertical;
+  background-color: #aeeaef;
+  border: #fff;
+  margin-top: 10px;
+  font-size: 30px;
+  font-family: lfl;
+  padding: 10px;
+  box-sizing: border-box;
+  color: #1f7eaa;
+}
+#userAspect .userEntry textarea:focus, #userAspect .userEntry textarea:hover, #userAspect .userEntry textarea:active {
+  border-color: #1f7eaa;
+  outline-color: #1f7eaa;
+}
+#userAspect .userEntry input[type=radio] {
+  cursor: pointer;
 }
 
 #aspectLinks {

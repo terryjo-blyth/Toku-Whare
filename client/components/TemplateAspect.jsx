@@ -15,6 +15,19 @@ function TemplateAspect () {
         <section className="intro">
           <p>What are some ways you can use your tinana (body) to feel good? Do you like to dance, or play sports? How about eating your favourite healthy kai? What are your ideas?</p>
         </section>
+        <section className="userEntry">
+          <label htmlFor="userEntry">My Idea:</label>
+          <textarea name="userEntry" id="" cols="30" rows="3">This is my idea... </textarea>
+          <label htmlFor="userRecording">Record:</label><br />
+          <audio id="player" controls></audio>
+          <label htmlFor="userFeeling">It makes me feel:</label><br />
+          <input type="radio" name="feeling" id="1" />
+          <input type="radio" name="feeling" id="2" />
+          <input type="radio" name="feeling" id="3" />
+          <input type="radio" name="feeling" id="4" />
+          <input type="radio" name="feeling" id="5" />
+          <input type="radio" name="feeling" id="6" />
+        </section>
       </section>
       <section className="aspectSection" id="aspectLinks">
         <h3>Useful Links</h3>

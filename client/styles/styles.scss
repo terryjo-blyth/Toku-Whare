@@ -319,6 +319,42 @@ footer{
   }
 }
 
+/* User page */
+#userPage{
+  display: flex;
+  box-sizing: border-box;
+  padding:0px 70px;
+  font-family:lfl;
+  form{
+    border:3px $lightBlue solid;
+    background-color: #fff;
+    max-width:800px;
+    width:calc(100vw - 140px);
+    padding:18px 30px;
+  }
+  label{
+    font-family:lflo;
+    color:$darkBlue;
+    font-size:36px;
+    font-weight:bold;
+    width:100%;
+    display:block;
+    margin:10px 0px 3px 0px;
+  }
+  input{
+    border:3px $lightBlue solid;
+    background-color:#fff;
+    padding:6px;
+    font-family:lfl;
+    font-size:30px;
+    color:$darkBlue;
+    &:hover, &:focus, &:active{
+      border-color:$darkBlue;
+      outline:$darkBlue;
+    }
+  }
+}
+
 /* Aspect Page */
 #aspectPage{
   display: flex;
@@ -355,7 +391,6 @@ footer{
     }
   }
 }
-
 .aspectSection{
   box-sizing: border-box;
 }
@@ -393,7 +428,36 @@ footer{
     font-size:24px;
     line-height:30px;
     p{
-      margin-top:0px;
+      margin:0px;
+    }
+  }
+  .userEntry{
+    label{
+      font-size:30px;
+      width:100%;
+      font-weight:bold;
+      color:$darkBlue;
+      float:left;
+      margin-top:10px;
+    }
+    textarea {
+      width:100%;
+      resize: vertical;
+      background-color:#aeeaef;
+      border:#fff;
+      margin-top:10px;
+      font-size:30px;
+      font-family:lfl;
+      padding:10px;
+      box-sizing: border-box;
+      color:$darkBlue;
+      &:focus, &:hover, &:active{
+        border-color:$darkBlue;
+        outline-color:$darkBlue;
+      }
+    }
+    input[type='radio']{
+      cursor: pointer;
     }
   }
 }
