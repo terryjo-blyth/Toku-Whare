@@ -8,7 +8,7 @@ body {
 
 /* breakpoints */
 $tablet:800px;
-$mobile:500px;
+$mobile:582px;
 
 /* fonts */
 @font-face {
@@ -50,6 +50,9 @@ header{
   background-size:contain;
   background-repeat:repeat-x;
   position:relative;
+  a{
+    text-decoration: none;
+  }
   h1{
     font-size:86px;
     color:$darkBlue;
@@ -72,6 +75,7 @@ header{
   }
   .login{
     position:absolute;
+    text-decoration: none;
     right:70px;
     top:38px;
     border:3px $lightBlue solid;
@@ -79,9 +83,22 @@ header{
     color:$darkBlue;
     background-color: #fff;
     font-size:24px;
-    padding:14px;
+    padding:8px 14px;
     box-sizing: border-box;
     z-index:10;
+    .avatarContainer{
+      height:38px;
+      width:calc(38px * 0.95);
+      float:left;
+    }
+    .loginText{
+      margin-left:6px;
+      position:relative;
+      top:6px;
+      @media (max-width: $tablet) {
+        display:none;
+      }
+    }
     @media (max-width: $tablet) {
       right:10px;
       top:10px;
@@ -104,6 +121,41 @@ main{
   }
 }
 
+footer{
+  nav{
+    width:100%;
+    padding:10px;
+    box-sizing: border-box;
+    background-color:$darkBlue;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align:center;
+    font-size:14px;
+    @media (max-width: $mobile) {
+      padding:0px;
+      width:100%;
+      background-color:$lightBlue;
+    }
+    a{
+      color:#fff;
+      margin:0px 10px;
+      text-decoration: none;
+      box-sizing: border-box;
+      @media (max-width: $mobile) {
+        width:100%;
+        display:block;
+        border-bottom:1px $darkBlue solid;
+        padding:23px 10px;
+        margin:0px;
+        &:last-child{
+          border:0px;
+        }
+      }
+    }
+  }
+}
+
+
+/* Home Page */
 .aspectsNav{
   position:absolute;
   width:calc(100% - 140px);
@@ -143,7 +195,7 @@ main{
       -webkit-text-stroke:none;
       -webkit-text-fill-color:none;
       background-color:#fff;
-      border-bottom:3px $yellow solid;
+      border-bottom:6px $yellow solid;
       letter-spacing:1px;
       small{
         font-size:0.7em;
@@ -267,3 +319,467 @@ main{
   }
 }
 
+/* Aspect Page */
+#aspectPage{
+  display: flex;
+  box-sizing: border-box;
+  padding:0px 70px;
+  font-family:lfl;
+  @media (max-width: calc(200px + $tablet)) {
+    display:block;
+  }
+  @media (max-width: $mobile) {
+    padding:0px 20px;
+  }
+  .whareContainer{
+    width:calc(25vw - 100px);
+    height:calc((25vw - 100px) * 0.7);
+    @media (max-width: calc(200px + $tablet))  {
+      width:200px;
+      height:calc(200px * 0.7)
+    }
+    @media (max-width: $mobile) {
+      width:130px;
+      height:calc(130px * 0.7);
+    }
+  }
+  h2{
+    font-family:lflo;
+    color:$darkBlue;
+    font-size:56px;
+    margin:0px;
+    line-height:38px;
+    text-align: center;
+    small{
+      font-size:0.8em;
+    }
+  }
+}
+
+.aspectSection{
+  box-sizing: border-box;
+}
+#aboutAspect{
+  width:25%;
+  padding:0px 40px;
+  font-size:20px;
+  color:#115d81;
+  @media (max-width: calc(200px + $tablet))  {
+    display: flex;
+    padding:0px;
+    margin-bottom:16px;
+  }
+  @media (max-width: $mobile) {
+    display: block;
+    margin-top:10px;
+  }
+  .description{
+    box-sizing: border-box;
+    @media (max-width: calc(200px + $tablet))  {
+      width:70%;
+      padding-left:16px;
+    }
+    @media (max-width: $mobile) {
+      width:100%;
+    }
+  }
+}
+#userAspect{
+  border:3px $lightBlue solid;
+  background-color: #fff;
+  width:50%;
+  padding:18px 30px;
+  .intro{
+    font-size:24px;
+    line-height:30px;
+    p{
+      margin-top:0px;
+    }
+  }
+}
+#aspectLinks{
+  width:25%;
+  color:$darkBlue;
+  padding:0px 26px;
+  @media (max-width: calc(200px + $tablet))  {
+    text-align:center;
+    margin-top:40px;
+    padding-bottom:30px;
+  }
+  @media (max-width: $mobile) {
+    margin-top:20px;
+  }
+  h3{
+    font-size:36px;
+    margin:0px;
+  }
+  ul{
+    padding:0px;
+  }
+  li{
+    margin:0px 0px 22px 0px;
+    @media (max-width: calc(200px + $tablet))  {
+      list-style-type: none;
+    }
+  }
+  a{
+    font-size:24px;
+    color:$darkBlue;
+  }
+}
+
+#aboutAspect,#userAspect,#aspectLinks{
+  @media (max-width: calc(200px + $tablet))  {
+    width:100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* default avatar styling */
+.avatarContainer{
+  height:210px;
+  width:200px;
+  position:relative;
+}
+
+.face, .head, .hairBox{
+  display:block;
+  height:100%;
+  width:100%;
+  position:absolute;
+}
+
+.head{
+  z-index:1;
+}
+
+.face{
+  z-index:4;
+}
+
+.hairBox,.hair{
+  z-index:6;
+}
+
+.head svg path{
+/*   face colour */
+  fill:#d29367;
+}
+
+.hair{
+  display:none;
+  /*   hair colour */
+  fill:brown;
+}
+
+.hair4{
+  display:block;
+}
+
+/* face w/gradient: */
+.a {
+  fill: none;
+}
+
+.b {
+  clip-path: url(#a);
+}
+
+.c {
+  fill: #464243;
+}
+
+.d {
+  fill: #454142;
+}
+
+.e {
+  fill: #444041;
+}
+
+.f {
+  fill: #433f40;
+}
+
+.g {
+  fill: #423e3f;
+}
+
+.h {
+  fill: #413d3e;
+}
+
+.i {
+  fill: #403c3d;
+}
+
+.j {
+  fill: #3f3b3c;
+}
+
+.k {
+  fill: #3e3a3b;
+}
+
+.l {
+  fill: #3d393a;
+}
+
+.m {
+  fill: #3c3839;
+}
+
+.n {
+  fill: #3b3738;
+}
+
+.o {
+  fill: #3a3737;
+}
+
+.p {
+  fill: #393636;
+}
+
+.q {
+  fill: #383535;
+}
+
+.r {
+  fill: #373434;
+}
+
+.s {
+  fill: #363333;
+}
+
+.t {
+  fill: #353232;
+}
+
+.u {
+  fill: #343132;
+}
+
+.v {
+  fill: #333031;
+}
+
+.w {
+  fill: #322f30;
+}
+
+.x {
+  fill: #312e2f;
+}
+
+.y {
+  fill: #302d2e;
+}
+
+.z {
+  fill: #2f2c2d;
+}
+
+.aa {
+  fill: #2e2b2c;
+}
+
+.ab {
+  fill: #2d2a2b;
+}
+
+.ac {
+  fill: #2c292a;
+}
+
+.ad {
+  fill: #2b2829;
+}
+
+.ae {
+  fill: #2a2728;
+}
+
+.af {
+  fill: #292627;
+}
+
+.ag {
+  fill: #282526;
+}
+
+.ah {
+  fill: #272425;
+}
+
+.ai {
+  fill: #262324;
+}
+
+.aj {
+  fill: #252223;
+}
+
+.ak {
+  fill: #242122;
+}
+
+.al {
+  fill: #222121;
+}
+
+.am {
+  fill: #212020;
+}
+
+.an {
+  fill: #201f1f;
+}
+
+.ao {
+  fill: #1f1e1e;
+}
+
+.ap {
+  fill: #1e1d1d;
+}
+
+.aq {
+  fill: #1d1c1c;
+}
+
+.ar {
+  fill: #1c1b1b;
+}
+
+.as {
+  fill: #1b1a1a;
+}
+
+.at {
+  fill: #1a1919;
+}
+
+.au {
+  fill: #191818;
+}
+
+.av {
+  fill: #181717;
+}
+
+.aw {
+  fill: #171616;
+}
+
+.ax {
+  fill: #161515;
+}
+
+.ay {
+  fill: #151414;
+}
+
+.az {
+  fill: #141313;
+}
+
+.ba {
+  fill: #131212;
+}
+
+.bb {
+  fill: #121111;
+}
+
+.bc {
+  fill: #111011;
+}
+
+.bd {
+  fill: #100f10;
+}
+
+.be {
+  fill: #0f0e0f;
+}
+
+.bf {
+  fill: #0e0d0e;
+}
+
+.bg {
+  fill: #0d0c0d;
+}
+
+.bh {
+  fill: #0c0b0c;
+}
+
+.bi {
+  fill: #0b0b0b;
+}
+
+.bj {
+  fill: #0a0a0a;
+}
+
+.bk {
+  fill: #090909;
+}
+
+.bl {
+  fill: #080808;
+}
+
+.bm {
+  fill: #070707;
+}
+
+.bn {
+  fill: #060606;
+}
+
+.bo {
+  fill: #050505;
+}
+
+.bp {
+  fill: #040404;
+}
+
+.bq {
+  fill: #030303;
+}
+
+.br {
+  fill: #020202;
+}
+
+.bs {
+  fill: #010101;
+}
+
+.bt {
+  clip-path: url(#b);
+}
+
+.bu {
+  clip-path: url(#c);
+}
