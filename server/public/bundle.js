@@ -660,8 +660,8 @@ function fetchWhare(id) {
 }
 function addUserData(newData) {
   return function (dispatch) {
-    return (0,_apis__WEBPACK_IMPORTED_MODULE_0__.addUser)(newData).then(function (data) {
-      dispatch(setUserSuccess(data));
+    return (0,_apis__WEBPACK_IMPORTED_MODULE_0__.addUser)(newData).then(function () {
+      dispatch(setUserSuccess(newData));
       return null;
     })["catch"](function (err) {
       dispatch(setError(err.message));
@@ -748,7 +748,7 @@ function _addUser() {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
-            return _context.abrupt("return", superagent__WEBPACK_IMPORTED_MODULE_2___default().post("".concat(whareUrl)).send(user)["catch"](logError));
+            return _context.abrupt("return", superagent__WEBPACK_IMPORTED_MODULE_2___default().post("".concat(whareUrl)).set('authorization', "Bearer ".concat(user.token)).send(user)["catch"](logError));
 
           case 1:
           case "end":
@@ -816,31 +816,31 @@ function _cacheUser() {
             // TODO: call the useAuth0 and destructure:
             // isAuthenticated, getAccessTokenSilently and user
             _useAuth = useAuth0(), getAccessTokenSilently = _useAuth.getAccessTokenSilently, isAuthenticated = _useAuth.isAuthenticated, user = _useAuth.user;
-            console.log(user);
 
             if (!(isAuthenticated && !(state !== null && state !== void 0 && state.token))) {
               _context.next = 14;
               break;
             }
 
-            _context.prev = 3;
-            _context.next = 6;
+            _context.prev = 2;
+            _context.next = 5;
             return getAccessTokenSilently();
 
-          case 6:
+          case 5:
             token = _context.sent;
             userToSave = {
               auth0Id: user.sub,
               email: user.email,
               token: token
             };
-            _store__WEBPACK_IMPORTED_MODULE_3__.default.dispatch((0,_actions__WEBPACK_IMPORTED_MODULE_2__.setUserSuccess)(userToSave));
+            console.log(userToSave);
+            _store__WEBPACK_IMPORTED_MODULE_3__.default.dispatch((0,_actions__WEBPACK_IMPORTED_MODULE_2__.addUserData)(userToSave));
             _context.next = 14;
             break;
 
           case 11:
             _context.prev = 11;
-            _context.t0 = _context["catch"](3);
+            _context.t0 = _context["catch"](2);
             console.error(_context.t0);
 
           case 14:
@@ -848,7 +848,7 @@ function _cacheUser() {
             return _context.stop();
         }
       }
-    }, _callee, null, [[3, 11]]);
+    }, _callee, null, [[2, 11]]);
   }));
   return _cacheUser.apply(this, arguments);
 }

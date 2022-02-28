@@ -19,12 +19,18 @@ module.exports = router
 
 router.post('/', checkJwt, async (req, res) => {
   const newUser = req.body
-  const { auth0Id, email } = newUser
+  const auth0Id = req.user?.sub
+  const { email } = newUser
   const user = {
-    auth0_id: auth0Id,
+    auth0Id: auth0Id,
     email
   }
+  console.log(newUser, auth0Id, email)
   try {
+    const isInDb = await db.isInDb(auth0Id)
+    if (isInDb) {
+      return res.sendStatus(200)
+    }
     await db.createUser(user)
     res.sendStatus(201)
   } catch (err) {

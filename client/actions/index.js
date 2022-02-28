@@ -22,8 +22,8 @@ export function fetchWhare (id) {
 export function addUserData (newData) {
   return dispatch => {
     return addUser(newData)
-      .then(data => {
-        dispatch(setUserSuccess(data))
+      .then(() => {
+        dispatch(setUserSuccess(newData))
         return null
       })
       .catch(err => {

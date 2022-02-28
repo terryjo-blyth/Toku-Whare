@@ -17,6 +17,7 @@ export function getWhare (id) {
 
 export async function addUser (user) {
   return request.post(`${whareUrl}`)
+    .set('authorization', `Bearer ${user.token}`)
     .send(user)
     .catch(logError)
 }

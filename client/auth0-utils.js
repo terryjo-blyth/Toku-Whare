@@ -1,11 +1,10 @@
-import { setUserSuccess } from './actions'
+import { addUserData } from './actions'
 import store from './store'
 
 export async function cacheUser (useAuth0, state) {
   // TODO: call the useAuth0 and destructure:
   // isAuthenticated, getAccessTokenSilently and user
   const { getAccessTokenSilently, isAuthenticated, user } = useAuth0()
-  console.log(user)
 
   if (isAuthenticated && !state?.token) {
     try {
@@ -15,8 +14,8 @@ export async function cacheUser (useAuth0, state) {
         email: user.email,
         token: token
       }
-
-      store.dispatch(setUserSuccess(userToSave))
+      console.log(userToSave)
+      store.dispatch(addUserData(userToSave))
     } catch (err) {
       console.error(err)
     }
