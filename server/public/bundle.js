@@ -850,7 +850,7 @@ function addUserData(newData) {
 
 function addAspectData(newData) {
   return function (dispatch) {
-    return (0,_apis__WEBPACK_IMPORTED_MODULE_0__.updateAspect)(newData).then(function () {
+    return (0,_apis__WEBPACK_IMPORTED_MODULE_0__.addAspect)(newData).then(function () {
       dispatch(setUserSuccess(newData));
       return null;
     })["catch"](function (err) {
@@ -896,7 +896,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "getWhare": () => (/* binding */ getWhare),
 /* harmony export */   "getUser": () => (/* binding */ getUser),
 /* harmony export */   "addUser": () => (/* binding */ addUser),
-/* harmony export */   "updateAspect": () => (/* binding */ updateAspect)
+/* harmony export */   "updateAspect": () => (/* binding */ updateAspect),
+/* harmony export */   "addAspect": () => (/* binding */ addAspect)
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/asyncToGenerator.js");
 /* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__);
@@ -941,10 +942,23 @@ function _addUser() {
 }
 
 function updateAspect(aspect) {
-  return superagent__WEBPACK_IMPORTED_MODULE_2___default().patch("".concat(whareUrl, "/entry")).set('authorization', "Bearer ".concat(aspect.token)).send({
-    aspect: aspect
+  var section = aspect.section,
+      entry = aspect.entry;
+  return superagent__WEBPACK_IMPORTED_MODULE_2___default().patch("".concat(whareUrl, "/entries/")).set('authorization', "Bearer ".concat(aspect.token)).send({
+    section: section,
+    entry: entry
   }).then(function (res) {
-    return res.body.aspect;
+    return res.body;
+  })["catch"](logError);
+}
+function addAspect(aspect) {
+  var section = aspect.section,
+      entry = aspect.entry;
+  return superagent__WEBPACK_IMPORTED_MODULE_2___default().post("".concat(whareUrl, "/entries")).set('Authorization', "Bearer ".concat(aspect.token)).send({
+    section: section,
+    entry: entry
+  }).then(function (res) {
+    return res.body;
   })["catch"](logError);
 }
 
@@ -1146,7 +1160,7 @@ function Aspect() {
     dispatch((0,_actions__WEBPACK_IMPORTED_MODULE_4__.addAspectData)({
       section: name,
       entry: value,
-      token: currentUser.token
+      token: user.token
     }));
   }
 
@@ -1156,7 +1170,7 @@ function Aspect() {
     htmlFor: aspect
   }, "user entry for ", aspect, ":"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("input", {
     id: "aspectDescr",
-    defaultValue: currentUser[aspect],
+    defaultValue: user[aspect],
     type: "text",
     name: aspect
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("button", {

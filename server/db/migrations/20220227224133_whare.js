@@ -5,7 +5,7 @@
 exports.up = function (knex) {
   return knex.schema.createTable('whare', (table) => {
     table.increments('id').primary()
-    table.string('auth0Id')
+    table.string('userAuth0Id')
     table.string('section')
     table.string('feeling')
     table.string('text')

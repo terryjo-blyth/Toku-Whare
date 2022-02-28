@@ -1,4 +1,4 @@
-import { getWhare, addUser, updateAspect, getUser } from '../apis'
+import { getWhare, addUser, addAspect, getUser } from '../apis'
 
 export const SET_WHARE_PENDING = 'SET_WHARE_PENDING'
 export const SET_USER_SUCCESS = 'SET_USER_SUCCESS'
@@ -59,7 +59,7 @@ export function addUserData (newData) {
 
 export function addAspectData (newData) {
   return dispatch => {
-    return updateAspect(newData)
+    return addAspect(newData)
       .then(() => {
         dispatch(setUserSuccess(newData))
         return null

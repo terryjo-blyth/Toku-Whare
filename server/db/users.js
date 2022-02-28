@@ -13,11 +13,23 @@ function getUser (id, db = connection) {
 
 function getWhareEntries (id, db = connection) {
   return db('users')
-    .join('whare', 'users.auth0Id', 'whare.auth0Id')
+    .join('whare', 'users.auth0Id', 'whare.userAuth0Id')
     .where({
       auth0Id: id
     })
-    .select('auth0Id', 'section', 'feeling', 'text', 'createdAt', 'updatedAt', 'imageUrl', 'audioUrl')
+    .select('users.auth0Id', 'section', 'feeling', 'text', 'createdAt', 'updatedAt', 'imageUrl', 'audioUrl')
+}
+
+function addWhareEntry (id, section, entry, db = connection) {
+  const { text, createdAt, updatedAt } = entry
+  return db('whare')
+    .insert({
+      userAuth0Id: id,
+      section,
+      text,
+      createdAt,
+      updatedAt
+    })
 }
 
 function isInDb (id, db = connection) {
@@ -40,5 +52,6 @@ module.exports = {
   getUsers,
   isInDb,
   createUser,
-  getWhareEntries
+  getWhareEntries,
+  addWhareEntry
 }

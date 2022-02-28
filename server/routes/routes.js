@@ -1,6 +1,6 @@
 const express = require('express')
 // const request = require('superagent')
-const db = require('../db/whare')
+const db = require('../db/users')
 const router = express.Router()
 const checkJwt = require('../auth0')
 
@@ -40,7 +40,7 @@ router.post('/', checkJwt, async (req, res) => {
 })
 
 // use checkJwt
-router.get('/user', checkJwt, async (req, res) => {
+router.get('/', checkJwt, async (req, res) => {
   const id = req.user?.sub
   console.log('id', id)
   db.getUser(id)
@@ -53,24 +53,43 @@ router.get('/user', checkJwt, async (req, res) => {
     })
 })
 
-router.get('/whare', checkJwt, async (req, res) => {
+router.get('/entries', checkJwt, async (req, res) => {
   const id = req.user?.sub
-  console.log('id', id)
-  db.getWhare(id)
-    .then(whare => {
-      res.json({ whare })
+  db.getWhareEntries(id)
+    .then(entries => {
+      res.json({ entries })
       return null
     })
     .catch(err => {
       res.status(500).send(err.message)
     })
 })
-// use checkJwt
-// router.patch('/entry', checkJwt, (req, res) => {
-router.patch('/entry', (req, res) => {
-  const id = req.user?.sub
+
+router.post('/entries', checkJwt, (req, res) => {
+  const userId = req.user?.sub
   const { section, entry } = req.body
-  db.updateEntry(id, section, entry)
+  const newEntry = {
+    text: entry,
+    createdAt: Date.now(),
+    updatedAt: Date.now()
+  }
+  db.addWhareEntry(userId, section, newEntry)
+    .then(() => {
+      res.sendStatus(201)
+      return null
+    })
+    .catch(err => res.status(500).send(err.message))
+})
+
+router.patch('/entries/:id', (req, res) => {
+  const id = req.user?.sub
+  const entryId = req.params.id
+  const { entry } = req.body
+  const updatedEntry = {
+    text: entry,
+    updatedAt: Date.now()
+  }
+  db.updateEntry(id, entryId, updatedEntry)
     .then(() => {
       res.sendStatus(204)
       return null

@@ -28,10 +28,20 @@ export async function addUser (user) {
 }
 
 export function updateAspect (aspect) {
-  return request.patch(`${whareUrl}/entry`)
+  const { section, entry } = aspect
+  return request.patch(`${whareUrl}/entries/`)
     .set('authorization', `Bearer ${aspect.token}`)
-    .send({ aspect })
-    .then(res => res.body.aspect)
+    .send({ section, entry })
+    .then(res => res.body)
+    .catch(logError)
+}
+
+export function addAspect (aspect) {
+  const { section, entry } = aspect
+  return request.post(`${whareUrl}/entries`)
+    .set('Authorization', `Bearer ${aspect.token}`)
+    .send({ section, entry })
+    .then(res => res.body)
     .catch(logError)
 }
 
