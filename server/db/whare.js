@@ -2,23 +2,19 @@ const connection = require('./connection')
 
 module.exports = {
   getUsers,
-<<<<<<< HEAD
   getUser,
   updateEntry,
-  addUser
-=======
+  addUser,
   createUser
   // getWhare,
   // getSingleUser,
   // addData
->>>>>>> de12fc1e0a72683e6cfcee2da09cd1c5b1aa99d9
 }
 
 function getUsers (db = connection) {
   return db('users').select()
 }
 
-<<<<<<< HEAD
 function getUser (id, db = connection) {
   return db('users')
     .select(
@@ -31,7 +27,6 @@ function getUser (id, db = connection) {
     .where({ id })
     .first()
 }
-=======
 function createUser (user, db = connection) {
   return db('users')
     .insert({ email: user.email, auth0_id: user.auth0_id })
@@ -45,7 +40,6 @@ function createUser (user, db = connection) {
 //     .where({ id })
 //     .first()
 // }
->>>>>>> de12fc1e0a72683e6cfcee2da09cd1c5b1aa99d9
 
 function addUser (auth0Id, db = connection) {
   return db('users')
