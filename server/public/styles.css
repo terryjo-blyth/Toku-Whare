@@ -467,9 +467,6 @@ footer nav a.profLink {
   width: 33%;
   cursor: pointer;
 }
-#userPage #chooseHair .hairBox .hairstyle svg, #userPage #chooseHair .hairBox .hairstyle title, #userPage #chooseHair .hairBox .hairstyle path {
-  pointer-events: none;
-}
 #userPage .choices {
   display: flex;
 }

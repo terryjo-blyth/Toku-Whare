@@ -10,7 +10,11 @@ const hairstylesArr = [
 ]
 
 function changeHair (e) {
-  alert(e.target.getAttribute('d'))
+  const newStyle = e.target.getAttribute('d')
+  const hairStyles = document.getElementsByClassName('chooseHair')
+  for (let i = 0; i < hairStyles.length; i++) {
+    hairStyles.item(i).setAttribute('d', newStyle)
+  }
 }
 
 function Hairstyles () {
