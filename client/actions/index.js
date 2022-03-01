@@ -78,8 +78,8 @@ export function saveUserInfo (newData) {
   return (dispatch, getState) => {
     const { user } = getState()
     const token = user?.token
-    const { name, dob, email } = newData
-    return addUserInfo({ name, dob, email, token })
+    const { name, dob, email, svgAvatar } = newData
+    return addUserInfo({ name, dob, email, svgAvatar, token })
       .then(() => {
         dispatch(setUserSuccess(newData))
         return null

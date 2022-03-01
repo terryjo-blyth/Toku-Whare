@@ -19,16 +19,22 @@ function UserProfile () {
     const email = document.getElementById('email').name
     const d = document.getElementById('dob').value
     const dob = document.getElementById('dob').name
+    const avatar = document.getElementById('saveAvatar')
+    const svgAvatar = 'svgAvatar'
+    console.log(avatar.innerHTML)
+
     setFormData({
       ...formData,
       [name]: n,
       [email]: e,
-      [dob]: d
+      [dob]: d,
+      [svgAvatar]: avatar.innerHTML
     })
     dispatch(saveUserInfo({
       name: n,
       email: e,
-      dob: d
+      dob: d,
+      svgAvatar: avatar.innerHTML
     }))
   }
 
@@ -93,7 +99,7 @@ function UserProfile () {
           <h3>My Avatar</h3>
           <section id="chooseAvatar">
             <section className="choices">
-              <Avatar />
+              <Avatar id={'saveAvatar'}/>
               <Hairstyles />
             </section>
             <h3>Face:</h3>
@@ -114,7 +120,6 @@ function UserProfile () {
             </ul>
           </section>
           <button onClick={(e) => submitClickHandler(e)} id="save">Save</button>&nbsp;
-          <button id="delete">Delete &times;</button>
         </form>
       </section>
     </>

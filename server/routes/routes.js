@@ -104,11 +104,12 @@ router.patch('/entries/:id', (req, res) => {
 router.patch('/info', checkJwt, async (req, res) => {
   console.log('postroute')
   const id = req.user?.sub
-  const { name, dob, email } = req.body
+  const { name, dob, email, svgAvatar } = req.body
   const moreInfo = {
     name: name,
     dob: dob,
-    email: email
+    email: email,
+    svgAvatar: svgAvatar
   }
   db.addUserInfo(id, moreInfo)
     .then(() => {

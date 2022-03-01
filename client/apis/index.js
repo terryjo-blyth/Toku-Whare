@@ -47,10 +47,10 @@ export function updateAspect (aspect) {
 
 export function addUserInfo (userData) {
   console.log('api', userData)
-  const { name, dob, email } = userData
+  const { name, dob, email, svgAvatar } = userData
   return request.patch(`${baseUrl}/info`)
     .set('Authorization', `Bearer ${userData.token}`)
-    .send({ name, dob, email })
+    .send({ name, dob, email, svgAvatar })
     .then(res => res.body.user)
     .catch(logError)
 }

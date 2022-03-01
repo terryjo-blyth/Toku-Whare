@@ -48,13 +48,15 @@ function createUser (user, db = connection) {
 }
 
 function addUserInfo (id, info, db = connection) {
-  const { name, dob, email } = info
+  const { name, dob, email, svgAvatar } = info
   return db('users')
     .where({ auth0Id: id })
     .update({
+      isSupporter: false,
       name,
       dob,
-      email
+      email,
+      svgAvatar
     })
 }
 

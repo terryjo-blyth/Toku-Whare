@@ -39,7 +39,7 @@ function Header () {
       <IfAuthenticated>
         <a href="/" onClick={handleLogoff} className="login">
           <span className="loginImg">
-            <Avatar />
+            <Avatar id={'avatarId'}/>
           </span>
           <span className="loginText">Log off</span>
         </a>
