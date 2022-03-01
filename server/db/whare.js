@@ -7,7 +7,9 @@ module.exports = {
   getDescription,
   getQuestionPrompts,
   getColor,
-  getResourceLinks
+  getResourceLinks,
+  getEntry,
+  deleteEntry
 }
 
 function getWhare (id, db = connection) {

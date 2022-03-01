@@ -1,4 +1,4 @@
-import { getWhare, addUser, addAspect, getUser, getWhareData, addUserInfo } from '../apis'
+import { getWhare, addUser, addAspect, getUser, getWhareData, addUserInfo, deleteEntry } from '../apis'
 
 export const SET_WHARE_PENDING = 'SET_WHARE_PENDING'
 export const SET_USER_SUCCESS = 'SET_USER_SUCCESS'
@@ -82,6 +82,21 @@ export function saveUserInfo (newData) {
     return addUserInfo({ name, dob, email, svgAvatar, token })
       .then(() => {
         dispatch(setUserSuccess(newData))
+        return null
+      })
+      .catch(err => {
+        dispatch(setError(err.message))
+      })
+  }
+}
+
+export function deleteEntryData (id) {
+  return (dispatch, getState) => {
+    const token = getState().user.token
+    return deleteEntry(id, token)
+      .then((entries) => {
+        dispatch(setWhareSuccess(entries))
+        console.log(entries)
         return null
       })
       .catch(err => {

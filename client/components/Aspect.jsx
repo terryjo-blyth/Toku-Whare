@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchWhare, addAspectData } from '../actions'
+import { fetchWhare, addAspectData, deleteEntryData } from '../actions'
 import { useParams } from 'react-router-dom'
 import { useAuth0 } from '@auth0/auth0-react'
 import data from '../data.json'
@@ -13,6 +13,9 @@ function Aspect () {
   const aspectData = useSelector(state => state.whare?.filter(entry => entry.section === aspect))
   const aspectMetaData = data[aspect]
   const [formData, setFormData] = useState({})
+  const entries = aspectData
+
+  const whare = useSelector(state => state.whare)
 
   function updateClickHandler (e) {
     e.preventDefault()
@@ -39,20 +42,26 @@ function Aspect () {
     e.target.querySelector('input').checked = true
   }
 
+  function deleteEntry (e) {
+    const id = e.target.id
+    dispatch(deleteEntryData(id))
+    console.log(id)
+  }
+
   return (
     <>
-      {/* <div>Description: {aspectMetaData.description}</div>
+      <div>Description: {aspectMetaData.description}</div>
       <div>Question: {aspectMetaData.question}</div>
       <div>Links: {aspectMetaData.usefulLinks}</div>
       <div>This is where user inputs personal info</div>
       <div>{JSON.stringify(aspectData)}</div>
-      <form action=""> */}
-      {/* <div>Description: {aspectMetaData.description}</div> */}
-      {/* <label htmlFor={aspect}>user entry for {aspect}:</label><br />
+      <form action="">
+        <div>Description: {aspectMetaData.description}</div>
+        <label htmlFor={aspect}>user entry for {aspect}:</label><br />
         <input id="aspectDescr" defaultValue={user[aspect]} type="text" name={aspect} /><br />
         <button onClick={(e) => updateClickHandler(e)}>update {aspect}</button><br />
         <button>delete {aspect}</button>
-      </form> */}
+      </form>
       <section id="aspectPage">
         <section className="aspectSection" id="aboutAspect">
           <WhareImage/>
@@ -140,45 +149,32 @@ function Aspect () {
             </form>
 
             <section className="submittedEntries">
-              <section id="1" className="submittedEntry">
-                <div className="entryWrap">
-                  <div className="feelingWrap">
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 353.5 217" style={{ enableBackground: 'new 0 0 353.5 217' }} xmlSpace="preserve">
-                      <g>
-                        <path id="path8" className="st0" d="M0,183.8V50.8c0-22.2,16.6-33.2,44.3-33.2h121.8 c27.7,0,44.3,11.1,44.3,33.2v132.9c0,22.2-16.6,33.2-44.3,33.2H44.3C16.6,217,0,205.9,0,183.8z M30.5,127 c16.9,20.5,39.9,31.6,63.7,34.1l4.4,26c1.7,10.2,10.8,15.8,23.3,15.8c13,0,29.4-7.8,29.4-21.6c0-2.5-2.8-18-4.7-28.5 c12.5-5.8,24.1-14.1,33.5-25.8l-6.9-6.9c-20.8,16.6-42.9,22.2-67.8,22.2s-47.1-5.5-67.8-22.2L30.5,127z M49.8,81.3 c0,15.2,8.6,27.7,19.4,27.7s19.4-12.5,19.4-27.7S80,53.6,69.2,53.6S49.8,66.1,49.8,81.3z M118.2,154.4l6.4-1.1l5.8,33l-6.6,1.1 L118.2,154.4z M121.8,81.3c0,15.2,8.6,27.7,19.4,27.7s19.4-12.5,19.4-27.7s-8.6-27.7-19.4-27.7S121.8,66.1,121.8,81.3z"/>
-                      </g>
-                    </svg>
-                  </div>
-                  <div className="ideaWrap">
-                    <h4>Posted on: 10/10/22</h4>
-                    <p>Here is some placeholder text lorem ipsum dolor sit amet.</p>
-                  </div>
-                  <div className="playButton">
+              {entries.map((entry, i) => {
+                // console.log(entry)
+                return (
+                  <section id={`entry-${i}`} key={i} className="submittedEntry">
+                    <div className="entryWrap">
+                      <div className="feelingWrap">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 353.5 217" style={{ enableBackground: 'new 0 0 353.5 217' }} xmlSpace="preserve">
+                          <g>
+                            <path id="path8" className="st0" d="M0,183.8V50.8c0-22.2,16.6-33.2,44.3-33.2h121.8 c27.7,0,44.3,11.1,44.3,33.2v132.9c0,22.2-16.6,33.2-44.3,33.2H44.3C16.6,217,0,205.9,0,183.8z M30.5,127 c16.9,20.5,39.9,31.6,63.7,34.1l4.4,26c1.7,10.2,10.8,15.8,23.3,15.8c13,0,29.4-7.8,29.4-21.6c0-2.5-2.8-18-4.7-28.5 c12.5-5.8,24.1-14.1,33.5-25.8l-6.9-6.9c-20.8,16.6-42.9,22.2-67.8,22.2s-47.1-5.5-67.8-22.2L30.5,127z M49.8,81.3 c0,15.2,8.6,27.7,19.4,27.7s19.4-12.5,19.4-27.7S80,53.6,69.2,53.6S49.8,66.1,49.8,81.3z M118.2,154.4l6.4-1.1l5.8,33l-6.6,1.1 L118.2,154.4z M121.8,81.3c0,15.2,8.6,27.7,19.4,27.7s19.4-12.5,19.4-27.7s-8.6-27.7-19.4-27.7S121.8,66.1,121.8,81.3z"/>
+                          </g>
+                        </svg>
+                      </div>
+                      <div className="ideaWrap">
+                        <h4>Posted on: 10/10/22</h4>
+                        <p>{entry.text}</p>
+                      </div>
+                      <div className="playButton">
                     &#9658;
-                  </div>
-                </div>
-                <button className="deleteIdea">&times;</button>
-              </section>
+                      </div>
+                    </div>
+                    <button id={entry.id} className="deleteIdea" onClick={(e) => deleteEntry(e)}>&times;</button>
+                  </section>
 
-              <section id="2" className="submittedEntry">
-                <div className="entryWrap">
-                  <div className="feelingWrap">
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 353.5 217" style={{ enableBackground: 'new 0 0 353.5 217' }} xmlSpace="preserve">
-                      <g>
-                        <path id="path8" className="st0" d="M0,183.8V50.8c0-22.2,16.6-33.2,44.3-33.2h121.8 c27.7,0,44.3,11.1,44.3,33.2v132.9c0,22.2-16.6,33.2-44.3,33.2H44.3C16.6,217,0,205.9,0,183.8z M30.5,127 c16.9,20.5,39.9,31.6,63.7,34.1l4.4,26c1.7,10.2,10.8,15.8,23.3,15.8c13,0,29.4-7.8,29.4-21.6c0-2.5-2.8-18-4.7-28.5 c12.5-5.8,24.1-14.1,33.5-25.8l-6.9-6.9c-20.8,16.6-42.9,22.2-67.8,22.2s-47.1-5.5-67.8-22.2L30.5,127z M49.8,81.3 c0,15.2,8.6,27.7,19.4,27.7s19.4-12.5,19.4-27.7S80,53.6,69.2,53.6S49.8,66.1,49.8,81.3z M118.2,154.4l6.4-1.1l5.8,33l-6.6,1.1 L118.2,154.4z M121.8,81.3c0,15.2,8.6,27.7,19.4,27.7s19.4-12.5,19.4-27.7s-8.6-27.7-19.4-27.7S121.8,66.1,121.8,81.3z"/>
-                      </g>
-                    </svg>
-                  </div>
-                  <div className="ideaWrap">
-                    <h4>Posted on: 10/10/22</h4>
-                    <p>Here is some placeholder text lorem ipsum dolor sit amet.</p>
-                  </div>
-                  <div className="playButton">
-                    &#9658;
-                  </div>
-                </div>
-                <button className="deleteIdea">&times;</button>
-              </section>
+                )
+              })}
+
             </section>
 
           </section>

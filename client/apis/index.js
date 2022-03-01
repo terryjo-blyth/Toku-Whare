@@ -64,6 +64,15 @@ export function addAspect (aspect) {
     .catch(logError)
 }
 
+export function deleteEntry (id, token) {
+  return request.delete(`${baseUrl}/entries/${id}`)
+    .set('Authorization', `Bearer ${token}`)
+    .then(response => {
+      return response.body.entries
+    })
+    .catch(logError)
+}
+
 function logError (err) {
   if (err.message === 'Forbidden') {
     throw new Error('Only the user who added the taha may update and delete it')
