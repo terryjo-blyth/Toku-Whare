@@ -4,11 +4,15 @@
  */
 exports.up = function (knex) {
   return knex.schema.createTable('whare', (table) => {
-    table.increments('id')
-    table.string('description')
-    table.string('questionPrompts')
-    table.string('color')
-    table.string('resourceLinks')
+    table.increments('id').primary()
+    table.string('userAuth0Id')
+    table.string('section')
+    table.string('feeling')
+    table.string('text')
+    table.datetime('createdAt')
+    table.datetime('updatedAt')
+    table.string('imageUrl')
+    table.string('audioUrl')
   })
 }
 
