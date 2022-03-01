@@ -61,7 +61,7 @@ function Aspect () {
           </section>
         </section>
         <section className="aspectSection" id="userAspect">
-          <h2>{aspect}<br /><small>{aspectMetaData.translation}</small></h2>
+          <h2>{aspectMetaData.name}<br /><small>{aspectMetaData.translation}</small></h2>
           <section className="intro">
             <p>{aspectMetaData.question}</p>
           </section>
@@ -136,17 +136,39 @@ function Aspect () {
               </fieldset>
               {/* <button id="delete">Delete &times;</button> */}
               <button onClick={(e) => updateClickHandler(e)} id="save">Submit</button>
-              <div>{JSON.stringify(aspectData)}</div>
+              {/* <div>{JSON.stringify(aspectData)}</div> */}
             </form>
+
+            <section className="submittedEntries">
+              <section id="" className="submittedEntry">
+                <div className="entryWrap">
+                  <div className="feelingWrap">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 353.5 217" style={{ enableBackground: 'new 0 0 353.5 217' }} xmlSpace="preserve">
+                      <g>
+                        <path id="path8" className="st0" d="M0,183.8V50.8c0-22.2,16.6-33.2,44.3-33.2h121.8 c27.7,0,44.3,11.1,44.3,33.2v132.9c0,22.2-16.6,33.2-44.3,33.2H44.3C16.6,217,0,205.9,0,183.8z M30.5,127 c16.9,20.5,39.9,31.6,63.7,34.1l4.4,26c1.7,10.2,10.8,15.8,23.3,15.8c13,0,29.4-7.8,29.4-21.6c0-2.5-2.8-18-4.7-28.5 c12.5-5.8,24.1-14.1,33.5-25.8l-6.9-6.9c-20.8,16.6-42.9,22.2-67.8,22.2s-47.1-5.5-67.8-22.2L30.5,127z M49.8,81.3 c0,15.2,8.6,27.7,19.4,27.7s19.4-12.5,19.4-27.7S80,53.6,69.2,53.6S49.8,66.1,49.8,81.3z M118.2,154.4l6.4-1.1l5.8,33l-6.6,1.1 L118.2,154.4z M121.8,81.3c0,15.2,8.6,27.7,19.4,27.7s19.4-12.5,19.4-27.7s-8.6-27.7-19.4-27.7S121.8,66.1,121.8,81.3z"/>
+                      </g>
+                    </svg>
+                  </div>
+                  <div className="ideaWrap">
+                    <h4>Posted on: 10/10/22</h4>
+                    <p>Here is some placeholder text lorem ipsum dolor sit amet.</p>
+                  </div>
+                  <div className="playButton">
+                    &#9658;
+                  </div>
+                </div>
+                <button className="deleteIdea">&times;</button>
+              </section>
+            </section>
 
           </section>
         </section>
         <section className="aspectSection" id="aspectLinks">
           <h3>Useful Links</h3>
           <ul>
-            <li><a href="#">Physical activity for 5- to 17-year-olds</a></li>
-            <li><a href="#">Physical activity for 5- to 17-year-olds</a></li>
-            <li><a href="#">Physical activity for 5- to 17-year-olds</a></li>
+            {aspectMetaData.usefulLinks.map((link, i) => {
+              return <li key={i}><a href={link}>{link}</a></li>
+            })}
           </ul>
         </section>
       </section>

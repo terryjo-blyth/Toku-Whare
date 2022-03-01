@@ -8,7 +8,7 @@
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse("{\"tahaTinana\":{\"question\":\"What are some ways you can use your tinana (body) to feel good? Do you like to dance, or play sports? How about eating your favourite healthly kai? What are your ideas?\",\"description\":\"Taha tinana is about how your body feels and how you care for it. Refuelling your body helps you to feel mentally well. Sometimes your tinana might not be where you’d like it to be and this might be beyond your control. What’s important is that you do what you can to nurture it.\",\"usefulLinks\":[\"https://sparklers.org.nz/activities/\"],\"translation\":\"our body\"},\"tahaWairua\":{\"question\":\"\",\"description\":\"Taha wairua is about taking notice and appreciating the beauty around us. It’s about rediscovering things that make us feel awe, hope, strength, unity and connection. For some, wairua is faith or a higher power. Sometimes our wairua isn’t strong and we encourage you to think about what wairua means to you and ways to strengthen it. When your wairua is strong, it’s easier to feel good, cope with challenges and build strong whānau relationships.\",\"usefulLinks\":\"\",\"translation\":\"spiritual\"},\"tahaHinengaro\":{\"question\":\"There are so many different ways we can feel - happy, sad, angry, grumpy, or silly. When you are feeling sad, what can you think about that makes you smile? Is there something you like to do - kōrero with a friend, or reading a favourite pukapuka (book)? Do you like to do a crazy dance, or jump on the trampoline?\",\"description\":\"Taha hinengaro is your mind, heart, conscience, thoughts and feelings. Just like your physical health, your hinengaro needs to be nurtured. Hinengaro is what you do to stimulate and refresh your mind so you can better cope with the ups and downs of life.\",\"usefulLinks\":\"\",\"translation\":\"mind and emotions\"},\"tahaWhanau\":{\"question\":\"Who are the people who are special to you? What do you like to do together? Give them a hug, play games together, bake something yummy, or read a story? What are your ideas?\",\"description\":\"Taha whānau is the people we care about, who recharge us and make us feel we belong. Whānau isn’t just our immediate relatives. It includes our friends, hoamahi/colleagues, iwi or community – the people who are close to our hearts.\",\"usefulLinks\":\"\",\"translation\":\"family and friends\"},\"whenua\":{\"question\":\"Where is a place you love to be? Do you like the beach, or the park? Maybe a secret place that's just for you? Or a place that is special to your family?\",\"description\":\"Whenua is our connection to the land. It’s soil, plants, animals and people – tangata whenua. It’s the earth through which you are connected to your tūpuna/ancestors. Whenua is a place of belonging and it’s comforting that it is never too far away.\",\"usefulLinks\":\"\",\"translation\":\"land/roots\"}}");
+module.exports = JSON.parse("{\"tahaTinana\":{\"question\":\"What are some ways you can use your tinana (body) to feel good? Do you like to dance, or play sports? How about eating your favourite healthly kai? What are your ideas?\",\"description\":\"Taha tinana is about how your body feels and how you care for it. Refuelling your body helps you to feel mentally well. Sometimes your tinana might not be where you’d like it to be and this might be beyond your control. What’s important is that you do what you can to nurture it.\",\"usefulLinks\":[\"https://sparklers.org.nz/activities/\",\"https://www.mhaw.nz/\",\"https://www.nukuora.org.nz/assets/Documents/Support-and-Development/03b4d265d1/Te-Whare-Tapa-Wha-Poster-PDF.pdf\"],\"translation\":\"our body\",\"name\":\"taha tinana\"},\"tahaWairua\":{\"question\":\"What things can you do to make yourself feel calm, and warm and fuzzy inside? You could lay on the lawn and look up at the sky, or do something to help someone else. Doing yoga, or practise taking ten deep tummy breaths. What are your ideas?\",\"description\":\"Taha wairua is about taking notice and appreciating the beauty around us. It’s about rediscovering things that make us feel awe, hope, strength, unity and connection. For some, wairua is faith or a higher power. Sometimes our wairua isn’t strong and we encourage you to think about what wairua means to you and ways to strengthen it. When your wairua is strong, it’s easier to feel good, cope with challenges and build strong whānau relationships.\",\"usefulLinks\":[\"https://sparklers.org.nz/activities/\",\"https://www.mhaw.nz/\",\"https://www.nukuora.org.nz/assets/Documents/Support-and-Development/03b4d265d1/Te-Whare-Tapa-Wha-Poster-PDF.pdf\"],\"translation\":\"spiritual\",\"name\":\"taha wairua\"},\"tahaHinengaro\":{\"question\":\"There are so many different ways we can feel - happy, sad, angry, grumpy, or silly. When you are feeling sad, what can you think about that makes you smile? Is there something you like to do - kōrero with a friend, or reading a favourite pukapuka (book)? Do you like to do a crazy dance, or jump on the trampoline?\",\"description\":\"Taha hinengaro is your mind, heart, conscience, thoughts and feelings. Just like your physical health, your hinengaro needs to be nurtured. Hinengaro is what you do to stimulate and refresh your mind so you can better cope with the ups and downs of life.\",\"usefulLinks\":[\"https://sparklers.org.nz/activities/\",\"https://www.mhaw.nz/\",\"https://www.nukuora.org.nz/assets/Documents/Support-and-Development/03b4d265d1/Te-Whare-Tapa-Wha-Poster-PDF.pdf\"],\"translation\":\"mind and emotions\",\"name\":\"taha hinengaro\"},\"tahaWhanau\":{\"question\":\"Who are the people who are special to you? What do you like to do together? Give them a hug, play games together, bake something yummy, or read a story? What are your ideas?\",\"description\":\"Taha whānau is the people we care about, who recharge us and make us feel we belong. Whānau isn’t just our immediate relatives. It includes our friends, hoamahi/colleagues, iwi or community – the people who are close to our hearts.\",\"usefulLinks\":[\"https://sparklers.org.nz/activities/\",\"https://www.mhaw.nz/\",\"https://www.nukuora.org.nz/assets/Documents/Support-and-Development/03b4d265d1/Te-Whare-Tapa-Wha-Poster-PDF.pdf\"],\"translation\":\"family and friends\",\"name\":\"taha whanau\"},\"whenua\":{\"question\":\"Where is a place you love to be? Do you like the beach, or the park? Maybe a secret place that's just for you? Or a place that is special to your family?\",\"description\":\"Whenua is our connection to the land. It’s soil, plants, animals and people – tangata whenua. It’s the earth through which you are connected to your tūpuna/ancestors. Whenua is a place of belonging and it’s comforting that it is never too far away.\",\"usefulLinks\":[\"https://sparklers.org.nz/activities/\",\"https://www.mhaw.nz/\",\"https://www.nukuora.org.nz/assets/Documents/Support-and-Development/03b4d265d1/Te-Whare-Tapa-Wha-Poster-PDF.pdf\"],\"translation\":\"land/roots\",\"name\":\"whenua\"}}");
 
 /***/ }),
 
@@ -1266,7 +1266,7 @@ function Aspect() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("p", null, aspectMetaData.description))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("section", {
     className: "aspectSection",
     id: "userAspect"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("h2", null, aspect, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("small", null, aspectMetaData.translation)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("section", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("h2", null, aspectMetaData.name, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("small", null, aspectMetaData.translation)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("section", {
     className: "intro"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("p", null, aspectMetaData.question)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("section", {
     className: "userEntry"
@@ -1446,16 +1446,46 @@ function Aspect() {
       return updateClickHandler(e);
     },
     id: "save"
-  }, "Submit"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("div", null, JSON.stringify(aspectData))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("section", {
+  }, "Submit")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("section", {
+    className: "submittedEntries"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("section", {
+    id: "",
+    className: "submittedEntry"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("div", {
+    className: "entryWrap"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("div", {
+    className: "feelingWrap"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("svg", {
+    version: "1.1",
+    xmlns: "http://www.w3.org/2000/svg",
+    xmlnsXlink: "http://www.w3.org/1999/xlink",
+    x: "0px",
+    y: "0px",
+    viewBox: "0 0 353.5 217",
+    style: {
+      enableBackground: 'new 0 0 353.5 217'
+    },
+    xmlSpace: "preserve"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("g", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("path", {
+    id: "path8",
+    className: "st0",
+    d: "M0,183.8V50.8c0-22.2,16.6-33.2,44.3-33.2h121.8 c27.7,0,44.3,11.1,44.3,33.2v132.9c0,22.2-16.6,33.2-44.3,33.2H44.3C16.6,217,0,205.9,0,183.8z M30.5,127 c16.9,20.5,39.9,31.6,63.7,34.1l4.4,26c1.7,10.2,10.8,15.8,23.3,15.8c13,0,29.4-7.8,29.4-21.6c0-2.5-2.8-18-4.7-28.5 c12.5-5.8,24.1-14.1,33.5-25.8l-6.9-6.9c-20.8,16.6-42.9,22.2-67.8,22.2s-47.1-5.5-67.8-22.2L30.5,127z M49.8,81.3 c0,15.2,8.6,27.7,19.4,27.7s19.4-12.5,19.4-27.7S80,53.6,69.2,53.6S49.8,66.1,49.8,81.3z M118.2,154.4l6.4-1.1l5.8,33l-6.6,1.1 L118.2,154.4z M121.8,81.3c0,15.2,8.6,27.7,19.4,27.7s19.4-12.5,19.4-27.7s-8.6-27.7-19.4-27.7S121.8,66.1,121.8,81.3z"
+  })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("div", {
+    className: "ideaWrap"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("h4", null, "Posted on: 10/10/22"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("p", null, "Here is some placeholder text lorem ipsum dolor sit amet.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("div", {
+    className: "playButton"
+  }, "\u25BA")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("button", {
+    className: "deleteIdea"
+  }, "\xD7"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("section", {
     className: "aspectSection",
     id: "aspectLinks"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("h3", null, "Useful Links"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("a", {
-    href: "#"
-  }, "Physical activity for 5- to 17-year-olds")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("a", {
-    href: "#"
-  }, "Physical activity for 5- to 17-year-olds")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("a", {
-    href: "#"
-  }, "Physical activity for 5- to 17-year-olds"))))));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("h3", null, "Useful Links"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("ul", null, aspectMetaData.usefulLinks.map(function (link, i) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("li", {
+      key: i
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("a", {
+      href: link
+    }, link));
+  })))));
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Aspect);
