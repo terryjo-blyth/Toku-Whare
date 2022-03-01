@@ -41,7 +41,6 @@ router.get('/', checkJwt, async (req, res) => {
 
 router.get('/entries', checkJwt, async (req, res) => {
   const id = req.user?.sub
-  console.log(id)
   db.getWhareEntries(id)
     .then(entries => {
       res.json({ entries })

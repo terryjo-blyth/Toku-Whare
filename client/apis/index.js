@@ -77,7 +77,6 @@ function logError (err) {
   if (err.message === 'Forbidden') {
     throw new Error('Only the user who added the taha may update and delete it')
   } else {
-    // eslint-disable-next-line no-console
     console.error(
       'Error consuming the API (in client/api.js):',
       err.message

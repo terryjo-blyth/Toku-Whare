@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchWhare, addAspectData, deleteEntryData } from '../actions'
+import { addAspectData, deleteEntryData } from '../actions'
 import { useParams } from 'react-router-dom'
-import { useAuth0 } from '@auth0/auth0-react'
 import data from '../data.json'
 import WhareImage from './WhareImage'
 
@@ -14,8 +13,6 @@ function Aspect () {
   const aspectMetaData = data[aspect]
   const [formData, setFormData] = useState({})
   const entries = aspectData
-
-  const whare = useSelector(state => state.whare)
 
   function updateClickHandler (e) {
     e.preventDefault()

@@ -105,13 +105,6 @@ export function deleteEntryData (id) {
   }
 }
 
-export function addWhareDataSuccess (newData) {
-  return {
-    type: ADD_WHARE_DATA,
-    newData
-  }
-}
-
 export function setWharePending () {
   return {
     type: SET_WHARE_PENDING
