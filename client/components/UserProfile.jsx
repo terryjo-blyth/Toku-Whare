@@ -1,14 +1,25 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchWhare, saveUserInfo } from '../actions'
+import { fetchUser, saveUserInfo } from '../actions'
+import { getUser } from '../apis'
 import Avatar from './Avatar'
 import Hairstyles from './Hairstyles'
 
 function UserProfile () {
   const user = useSelector(state => state.user)
+  console.log('user profile from auth', user)
   const [formData, setFormData] = useState({})
 
   const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(fetchUser(user))
+    // userDb.token = user.token
+    // const blah = dispatch(fetchUser(user)).then(() => {
+    //   console.log('fetch user from user profile ', user)
+    //   return null
+    // }).catch(err => console.log(err.message))
+  }, [])
 
   function submitClickHandler (event) {
     event.preventDefault()

@@ -41,9 +41,13 @@ router.post('/', checkJwt, async (req, res) => {
 // use checkJwt
 router.get('/', checkJwt, async (req, res) => {
   const id = req.user?.sub
+  // const token = req.user?.token
+  console.log('routes req', req.headers)
   db.getUser(id)
     .then(user => {
-      res.json({ user })
+      res.json({
+        user
+      })
       return null
     })
     .catch(err => {

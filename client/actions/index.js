@@ -7,10 +7,13 @@ export const SET_ERROR = 'SET_ERROR'
 
 export function fetchUser (user) {
   return (dispatch, getState) => {
-    dispatch(setWharePending())
+    // dispatch(setWharePending())
+    const token = user.token
     return getUser(user)
       .then(userData => {
+        userData.user.token = token
         dispatch(setUserSuccess(userData))
+        console.log('actions fetchUser ', userData)
         return null
       })
       .catch(err => {

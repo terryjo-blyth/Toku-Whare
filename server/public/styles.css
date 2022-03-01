@@ -82,7 +82,7 @@ header .login {
 header .login .avatarContainer {
   height: 38px;
   margin-left: 10px;
-  width: calc(38px * 0.95);
+  width: 36.1px;
 }
 header .login .loginText {
   position: relative;
@@ -122,7 +122,7 @@ main {
   padding: 8px;
   border-radius: 6px;
 }
-@media (max-width: calc(200px + $tablet)) {
+@media (max-width: 1000px) {
   #delete, #save {
     width: 100%;
     margin: 0px 0px 10px 0px;
@@ -332,7 +332,7 @@ footer nav a.profLink {
 @media (max-width: 800px) {
   .whareContainer {
     width: 400px;
-    height: calc(400px * 0.7);
+    height: 280px;
   }
 }
 @media (max-width: 582px) {
@@ -498,7 +498,7 @@ footer nav a.profLink {
   padding: 0px 70px;
   font-family: lfl;
 }
-@media (max-width: calc(200px + $tablet)) {
+@media (max-width: 1000px) {
   #aspectPage {
     display: block;
   }
@@ -512,16 +512,16 @@ footer nav a.profLink {
   width: calc(25vw - 100px);
   height: calc((25vw - 100px) * 0.7);
 }
-@media (max-width: calc(200px + $tablet)) {
+@media (max-width: 1000px) {
   #aspectPage .whareContainer {
     width: 200px;
-    height: calc(200px * 0.7);
+    height: 140px;
   }
 }
 @media (max-width: 582px) {
   #aspectPage .whareContainer {
     width: 130px;
-    height: calc(130px * 0.7);
+    height: 91px;
   }
 }
 #aspectPage h2 {
@@ -551,7 +551,7 @@ footer nav a.profLink {
   font-size: 20px;
   color: #115d81;
 }
-@media (max-width: calc(200px + $tablet)) {
+@media (max-width: 1000px) {
   #aboutAspect {
     display: flex;
     padding: 0px;
@@ -567,7 +567,7 @@ footer nav a.profLink {
 #aboutAspect .description {
   box-sizing: border-box;
 }
-@media (max-width: calc(200px + $tablet)) {
+@media (max-width: 1000px) {
   #aboutAspect .description {
     width: 70%;
     padding-left: 16px;
@@ -649,7 +649,7 @@ footer nav a.profLink {
 }
 #userAspect .userEntry .radioWrap svg {
   width: 100px;
-  height: calc(100px * 0.68);
+  height: 68px;
   display: block;
   pointer-events: none;
 }
@@ -747,7 +747,7 @@ footer nav a.profLink {
 }
 #userAspect .entryWrap .feelingWrap {
   width: 100px;
-  height: calc(100px * 0.68);
+  height: 68px;
 }
 #userAspect .entryWrap .feelingWrap path {
   fill: #053f5a;
@@ -767,7 +767,7 @@ footer nav a.profLink {
   padding: 0px 26px;
   word-break: break-all;
 }
-@media (max-width: calc(200px + $tablet)) {
+@media (max-width: 1000px) {
   #aspectLinks {
     text-align: center;
     margin-top: 40px;
@@ -789,7 +789,7 @@ footer nav a.profLink {
 #aspectLinks li {
   margin: 0px 0px 22px 0px;
 }
-@media (max-width: calc(200px + $tablet)) {
+@media (max-width: 1000px) {
   #aspectLinks li {
     list-style-type: none;
   }
@@ -799,7 +799,7 @@ footer nav a.profLink {
   color: #1f7eaa;
 }
 
-@media (max-width: calc(200px + $tablet)) {
+@media (max-width: 1000px) {
   #aboutAspect, #userAspect, #aspectLinks {
     width: 100%;
   }

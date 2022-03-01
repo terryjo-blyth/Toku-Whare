@@ -21,8 +21,10 @@ export function getWhareData (token) {
 }
 
 export function getUser (user) {
-  return request.get(`${baseUrl}/user`)
+  console.log('apis getUser ', user)
+  return request.get(`${baseUrl}`)
     .set('Authorization', `Bearer ${user.token}`)
+    // .send({ token: user.token })
     .then((response) => {
       return response.body
     })
