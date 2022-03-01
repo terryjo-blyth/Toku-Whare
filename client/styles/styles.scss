@@ -143,10 +143,18 @@ main{
 }
 #delete{
   background-color:$whareRed;
+  transition: background-color 0.3s;
+  &:hover{
+    background-color:red;
+  }
 }
 #save{
   background-color:#2b8f17;
   margin-left:10px;
+  transition: background-color 0.3s;
+  &:hover{
+    background-color:#22ac06;
+  }
   @media (max-width: $mobile) {
     margin-left:0px;
   }
@@ -502,6 +510,9 @@ footer{
     }
   }
 }
+#save{
+  margin-left:0px;
+}
 .aspectSection{
   box-sizing: border-box;
 }
@@ -554,7 +565,7 @@ footer{
     textarea {
       width:100%;
       resize: vertical;
-      background-color:#aeeaef;
+      background-color:#fff;
       border:3px #aeeaef solid;
       margin-top:10px;
       font-size:30px;
@@ -620,9 +631,9 @@ footer{
   }
   .deleteIdea{
     width:40px;
-      height:40px;
-      border-radius: 20px;
-      font-size:30px;
+    height:40px;
+    border-radius: 20px;
+    font-size:30px;
     background-color:$whareRed;
     color:#fff;
     font-family:Arial, Helvetica, sans-serif;
@@ -631,11 +642,19 @@ footer{
     outline:0px;
     margin-left:20px;
     cursor:pointer;
+    transition: background-color 0.3s;
+    &:hover{
+      background-color:red;
+    }
   }
   .submittedEntry{
     width:100%;
     display:flex;
     align-items: center;
+    margin-bottom:10px;
+    &:last-child{
+      margin-bottom:0px;
+    }
   }
   .entryWrap{
     width:calc(100% - 40px);
@@ -674,6 +693,10 @@ footer{
       cursor:pointer;
       width:100px;
       text-align: right;
+      transition: color  0.3s;
+      &:hover{
+        color:#05628d;
+      }
       @media (max-width:  1320px) {
         text-align: left;
         line-height:40px;

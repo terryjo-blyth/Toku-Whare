@@ -1449,7 +1449,35 @@ function Aspect() {
   }, "Submit")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("section", {
     className: "submittedEntries"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("section", {
-    id: "",
+    id: "1",
+    className: "submittedEntry"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("div", {
+    className: "entryWrap"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("div", {
+    className: "feelingWrap"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("svg", {
+    version: "1.1",
+    xmlns: "http://www.w3.org/2000/svg",
+    xmlnsXlink: "http://www.w3.org/1999/xlink",
+    x: "0px",
+    y: "0px",
+    viewBox: "0 0 353.5 217",
+    style: {
+      enableBackground: 'new 0 0 353.5 217'
+    },
+    xmlSpace: "preserve"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("g", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("path", {
+    id: "path8",
+    className: "st0",
+    d: "M0,183.8V50.8c0-22.2,16.6-33.2,44.3-33.2h121.8 c27.7,0,44.3,11.1,44.3,33.2v132.9c0,22.2-16.6,33.2-44.3,33.2H44.3C16.6,217,0,205.9,0,183.8z M30.5,127 c16.9,20.5,39.9,31.6,63.7,34.1l4.4,26c1.7,10.2,10.8,15.8,23.3,15.8c13,0,29.4-7.8,29.4-21.6c0-2.5-2.8-18-4.7-28.5 c12.5-5.8,24.1-14.1,33.5-25.8l-6.9-6.9c-20.8,16.6-42.9,22.2-67.8,22.2s-47.1-5.5-67.8-22.2L30.5,127z M49.8,81.3 c0,15.2,8.6,27.7,19.4,27.7s19.4-12.5,19.4-27.7S80,53.6,69.2,53.6S49.8,66.1,49.8,81.3z M118.2,154.4l6.4-1.1l5.8,33l-6.6,1.1 L118.2,154.4z M121.8,81.3c0,15.2,8.6,27.7,19.4,27.7s19.4-12.5,19.4-27.7s-8.6-27.7-19.4-27.7S121.8,66.1,121.8,81.3z"
+  })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("div", {
+    className: "ideaWrap"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("h4", null, "Posted on: 10/10/22"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("p", null, "Here is some placeholder text lorem ipsum dolor sit amet.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("div", {
+    className: "playButton"
+  }, "\u25BA")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("button", {
+    className: "deleteIdea"
+  }, "\xD7")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("section", {
+    id: "2",
     className: "submittedEntry"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("div", {
     className: "entryWrap"

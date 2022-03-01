@@ -131,11 +131,19 @@ main {
 
 #delete {
   background-color: #ac2124;
+  transition: background-color 0.3s;
+}
+#delete:hover {
+  background-color: red;
 }
 
 #save {
   background-color: #2b8f17;
   margin-left: 10px;
+  transition: background-color 0.3s;
+}
+#save:hover {
+  background-color: #22ac06;
 }
 @media (max-width: 582px) {
   #save {
@@ -533,6 +541,10 @@ footer nav a.profLink {
   font-size: 0.8em;
 }
 
+#save {
+  margin-left: 0px;
+}
+
 .aspectSection {
   box-sizing: border-box;
 }
@@ -595,7 +607,7 @@ footer nav a.profLink {
 #userAspect .userEntry textarea {
   width: 100%;
   resize: vertical;
-  background-color: #aeeaef;
+  background-color: #fff;
   border: 3px #aeeaef solid;
   margin-top: 10px;
   font-size: 30px;
@@ -669,11 +681,19 @@ footer nav a.profLink {
   outline: 0px;
   margin-left: 20px;
   cursor: pointer;
+  transition: background-color 0.3s;
+}
+#userAspect .deleteIdea:hover {
+  background-color: red;
 }
 #userAspect .submittedEntry {
   width: 100%;
   display: flex;
   align-items: center;
+  margin-bottom: 10px;
+}
+#userAspect .submittedEntry:last-child {
+  margin-bottom: 0px;
 }
 #userAspect .entryWrap {
   width: calc(100% - 40px);
@@ -718,6 +738,10 @@ footer nav a.profLink {
   cursor: pointer;
   width: 100px;
   text-align: right;
+  transition: color 0.3s;
+}
+#userAspect .entryWrap .playButton:hover {
+  color: #05628d;
 }
 @media (max-width: 1320px) {
   #userAspect .entryWrap .playButton {
