@@ -6,7 +6,6 @@ function checkBox (e) {
   for (var i = 0; i < radios.length; i++) {
     radios.item(i).classList.remove('active')
   }
-
   e.target.classList.add('active')
   e.target.querySelector('input').checked = true
 }

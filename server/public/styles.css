@@ -54,9 +54,13 @@ header h1 {
   text-align: center;
   z-index: 10;
 }
-@media (max-width: 582px) {
+@media (max-width: 800px) {
   header h1 {
     font-size: 70px;
+  }
+}
+@media (max-width: 582px) {
+  header h1 {
     width: 208px;
     line-height: 60px;
   }
@@ -65,7 +69,7 @@ header .login {
   position: absolute;
   text-decoration: none;
   right: 70px;
-  top: 38px;
+  top: 20px;
   border: 3px #66cbe4 solid;
   font-family: lfl;
   color: #1f7eaa;
@@ -77,18 +81,14 @@ header .login {
 }
 header .login .avatarContainer {
   height: 38px;
+  margin-left: 10px;
   width: 36.1px;
-  float: left;
 }
 header .login .loginText {
-  margin-left: 6px;
   position: relative;
-  top: 6px;
-}
-@media (max-width: 800px) {
-  header .login .loginText {
-    display: none;
-  }
+  top: 0px;
+  width: 100%;
+  display: block;
 }
 @media (max-width: 800px) {
   header .login {
@@ -122,7 +122,7 @@ main {
   padding: 8px;
   border-radius: 6px;
 }
-@media (max-width: 582px) {
+@media (max-width: 1000px) {
   #delete, #save {
     width: 100%;
     margin: 0px 0px 10px 0px;
@@ -131,11 +131,19 @@ main {
 
 #delete {
   background-color: #ac2124;
+  transition: background-color 0.3s;
+}
+#delete:hover {
+  background-color: red;
 }
 
 #save {
   background-color: #2b8f17;
   margin-left: 10px;
+  transition: background-color 0.3s;
+}
+#save:hover {
+  background-color: #22ac06;
 }
 @media (max-width: 582px) {
   #save {
@@ -178,7 +186,20 @@ footer nav a {
     border: 0px;
   }
 }
-
+footer nav a.profLink {
+  text-transform: uppercase;
+  color: #fbe02b;
+  background-color: #053f5a;
+}
+@media (min-width: 582px) {
+  footer nav a.profLink {
+    height: 100%;
+    display: inline-block;
+    padding: 8px;
+    background-color: #fbe02b;
+    color: #053f5a;
+  }
+}
 /* Home Page */
 .aspectsNav {
   position: absolute;
@@ -420,18 +441,16 @@ footer nav a {
   border-color: #1f7eaa;
   outline: #1f7eaa;
 }
-#userPage #chooseAvatar {
-  display: flex;
-}
-@media (max-width: 582px) {
-  #userPage #chooseAvatar {
-    display: block;
-  }
-}
 #userPage .avatarContainer {
-  width: 50%;
-  padding-bottom: 55%;
+  width: 40%;
+  padding-bottom: 43%;
   box-sizing: border-box;
+}
+@media (max-width: 800px) {
+  #userPage .avatarContainer {
+    width: 50%;
+    padding-bottom: 55%;
+  }
 }
 @media (max-width: 582px) {
   #userPage .avatarContainer {
@@ -448,30 +467,28 @@ footer nav a {
   width: 33%;
   cursor: pointer;
 }
-#userPage #chooseHair .hairBox .hairstyle svg, #userPage #chooseHair .hairBox .hairstyle title, #userPage #chooseHair .hairBox .hairstyle path {
-  pointer-events: none;
-}
 #userPage .choices {
-  display: block;
-  width: 100%;
-  border: 1px magenta solid;
-  display: none;
+  display: flex;
+}
+@media (max-width: 582px) {
+  #userPage .choices {
+    display: block;
+  }
 }
 #userPage .colourlist {
   display: flex;
-  display: block;
   width: 100%;
-  border: 1px pink solid;
-  margin: 0px;
+  margin: 0px 0px 10px 0px;
   padding: 0px;
 }
 #userPage .colourlist li {
   display: block;
   list-style-type: none;
-  height: 100px;
-  width: 100px;
+  height: 60px;
+  width: 60px;
   margin: 0px;
   padding: 0px;
+  cursor: pointer;
 }
 
 /* Aspect Page */
@@ -514,9 +531,14 @@ footer nav a {
   margin: 0px;
   line-height: 38px;
   text-align: center;
+  text-transform: capitalize;
 }
 #aspectPage h2 small {
   font-size: 0.8em;
+}
+
+#save {
+  margin-left: 0px;
 }
 
 .aspectSection {
@@ -581,7 +603,7 @@ footer nav a {
 #userAspect .userEntry textarea {
   width: 100%;
   resize: vertical;
-  background-color: #aeeaef;
+  background-color: #fff;
   border: 3px #aeeaef solid;
   margin-top: 10px;
   font-size: 30px;
@@ -638,11 +660,112 @@ footer nav a {
 #userAspect #player {
   max-width: 100%;
 }
+#userAspect .submittedEntries {
+  margin-top: 20px;
+  width: 100%;
+}
+#userAspect .deleteIdea {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  font-size: 30px;
+  background-color: #ac2124;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  display: block;
+  border: 0px;
+  outline: 0px;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+#userAspect .deleteIdea:hover {
+  background-color: red;
+}
+#userAspect .submittedEntry {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+#userAspect .submittedEntry:last-child {
+  margin-bottom: 0px;
+}
+#userAspect .entryWrap {
+  width: calc(100% - 40px);
+  box-sizing: border-box;
+  padding: 10px 20px;
+  background-color: #66cbe4;
+  border-radius: 8px;
+  color: #053f5a;
+  font-size: 30px;
+  margin: 0px;
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 1320px) {
+  #userAspect .entryWrap {
+    display: block;
+  }
+}
+@media (max-width: 582px) {
+  #userAspect .entryWrap {
+    width: calc(100% - 20px);
+  }
+}
+#userAspect .entryWrap .ideaWrap {
+  width: calc(100% - 200px);
+  padding: 0px 10px;
+}
+@media (max-width: 1320px) {
+  #userAspect .entryWrap .ideaWrap {
+    padding: 0px;
+  }
+}
+#userAspect .entryWrap .ideaWrap h4 {
+  font-size: 16px;
+  margin: 0px;
+}
+#userAspect .entryWrap .ideaWrap p {
+  margin-top: 0px;
+}
+#userAspect .entryWrap .playButton {
+  font-size: 60px;
+  cursor: pointer;
+  width: 100px;
+  text-align: right;
+  transition: color 0.3s;
+}
+#userAspect .entryWrap .playButton:hover {
+  color: #05628d;
+}
+@media (max-width: 1320px) {
+  #userAspect .entryWrap .playButton {
+    text-align: left;
+    line-height: 40px;
+  }
+}
+#userAspect .entryWrap .feelingWrap {
+  width: 100px;
+  height: 68px;
+}
+#userAspect .entryWrap .feelingWrap path {
+  fill: #053f5a;
+}
+#userAspect .entryWrap .ideaWrap, #userAspect .entryWrap .playButton, #userAspect .entryWrap .feelingWrap {
+  display: block;
+}
+@media (max-width: 1320px) {
+  #userAspect .entryWrap .ideaWrap, #userAspect .entryWrap .playButton {
+    width: 100%;
+  }
+}
 
 #aspectLinks {
   width: 25%;
   color: #1f7eaa;
   padding: 0px 26px;
+  word-break: break-all;
 }
 @media (max-width: 1000px) {
   #aspectLinks {
@@ -708,13 +831,13 @@ footer nav a {
   z-index: 6;
 }
 
-.head svg path {
+.faceColour {
   /*   face colour */
   fill: #d29367;
 }
 
 .hair {
-  fill: aqua;
+  fill: #291d14;
 }
 
 /* face w/gradient: */

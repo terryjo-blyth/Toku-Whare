@@ -1,6 +1,17 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./client/data.json":
+/*!**************************!*\
+  !*** ./client/data.json ***!
+  \**************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = JSON.parse("{\"tahaTinana\":{\"question\":\"What are some ways you can use your tinana (body) to feel good? Do you like to dance, or play sports? How about eating your favourite healthly kai? What are your ideas?\",\"description\":\"Taha tinana is about how your body feels and how you care for it. Refuelling your body helps you to feel mentally well. Sometimes your tinana might not be where you’d like it to be and this might be beyond your control. What’s important is that you do what you can to nurture it.\",\"usefulLinks\":[\"https://sparklers.org.nz/activities/\",\"https://www.mhaw.nz/\",\"https://www.nukuora.org.nz/assets/Documents/Support-and-Development/03b4d265d1/Te-Whare-Tapa-Wha-Poster-PDF.pdf\"],\"translation\":\"our body\",\"name\":\"taha tinana\"},\"tahaWairua\":{\"question\":\"What things can you do to make yourself feel calm, and warm and fuzzy inside? You could lay on the lawn and look up at the sky, or do something to help someone else. Doing yoga, or practise taking ten deep tummy breaths. What are your ideas?\",\"description\":\"Taha wairua is about taking notice and appreciating the beauty around us. It’s about rediscovering things that make us feel awe, hope, strength, unity and connection. For some, wairua is faith or a higher power. Sometimes our wairua isn’t strong and we encourage you to think about what wairua means to you and ways to strengthen it. When your wairua is strong, it’s easier to feel good, cope with challenges and build strong whānau relationships.\",\"usefulLinks\":[\"https://sparklers.org.nz/activities/\",\"https://www.mhaw.nz/\",\"https://www.nukuora.org.nz/assets/Documents/Support-and-Development/03b4d265d1/Te-Whare-Tapa-Wha-Poster-PDF.pdf\"],\"translation\":\"spiritual\",\"name\":\"taha wairua\"},\"tahaHinengaro\":{\"question\":\"There are so many different ways we can feel - happy, sad, angry, grumpy, or silly. When you are feeling sad, what can you think about that makes you smile? Is there something you like to do - kōrero with a friend, or reading a favourite pukapuka (book)? Do you like to do a crazy dance, or jump on the trampoline?\",\"description\":\"Taha hinengaro is your mind, heart, conscience, thoughts and feelings. Just like your physical health, your hinengaro needs to be nurtured. Hinengaro is what you do to stimulate and refresh your mind so you can better cope with the ups and downs of life.\",\"usefulLinks\":[\"https://sparklers.org.nz/activities/\",\"https://www.mhaw.nz/\",\"https://www.nukuora.org.nz/assets/Documents/Support-and-Development/03b4d265d1/Te-Whare-Tapa-Wha-Poster-PDF.pdf\"],\"translation\":\"mind and emotions\",\"name\":\"taha hinengaro\"},\"tahaWhanau\":{\"question\":\"Who are the people who are special to you? What do you like to do together? Give them a hug, play games together, bake something yummy, or read a story? What are your ideas?\",\"description\":\"Taha whānau is the people we care about, who recharge us and make us feel we belong. Whānau isn’t just our immediate relatives. It includes our friends, hoamahi/colleagues, iwi or community – the people who are close to our hearts.\",\"usefulLinks\":[\"https://sparklers.org.nz/activities/\",\"https://www.mhaw.nz/\",\"https://www.nukuora.org.nz/assets/Documents/Support-and-Development/03b4d265d1/Te-Whare-Tapa-Wha-Poster-PDF.pdf\"],\"translation\":\"family and friends\",\"name\":\"taha whanau\"},\"whenua\":{\"question\":\"Where is a place you love to be? Do you like the beach, or the park? Maybe a secret place that's just for you? Or a place that is special to your family?\",\"description\":\"Whenua is our connection to the land. It’s soil, plants, animals and people – tangata whenua. It’s the earth through which you are connected to your tūpuna/ancestors. Whenua is a place of belonging and it’s comforting that it is never too far away.\",\"usefulLinks\":[\"https://sparklers.org.nz/activities/\",\"https://www.mhaw.nz/\",\"https://www.nukuora.org.nz/assets/Documents/Support-and-Development/03b4d265d1/Te-Whare-Tapa-Wha-Poster-PDF.pdf\"],\"translation\":\"land/roots\",\"name\":\"whenua\"}}");
+
+/***/ }),
+
 /***/ "./node_modules/@auth0/auth0-react/dist/auth0-react.esm.js":
 /*!*****************************************************************!*\
   !*** ./node_modules/@auth0/auth0-react/dist/auth0-react.esm.js ***!
@@ -1182,8 +1193,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../actions */ "./client/actions/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/index.js");
 /* harmony import */ var _auth0_auth0_react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @auth0/auth0-react */ "./node_modules/@auth0/auth0-react/dist/auth0-react.esm.js");
+/* harmony import */ var _data_json__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../data.json */ "./client/data.json");
+/* harmony import */ var _WhareImage__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./WhareImage */ "./client/components/WhareImage.jsx");
 
 
 
@@ -1195,21 +1208,24 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 
 
- // import data from '../data.json'
+
+
+
 
 function Aspect() {
   var user = (0,react_redux__WEBPACK_IMPORTED_MODULE_3__.useSelector)(function (state) {
     return state.user;
   });
   var dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_3__.useDispatch)();
-  var aspect = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_6__.useParams)().aspect;
+  var aspect = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_8__.useParams)().aspect;
   var aspectData = (0,react_redux__WEBPACK_IMPORTED_MODULE_3__.useSelector)(function (state) {
     var _state$whare;
 
     return (_state$whare = state.whare) === null || _state$whare === void 0 ? void 0 : _state$whare.filter(function (entry) {
       return entry.section === aspect;
     });
-  }); // const aspectMetaData = data[aspect]
+  });
+  var aspectMetaData = _data_json__WEBPACK_IMPORTED_MODULE_6__[aspect];
 
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)({}),
       _useState2 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1___default()(_useState, 2),
@@ -1229,20 +1245,275 @@ function Aspect() {
     }));
   }
 
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(react__WEBPACK_IMPORTED_MODULE_2__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("div", null, "This is where user inputs personal info"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("div", null, JSON.stringify(aspectData)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("form", {
+  function checkBox(e) {
+    var radios = document.getElementsByClassName('radioWrap');
+
+    for (var i = 0; i < radios.length; i++) {
+      radios.item(i).classList.remove('active');
+    }
+
+    e.target.classList.add('active');
+    e.target.querySelector('input').checked = true;
+  }
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(react__WEBPACK_IMPORTED_MODULE_2__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("section", {
+    id: "aspectPage"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("section", {
+    className: "aspectSection",
+    id: "aboutAspect"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(_WhareImage__WEBPACK_IMPORTED_MODULE_7__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("section", {
+    className: "description"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("p", null, aspectMetaData.description))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("section", {
+    className: "aspectSection",
+    id: "userAspect"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("h2", null, aspectMetaData.name, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("small", null, aspectMetaData.translation)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("section", {
+    className: "intro"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("p", null, aspectMetaData.question)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("section", {
+    className: "userEntry"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("form", {
     action: ""
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("label", {
-    htmlFor: aspect
-  }, "user entry for ", aspect, ":"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("input", {
-    id: "aspectDescr",
-    defaultValue: user[aspect],
-    type: "text",
-    name: aspect
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("button", {
+    htmlFor: "userEntry"
+  }, "My Idea:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("textarea", {
+    name: "userEntry",
+    placeholder: "This is my idea...",
+    id: "userEntry",
+    cols: "30",
+    rows: "3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("label", {
+    htmlFor: "userRecording"
+  }, "Record:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("audio", {
+    id: "player",
+    controls: true
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("fieldset", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("legend", null, "It makes me feel:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("div", {
+    onClick: function onClick(e) {
+      return checkBox(e);
+    },
+    className: "radioWrap"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("svg", {
+    version: "1.1",
+    xmlns: "http://www.w3.org/2000/svg",
+    xmlnsXlink: "http://www.w3.org/1999/xlink",
+    x: "0px",
+    y: "0px",
+    viewBox: "0 0 353.5 217",
+    style: {
+      enableBackground: 'new 0 0 353.5 217'
+    },
+    xmlSpace: "preserve"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("g", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("path", {
+    id: "path34",
+    className: "st0",
+    d: "M0,183.8V50.8c0-22.2,16.6-33.2,44.3-33.2h121.8 c27.7,0,44.3,11.1,44.3,33.2v132.9c0,22.2-16.6,33.2-44.3,33.2H44.3C16.6,217,0,205.9,0,183.8z M47.1,169.9h116.3v-16.6H47.1V169.9 z M49.8,81.3c0,15.2,8.6,27.7,19.4,27.7s19.4-12.5,19.4-27.7S80,53.6,69.2,53.6S49.8,66.1,49.8,81.3z M121.8,81.3 c0,15.2,8.6,27.7,19.4,27.7c10.8,0,19.4-12.5,19.4-27.7s-8.6-27.7-19.4-27.7C130.4,53.6,121.8,66.1,121.8,81.3z"
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("label", {
+    htmlFor: "ok"
+  }, "Ok"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("input", {
+    type: "radio",
+    name: "userFeeling",
+    id: "ok"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("div", {
+    onClick: function onClick(e) {
+      return checkBox(e);
+    },
+    className: "radioWrap"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("svg", {
+    version: "1.1",
+    xmlns: "http://www.w3.org/2000/svg",
+    xmlnsXlink: "http://www.w3.org/1999/xlink",
+    x: "0px",
+    y: "0px",
+    viewBox: "0 0 353.5 217",
+    style: {
+      enableBackground: 'new 0 0 353.5 217'
+    },
+    xmlSpace: "preserve"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("g", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("path", {
+    id: "path44",
+    className: "st0",
+    d: "M0,183.8V50.8c0-22.2,16.6-33.2,44.3-33.2h121.8 c27.7,0,44.3,11.1,44.3,33.2v132.9c0,22.2-16.6,33.2-44.3,33.2H44.3C16.6,217,0,205.9,0,183.8z M16.6,53.6l5.5,49.8l63.7,5.5 l12.5-36h13.8l12.5,36l63.7-5.5l5.5-49.8H16.6z M58.2,189c60.9,0,99.7-13.6,127.4-49.6l-13.8-11.1c-24.9,33.2-66.5,49.8-113.5,49.8 V189z"
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("label", {
+    htmlFor: "cool"
+  }, "Cool"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("input", {
+    type: "radio",
+    name: "userFeeling",
+    id: "cool"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("div", {
+    onClick: function onClick(e) {
+      return checkBox(e);
+    },
+    className: "radioWrap"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("svg", {
+    version: "1.1",
+    xmlns: "http://www.w3.org/2000/svg",
+    xmlnsXlink: "http://www.w3.org/1999/xlink",
+    x: "0px",
+    y: "0px",
+    viewBox: "0 0 353.5 217",
+    style: {
+      enableBackground: 'new 0 0 353.5 217'
+    },
+    xmlSpace: "preserve"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("g", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("path", {
+    id: "path4",
+    className: "st0",
+    d: "M0,183.8V50.8c0-22.2,16.6-33.2,44.3-33.2h121.8 c27.7,0,44.3,11.1,44.3,33.2v132.9c0,22.2-16.6,33.2-44.3,33.2H44.3C16.6,217,0,205.9,0,183.8z M27.7,133.9 c13.8,30.5,44.3,49.8,77.5,49.8s63.7-19.4,77.5-49.8l-6.9-5.5c-20.8,22.2-40.2,33.2-70.6,33.2s-49.8-11.1-70.6-33.2L27.7,133.9z M49.8,81.3c0,15.2,8.6,27.7,19.4,27.7s19.4-12.5,19.4-27.7S80,53.6,69.2,53.6S49.8,66.1,49.8,81.3z M121.8,81.3 c0,15.2,8.6,27.7,19.4,27.7s19.4-12.5,19.4-27.7s-8.6-27.7-19.4-27.7S121.8,66.1,121.8,81.3z"
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("label", {
+    htmlFor: "happy"
+  }, "Happy"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("input", {
+    type: "radio",
+    name: "userFeeling",
+    id: "happy"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("div", {
+    onClick: function onClick(e) {
+      return checkBox(e);
+    },
+    className: "radioWrap"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("svg", {
+    version: "1.1",
+    xmlns: "http://www.w3.org/2000/svg",
+    xmlnsXlink: "http://www.w3.org/1999/xlink",
+    x: "0px",
+    y: "0px",
+    viewBox: "0 0 353.5 217",
+    style: {
+      enableBackground: 'new 0 0 353.5 217'
+    },
+    xmlSpace: "preserve"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("g", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("path", {
+    id: "path30",
+    className: "st0",
+    d: "M0,183.8V50.8c0-22.2,16.6-33.2,44.3-33.2h121.8 c27.7,0,44.3,11.1,44.3,33.2v132.9c0,22.2-16.6,33.2-44.3,33.2H44.3C16.6,217,0,205.9,0,183.8z M33.2,81.3 c0,16.9,13.6,30.5,30.5,30.5s30.5-13.6,30.5-30.5S80.6,50.8,63.7,50.8S33.2,64.4,33.2,81.3z M33.5,189.3H177 c-3.3-34.1-34.3-60.9-71.7-60.9S36.8,155.2,33.5,189.3z M52.6,81.3c0-6.1,5-11.1,11.1-11.1c6.1,0,11.1,5,11.1,11.1 c0,6.1-5,11.1-11.1,11.1C57.6,92.4,52.6,87.4,52.6,81.3z M116.3,81.3c0,16.9,13.6,30.5,30.5,30.5s30.5-13.6,30.5-30.5 s-13.6-30.5-30.5-30.5S116.3,64.4,116.3,81.3z M135.7,81.3c0-6.1,5-11.1,11.1-11.1c6.1,0,11.1,5,11.1,11.1c0,6.1-5,11.1-11.1,11.1 C140.7,92.4,135.7,87.4,135.7,81.3z"
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("label", {
+    htmlFor: "wow"
+  }, "Wow"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("input", {
+    type: "radio",
+    name: "userFeeling",
+    id: "wow"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("div", {
+    onClick: function onClick(e) {
+      return checkBox(e);
+    },
+    className: "radioWrap"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("svg", {
+    version: "1.1",
+    xmlns: "http://www.w3.org/2000/svg",
+    xmlnsXlink: "http://www.w3.org/1999/xlink",
+    x: "0px",
+    y: "0px",
+    viewBox: "0 0 353.5 217",
+    style: {
+      enableBackground: 'new 0 0 353.5 217'
+    },
+    xmlSpace: "preserve"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("g", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("path", {
+    id: "path8",
+    className: "st0",
+    d: "M0,183.8V50.8c0-22.2,16.6-33.2,44.3-33.2h121.8 c27.7,0,44.3,11.1,44.3,33.2v132.9c0,22.2-16.6,33.2-44.3,33.2H44.3C16.6,217,0,205.9,0,183.8z M30.5,127 c16.9,20.5,39.9,31.6,63.7,34.1l4.4,26c1.7,10.2,10.8,15.8,23.3,15.8c13,0,29.4-7.8,29.4-21.6c0-2.5-2.8-18-4.7-28.5 c12.5-5.8,24.1-14.1,33.5-25.8l-6.9-6.9c-20.8,16.6-42.9,22.2-67.8,22.2s-47.1-5.5-67.8-22.2L30.5,127z M49.8,81.3 c0,15.2,8.6,27.7,19.4,27.7s19.4-12.5,19.4-27.7S80,53.6,69.2,53.6S49.8,66.1,49.8,81.3z M118.2,154.4l6.4-1.1l5.8,33l-6.6,1.1 L118.2,154.4z M121.8,81.3c0,15.2,8.6,27.7,19.4,27.7s19.4-12.5,19.4-27.7s-8.6-27.7-19.4-27.7S121.8,66.1,121.8,81.3z"
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("label", {
+    htmlFor: "silly"
+  }, "Silly"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("input", {
+    type: "radio",
+    name: "userFeeling",
+    id: "silly"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("div", {
+    onClick: function onClick(e) {
+      return checkBox(e);
+    },
+    className: "radioWrap"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("svg", {
+    version: "1.1",
+    xmlns: "http://www.w3.org/2000/svg",
+    xmlnsXlink: "http://www.w3.org/1999/xlink",
+    x: "0px",
+    y: "0px",
+    viewBox: "0 0 353.5 217",
+    style: {
+      enableBackground: 'new 0 0 353.5 217'
+    },
+    xmlSpace: "preserve"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("g", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("path", {
+    id: "path42",
+    className: "st0",
+    d: "M0,183.8V50.8c0-22.2,16.6-33.2,44.3-33.2h121.8 c27.7,0,44.3,11.1,44.3,33.2v132.9c0,22.2-16.6,33.2-44.3,33.2H44.3C16.6,217,0,205.9,0,183.8z M30.5,79.9 c5.5,12.5,16.6,23.5,33.2,23.5s27.7-11.1,33.2-23.5L87.2,73c-5.5,9.7-12.5,15.2-23.5,15.2S44.3,81.3,40.2,73L30.5,79.9z M74.8,174.1c0,11.4,13.6,20.8,30.5,20.8s30.5-9.4,30.5-20.8s-13.6-20.8-30.5-20.8S74.8,162.7,74.8,174.1z M113.5,79.9 c5.5,12.5,16.6,23.5,33.2,23.5s27.7-11.1,33.2-23.5l-9.7-6.9c-5.5,9.7-12.5,15.2-23.5,15.2c-11.1,0-19.4-6.9-23.5-15.2L113.5,79.9z M224.3,61.9v-8.3l31.8-27.7h-30.5v-8.3h47.1v8.3l-30.5,27.7h31.8v8.3H224.3z M288,61.9V50.8l42.9-38.8h-40.2V1h62.3v11.1 l-42.9,38.8h44.3v11.1H288z"
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("label", {
+    htmlFor: "tired"
+  }, "Tired"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("input", {
+    type: "radio",
+    name: "userFeeling",
+    id: "tired"
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("button", {
     onClick: function onClick(e) {
       return updateClickHandler(e);
-    }
-  }, "update ", aspect), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("button", null, "delete ", aspect)));
+    },
+    id: "save"
+  }, "Submit")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("section", {
+    className: "submittedEntries"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("section", {
+    id: "1",
+    className: "submittedEntry"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("div", {
+    className: "entryWrap"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("div", {
+    className: "feelingWrap"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("svg", {
+    version: "1.1",
+    xmlns: "http://www.w3.org/2000/svg",
+    xmlnsXlink: "http://www.w3.org/1999/xlink",
+    x: "0px",
+    y: "0px",
+    viewBox: "0 0 353.5 217",
+    style: {
+      enableBackground: 'new 0 0 353.5 217'
+    },
+    xmlSpace: "preserve"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("g", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("path", {
+    id: "path8",
+    className: "st0",
+    d: "M0,183.8V50.8c0-22.2,16.6-33.2,44.3-33.2h121.8 c27.7,0,44.3,11.1,44.3,33.2v132.9c0,22.2-16.6,33.2-44.3,33.2H44.3C16.6,217,0,205.9,0,183.8z M30.5,127 c16.9,20.5,39.9,31.6,63.7,34.1l4.4,26c1.7,10.2,10.8,15.8,23.3,15.8c13,0,29.4-7.8,29.4-21.6c0-2.5-2.8-18-4.7-28.5 c12.5-5.8,24.1-14.1,33.5-25.8l-6.9-6.9c-20.8,16.6-42.9,22.2-67.8,22.2s-47.1-5.5-67.8-22.2L30.5,127z M49.8,81.3 c0,15.2,8.6,27.7,19.4,27.7s19.4-12.5,19.4-27.7S80,53.6,69.2,53.6S49.8,66.1,49.8,81.3z M118.2,154.4l6.4-1.1l5.8,33l-6.6,1.1 L118.2,154.4z M121.8,81.3c0,15.2,8.6,27.7,19.4,27.7s19.4-12.5,19.4-27.7s-8.6-27.7-19.4-27.7S121.8,66.1,121.8,81.3z"
+  })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("div", {
+    className: "ideaWrap"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("h4", null, "Posted on: 10/10/22"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("p", null, "Here is some placeholder text lorem ipsum dolor sit amet.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("div", {
+    className: "playButton"
+  }, "\u25BA")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("button", {
+    className: "deleteIdea"
+  }, "\xD7")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("section", {
+    id: "2",
+    className: "submittedEntry"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("div", {
+    className: "entryWrap"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("div", {
+    className: "feelingWrap"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("svg", {
+    version: "1.1",
+    xmlns: "http://www.w3.org/2000/svg",
+    xmlnsXlink: "http://www.w3.org/1999/xlink",
+    x: "0px",
+    y: "0px",
+    viewBox: "0 0 353.5 217",
+    style: {
+      enableBackground: 'new 0 0 353.5 217'
+    },
+    xmlSpace: "preserve"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("g", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("path", {
+    id: "path8",
+    className: "st0",
+    d: "M0,183.8V50.8c0-22.2,16.6-33.2,44.3-33.2h121.8 c27.7,0,44.3,11.1,44.3,33.2v132.9c0,22.2-16.6,33.2-44.3,33.2H44.3C16.6,217,0,205.9,0,183.8z M30.5,127 c16.9,20.5,39.9,31.6,63.7,34.1l4.4,26c1.7,10.2,10.8,15.8,23.3,15.8c13,0,29.4-7.8,29.4-21.6c0-2.5-2.8-18-4.7-28.5 c12.5-5.8,24.1-14.1,33.5-25.8l-6.9-6.9c-20.8,16.6-42.9,22.2-67.8,22.2s-47.1-5.5-67.8-22.2L30.5,127z M49.8,81.3 c0,15.2,8.6,27.7,19.4,27.7s19.4-12.5,19.4-27.7S80,53.6,69.2,53.6S49.8,66.1,49.8,81.3z M118.2,154.4l6.4-1.1l5.8,33l-6.6,1.1 L118.2,154.4z M121.8,81.3c0,15.2,8.6,27.7,19.4,27.7s19.4-12.5,19.4-27.7s-8.6-27.7-19.4-27.7S121.8,66.1,121.8,81.3z"
+  })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("div", {
+    className: "ideaWrap"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("h4", null, "Posted on: 10/10/22"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("p", null, "Here is some placeholder text lorem ipsum dolor sit amet.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("div", {
+    className: "playButton"
+  }, "\u25BA")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("button", {
+    className: "deleteIdea"
+  }, "\xD7"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("section", {
+    className: "aspectSection",
+    id: "aspectLinks"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("h3", null, "Useful Links"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("ul", null, aspectMetaData.usefulLinks.map(function (link, i) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("li", {
+      key: i
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("a", {
+      href: link
+    }, link));
+  })))));
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Aspect);
@@ -1308,7 +1579,7 @@ function Avatar() {
     viewBox: "0 0 200 253.9"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
     id: "headPath",
-    className: "a",
+    className: "faceColour",
     d: "M162.1,136c0-35.3-26.6-64-62-64a63.81,63.81,0,0,0-48,21.7A56.62,56.62,0,0,0,36.3,131c-.1,1.6-.2,3.3-.2,5,0,1.4.1,2.9.2,4.3v6.4a60,60,0,0,0,.5,7.4,30,30,0,0,0-7.2,19.5h0a30.3,30.3,0,0,0,30.2,30.2h58c14.7,0,25.6-5.4,32.2-14.3C162.1,172.7,162.1,152.6,162.1,136Z"
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "face"
@@ -2007,14 +2278,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/index.js");
+
 
 
 function Footer() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    style: {
-      display: 'none'
-    }
-  }, "This is the Footer");
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("footer", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("nav", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
+    "class": "profLink",
+    to: "/userprofile"
+  }, "My Profile"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
+    to: "/"
+  }, "Home"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
+    href: "#"
+  }, "Contact us"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
+    href: "#"
+  }, "Privacy policy"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
+    href: "#"
+  }, "\xA9 Copyright Tohora 2022")));
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Footer);
@@ -2037,7 +2317,12 @@ __webpack_require__.r(__webpack_exports__);
 var hairstylesArr = ['M190.8,98.5a15.63,15.63,0,0,0-2.6-24.4,16.16,16.16,0,0,0,1-5.4A15.66,15.66,0,0,0,177,53.4a17.05,17.05,0,0,0,.9-5.1,15.66,15.66,0,0,0-15.7-15.7h-.1A15.84,15.84,0,0,0,146.5,19a16.16,16.16,0,0,0-5.4,1,15.61,15.61,0,0,0-26.2-4.8,15.68,15.68,0,0,0-26.5-2.7A15.25,15.25,0,0,0,77.5,8,15.63,15.63,0,0,0,61.9,22.5a15.36,15.36,0,0,0-7.4-1.9A15.67,15.67,0,0,0,38.9,34.9,15.74,15.74,0,0,0,20.1,50.3,16.45,16.45,0,0,0,21.6,57,15.68,15.68,0,0,0,11.4,71.7a16.12,16.12,0,0,0,2.2,8.1,15.62,15.62,0,0,0,1,28.8,15.17,15.17,0,0,0-3.1,9.4,15.56,15.56,0,0,0,10.1,14.6,9.7,9.7,0,0,0-.1,1.7c0,5.7,10.6,9.9,13.8,9.1.2-.1.4-.1.6-.2,0,0,2.9-23.5,3.4-26.9h0c5.9-.3,8.2-3.4,10.7-8.5a18.44,18.44,0,0,0,4.1.6,15.82,15.82,0,0,0,13-6.9,16.29,16.29,0,0,0,5.5,1A15.09,15.09,0,0,0,81,100a15.73,15.73,0,0,0,9.3,3.1,15.47,15.47,0,0,0,10.1-3.7,15.72,15.72,0,0,0,11.7,5.3,16.41,16.41,0,0,0,7.3-1.8,15.72,15.72,0,0,0,12.5,6.3,17.52,17.52,0,0,0,4-.5v.5a15.59,15.59,0,0,0,12.8,15.4,15.43,15.43,0,0,0,7.5,11.2,15,15,0,0,0-1.4,6.4,15.65,15.65,0,0,0,6,12.3,16.42,16.42,0,0,0,7.4,3.2,15,15,0,0,0,2.2.2A15.65,15.65,0,0,0,186,143.2a15.8,15.8,0,0,0,7.4-13.3,15.53,15.53,0,0,0-2.7-8.8,15.54,15.54,0,0,0,4.7-11.2A15.21,15.21,0,0,0,190.8,98.5Z', 'M101.8,60.2h0A70,70,0,0,0,32,129.9v32a29.27,29.27,0,0,1,4.8-7.7,60,60,0,0,1-.5-7.4v-6.4c-.1-1.4-.2-2.9-.2-4.3,0-1.7.1-3.3.2-5a57.38,57.38,0,0,1,8.9-28.6c-.6,1.1-.9,1.7-.9,1.7s28.5,3.4,45.1-8.7a45.81,45.81,0,0,0,6-5.2A46,46,0,0,0,111.6,105c17.7,9.8,39.4,9.6,46.8,9.2A67.79,67.79,0,0,1,162,136c0,16.6,0,36.7-12.1,53.3-6.5,9-17.5,14.3-32.2,14.3H59.8a30.33,30.33,0,0,1-27.2-17.1,70,70,0,0,0,69.2,61h0a70,70,0,0,0,69.8-69.7v-48C171.6,91.6,140.2,60.2,101.8,60.2Z', 'M172.4,122c0-37.2-29.3-67.6-65-67.6H97.7c-35.8,0-65,30.4-65,67.6h0a69.84,69.84,0,0,0,3.9,23v-8.7A65.12,65.12,0,0,1,48.2,99.1a71.9,71.9,0,0,0,6.4,13.5c5.8,9.5,9.6,2,8-2.3-1.3-3.5-2.7-13.6-3.2-17.1.4,2,1.8,6.6,7.2,14.5,7.5,11.1,9.7.7,9.7.7l-1.6-4.2c-1.6-4.2-3.1-15.3-3.1-15.3S76,102,81.3,107.5s7.5,1.3,5.7-4.6-2.2-14.4-2.2-14.4A43.5,43.5,0,0,0,95.9,110c9.5,10.1,11.5-2.6,9.4-7.2S102.5,87,102.5,87s4.9,12.2,10.2,19.1,11,2.3,8.8-2.9-2.8-13.7-2.8-13.7l10.4,15.7c10.4,15.7,17.6,16.3,17.6,16.3v19s4.6,2,8.5,8.6a48.35,48.35,0,0,1,5.3,14.3,5.2,5.2,0,0,1,.3-.5v.1c8.2-11.2,11.6-25.8,11.6-41Z', 'M172.8,78.8a15.83,15.83,0,0,0-4.1-10.5,14.56,14.56,0,0,0,.9-5.2,15.66,15.66,0,0,0-15.7-15.7h-.3a15.6,15.6,0,0,0-21.1-11.7A15.6,15.6,0,0,0,109.7,32a15.5,15.5,0,0,0-12.3-6,15.78,15.78,0,0,0-13.8,8.2,15.45,15.45,0,0,0-12.7-6.5A15.76,15.76,0,0,0,55.5,40.3a15.75,15.75,0,0,0-21,14.8A15.66,15.66,0,0,0,18.8,70.8a15.47,15.47,0,0,0,7.8,13.5A15,15,0,0,0,25.1,91a15.61,15.61,0,0,0,9.5,14.4,16,16,0,0,0,6.2,1.3,15.72,15.72,0,0,0,13.6-7.9,15.58,15.58,0,0,0,8.1-5.4,15.62,15.62,0,0,0,20.7,1.8,15.62,15.62,0,0,0,22.7-1.7,15.63,15.63,0,0,0,11.3,4.8,15.35,15.35,0,0,0,9.2-3,15.67,15.67,0,0,0,11.8,5.4h.1a15.62,15.62,0,0,0,10.4,13.5v19.4s4.8,2.1,9,8.8a28.3,28.3,0,0,1,4,14.2s19.4-28.1,6.2-66.3A16.48,16.48,0,0,0,172.8,78.8Z', 'M172.7,138.4a61.13,61.13,0,0,0,3.4-20.1v-9.9A62.29,62.29,0,0,0,114,46.3H91.9A62,62,0,0,0,38.6,76.7a18.53,18.53,0,0,0-8.8,15.8,16.93,16.93,0,0,0,.9,5.6,59.3,59.3,0,0,0-.9,10.3v9.9a50.54,50.54,0,0,0,.3,5.5,50.54,50.54,0,0,0-.3,5.5h0a13.34,13.34,0,0,0,.1,2h-.1a27.8,27.8,0,0,0,0,55.6c1,0,2-.1,3-.2a30.46,30.46,0,0,1-3-13.2h0A30,30,0,0,1,37,154a59.09,59.09,0,0,1-.5-7.4v-6.4c-.1-1.4-.2-2.9-.2-4.3,0-1.7.1-3.3.2-5a56.92,56.92,0,0,1,5-21.4,19.38,19.38,0,0,0,6.9,1.3,18.58,18.58,0,0,0,13.5-5.9,18.39,18.39,0,0,0,26,1c.35-.32.69-.66,1-1a18.39,18.39,0,0,0,26,1c.35-.32.69-.66,1-1a18.51,18.51,0,0,0,31.9-10.2A65.73,65.73,0,0,1,162,135.9c0,16.4,0,36.3-11.8,52.8a27.75,27.75,0,0,0,42.1-23.8A27.19,27.19,0,0,0,172.7,138.4Z', 'M171.1,92.1a40.12,40.12,0,0,0-40-40H74.6a40.12,40.12,0,0,0-40,40v38.1a37.69,37.69,0,0,0,1.8,11.7v-1c-.1-1.4-.2-2.9-.2-4.3,0-1.7.1-3.3.2-5A56.62,56.62,0,0,1,52.2,94.3a.1.1,0,0,1,.1-.1,15.37,15.37,0,0,0,9.6,3.4,15.67,15.67,0,0,0,8.5-2.5,15.18,15.18,0,0,0,8.5,2.5,15.42,15.42,0,0,0,8.5-2.5,15.18,15.18,0,0,0,8.5,2.5,15.42,15.42,0,0,0,8.5-2.5,15.18,15.18,0,0,0,8.5,2.5,15.42,15.42,0,0,0,8.5-2.5,15.18,15.18,0,0,0,8.5,2.5,16.55,16.55,0,0,0,3.2-.3c4.2,5.7,12.5,17.8,13.6,26.1l1.5,11.2s13.9,23.6,14.1,21.5a42.4,42.4,0,0,0,8.9-25.8V92.1Z'];
 
 function changeHair(e) {
-  alert(e.target.innerHTML);
+  var newStyle = e.target.getAttribute('d');
+  var hairStyles = document.getElementsByClassName('chooseHair');
+
+  for (var i = 0; i < hairStyles.length; i++) {
+    hairStyles.item(i).setAttribute('d', newStyle);
+  }
 }
 
 function Hairstyles() {
@@ -2048,9 +2333,6 @@ function Hairstyles() {
     className: "hairBox"
   }, hairstylesArr.map(function (style, i) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-      onClick: function onClick(e) {
-        return changeHair(e);
-      },
       className: "hairstyle",
       key: i
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
@@ -2058,6 +2340,9 @@ function Hairstyles() {
       xmlns: "http://www.w3.org/2000/svg",
       viewBox: "0 0 200 253.9"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+      onClick: function onClick(e) {
+        return changeHair(e);
+      },
       d: style
     })));
   })));
@@ -2079,14 +2364,55 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _auth0_auth0_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @auth0/auth0-react */ "./node_modules/@auth0/auth0-react/dist/auth0-react.esm.js");
+/* harmony import */ var _Avatar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Avatar */ "./client/components/Avatar.jsx");
+/* harmony import */ var _Authenticated__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Authenticated */ "./client/components/Authenticated.jsx");
+
+
+
+
 
 
 function Header() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    style: {
-      display: 'none'
-    }
-  }, "This is the header");
+  var _useAuth = (0,_auth0_auth0_react__WEBPACK_IMPORTED_MODULE_1__.useAuth0)(),
+      logout = _useAuth.logout,
+      loginWithRedirect = _useAuth.loginWithRedirect;
+
+  var redirect = {
+    redirectUri: "".concat(window.location.origin)
+  };
+
+  function handleLogoff(e) {
+    e.preventDefault();
+    console.log('log off');
+    return logout();
+  }
+
+  function handleSignIn(e) {
+    e.preventDefault();
+    console.log('sign in');
+    return loginWithRedirect();
+  }
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("header", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
+    href: "/"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "T\u014Dku Whare")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Authenticated__WEBPACK_IMPORTED_MODULE_3__.IfNotAuthenticated, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
+    href: "/",
+    onClick: handleSignIn,
+    className: "login"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+    className: "loginImg"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+    className: "loginText"
+  }, "Login"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Authenticated__WEBPACK_IMPORTED_MODULE_3__.IfAuthenticated, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
+    href: "/",
+    onClick: handleLogoff,
+    className: "login"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+    className: "loginImg"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Avatar__WEBPACK_IMPORTED_MODULE_2__.default, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+    className: "loginText"
+  }, "Log off"))));
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Header);
@@ -2105,48 +2431,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/index.js");
 /* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Header */ "./client/components/Header.jsx");
 /* harmony import */ var _Footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Footer */ "./client/components/Footer.jsx");
-/* harmony import */ var _auth0_auth0_react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @auth0/auth0-react */ "./node_modules/@auth0/auth0-react/dist/auth0-react.esm.js");
-/* harmony import */ var _Authenticated__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Authenticated */ "./client/components/Authenticated.jsx");
-
-
 
 
 
 
 
 function Layout() {
-  var _useAuth = (0,_auth0_auth0_react__WEBPACK_IMPORTED_MODULE_3__.useAuth0)(),
-      logout = _useAuth.logout,
-      loginWithRedirect = _useAuth.loginWithRedirect;
-
-  var redirect = {
-    redirectUri: "".concat(window.location.origin)
-  };
-
-  function handleLogoff(e) {
-    e.preventDefault();
-    console.log('log off');
-    return logout();
-  }
-
-  function handleRegister(e) {
-    e.preventDefault();
-    console.log('register');
-    return loginWithRedirect(redirect);
-  }
-
-  function handleSignIn(e) {
-    e.preventDefault();
-    console.log('sign in');
-    return loginWithRedirect();
-  }
-
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Header__WEBPACK_IMPORTED_MODULE_1__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Header__WEBPACK_IMPORTED_MODULE_1__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "outlet-container"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Outlet, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Footer__WEBPACK_IMPORTED_MODULE_2__.default, null));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Outlet, null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Footer__WEBPACK_IMPORTED_MODULE_2__.default, null));
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Layout);
@@ -2509,6 +2805,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../actions */ "./client/actions/index.js");
+/* harmony import */ var _Avatar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Avatar */ "./client/components/Avatar.jsx");
+/* harmony import */ var _Hairstyles__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Hairstyles */ "./client/components/Hairstyles.jsx");
+
+
 
 
 
@@ -2521,27 +2821,85 @@ function UserProfile() {
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     dispatch((0,_actions__WEBPACK_IMPORTED_MODULE_2__.fetchWhare)(user));
   }, []);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "This is where user inputs personal info"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("form", {
-    action: ""
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", {
+  var hairColorArr = ['29abe2', '22b573', 'ff00ff', 'f7931e', 'f7e96f', '754c24', '000000'];
+  var headColourArr = ['f1c0a5', 'd29367', 'ba8041', '995d34', '59331a'];
+
+  function hairColour(e) {
+    var newColor = "#".concat(e.target.id);
+    var hair = document.getElementsByClassName('chooseHair');
+
+    for (var i = 0; i < hair.length; i++) {
+      hair.item(i).style.fill = newColor;
+    }
+  }
+
+  function faceColour(e) {
+    var newColor = "#".concat(e.target.id);
+    var faces = document.getElementsByClassName('faceColour');
+
+    for (var i = 0; i < faces.length; i++) {
+      faces.item(i).style.fill = newColor;
+    }
+  }
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
+    id: "userPage"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("form", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, "My Info"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", {
     htmlFor: "name"
-  }, "Name:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+  }, "My Name"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
     defaultValue: user.name,
     type: "text",
-    name: "name"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", {
-    htmlFor: "email"
-  }, "Email:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+    name: "name",
+    id: ""
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", {
+    htmlFor: "name"
+  }, "My Email"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
     defaultValue: user.email,
     type: "email",
-    name: "email"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", {
+    name: "email",
+    id: ""
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", {
     htmlFor: "dob"
-  }, "Birthday:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+  }, "My Birthday"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
     defaultValue: user.dob,
     type: "date",
-    name: "dob"
-  })));
+    name: "dob",
+    id: ""
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "My Avatar"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
+    id: "chooseAvatar"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
+    className: "choices"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Avatar__WEBPACK_IMPORTED_MODULE_3__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Hairstyles__WEBPACK_IMPORTED_MODULE_4__.default, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Face:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
+    className: "colourlist"
+  }, headColourArr.map(function (colour, i) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+      id: colour,
+      onClick: function onClick(e) {
+        return faceColour(e);
+      },
+      style: {
+        backgroundColor: "#".concat(colour)
+      },
+      key: i
+    });
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "hair:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
+    className: "colourlist"
+  }, hairColorArr.map(function (colour, i) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+      id: colour,
+      onClick: function onClick(e) {
+        return hairColour(e);
+      },
+      style: {
+        backgroundColor: "#".concat(colour)
+      },
+      key: i
+    });
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    id: "save"
+  }, "Save"), "\xA0", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    id: "delete"
+  }, "Delete \xD7"))));
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (UserProfile);
@@ -2559,11 +2917,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../actions */ "./client/actions/index.js");
 /* harmony import */ var _auth0_auth0_react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @auth0/auth0-react */ "./node_modules/@auth0/auth0-react/dist/auth0-react.esm.js");
+/* harmony import */ var _WhareImage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./WhareImage */ "./client/components/WhareImage.jsx");
+
 
 
 
@@ -2581,17 +2941,24 @@ function Home() {
   //   dispatch(fetchWhare(user))
   // }, [])
 
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "This is the HomePage"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
-    to: "tahaTinana"
-  }, "Taha Tinana"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_WhareImage__WEBPACK_IMPORTED_MODULE_4__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("nav", {
+    className: "aspectsNav"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Link, {
+    "class": "wairua",
     to: "tahaWairua"
-  }, "Taha Wairua"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
-    to: "tahaWhanau"
-  }, "Taha Whanau"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
+  }, "Taha Wairua ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("small", null, "Spiritual")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Link, {
+    "class": "tinana",
+    to: "tahaTinana"
+  }, "Taha Tinana ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("small", null, "Our Body")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Link, {
+    "class": "hinengaro",
     to: "tahaHinengaro"
-  }, "Taha Hinengaro"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
+  }, "Taha Hinengaro ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("small", null, "Mind and emotions")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Link, {
+    "class": "whanau",
+    to: "tahaWhanau"
+  }, "Taha Wh\u0101nau ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("small", null, "Family and Friends")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Link, {
+    "class": "whenua",
     to: "whenua"
-  }, "Whenua"));
+  }, "Whenua ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("small", null, "Land/Roots"))));
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Home);
