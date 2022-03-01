@@ -2,7 +2,7 @@ import React from 'react'
 
 function Header () {
   return (
-    <div>This is the heafdsgarder</div>
+    <div style={{ display: 'none' }}>This is the header</div>
   )
 }
 
