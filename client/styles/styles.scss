@@ -365,7 +365,7 @@ footer{
     padding:18px 30px;
     margin:0px auto;
   }
-  label{
+  label, h3{
     font-family:lflo;
     color:$darkBlue;
     font-size:36px;
@@ -398,11 +398,32 @@ footer{
       outline:$darkBlue;
     }
   }
-  .avatarContainer{
-    border:1px aqua solid;
+  #chooseAvatar{
+    display:flex;
+    @media (max-width: $mobile) {
+      display:block;
+    }
   }
-  .avatarContainer.chooseHair{
-    border:1px lime solid;
+  .avatarContainer{
+    width:50%;
+    padding-bottom:55%;
+    box-sizing: border-box;
+    @media (max-width: $mobile) {
+      width:100%;
+      padding-bottom:105%;
+    }
+  }
+  #chooseHair .hairBox{
+    display:flex;
+    flex-wrap: wrap;
+    .hairstyle{
+      display:block;
+      width:33%;
+      cursor:pointer;
+      svg,title,path{
+        pointer-events: none;
+      }
+    }
   }
 }
 
@@ -640,14 +661,9 @@ footer{
 }
 
 .hair{
-  display:none;
-  /*   hair colour */
   fill:brown;
 }
 
-.hair4{
-  display:block;
-}
 
 /* face w/gradient: */
 .a {

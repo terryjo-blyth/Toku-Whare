@@ -387,7 +387,7 @@ footer nav a {
   padding: 18px 30px;
   margin: 0px auto;
 }
-#userPage label {
+#userPage label, #userPage h3 {
   font-family: lflo;
   color: #1f7eaa;
   font-size: 36px;
@@ -420,11 +420,36 @@ footer nav a {
   border-color: #1f7eaa;
   outline: #1f7eaa;
 }
-#userPage .avatarContainer {
-  border: 1px aqua solid;
+#userPage #chooseAvatar {
+  display: flex;
 }
-#userPage .avatarContainer.chooseHair {
-  border: 1px lime solid;
+@media (max-width: 582px) {
+  #userPage #chooseAvatar {
+    display: block;
+  }
+}
+#userPage .avatarContainer {
+  width: 50%;
+  padding-bottom: 55%;
+  box-sizing: border-box;
+}
+@media (max-width: 582px) {
+  #userPage .avatarContainer {
+    width: 100%;
+    padding-bottom: 105%;
+  }
+}
+#userPage #chooseHair .hairBox {
+  display: flex;
+  flex-wrap: wrap;
+}
+#userPage #chooseHair .hairBox .hairstyle {
+  display: block;
+  width: 33%;
+  cursor: pointer;
+}
+#userPage #chooseHair .hairBox .hairstyle svg, #userPage #chooseHair .hairBox .hairstyle title, #userPage #chooseHair .hairBox .hairstyle path {
+  pointer-events: none;
 }
 
 /* Aspect Page */
@@ -667,13 +692,7 @@ footer nav a {
 }
 
 .hair {
-  display: none;
-  /*   hair colour */
   fill: brown;
-}
-
-.hair4 {
-  display: block;
 }
 
 /* face w/gradient: */
