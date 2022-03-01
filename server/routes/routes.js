@@ -25,7 +25,6 @@ router.post('/', checkJwt, async (req, res) => {
     auth0Id: auth0Id,
     email
   }
-  console.log(newUser, auth0Id, email)
   try {
     const isInDb = await db.isInDb(auth0Id)
     if (isInDb) {
@@ -42,7 +41,6 @@ router.post('/', checkJwt, async (req, res) => {
 // use checkJwt
 router.get('/', checkJwt, async (req, res) => {
   const id = req.user?.sub
-  console.log('id', id)
   db.getUser(id)
     .then(user => {
       res.json({ user })
@@ -55,6 +53,8 @@ router.get('/', checkJwt, async (req, res) => {
 
 router.get('/entries', checkJwt, async (req, res) => {
   const id = req.user?.sub
+  console.log(id)
+  // const id = 'auth0|1234'
   db.getWhareEntries(id)
     .then(entries => {
       res.json({ entries })
@@ -75,8 +75,10 @@ router.post('/entries', checkJwt, (req, res) => {
   }
   db.addWhareEntry(userId, section, newEntry)
     .then(() => {
-      res.sendStatus(201)
-      return null
+      return db.getWhareEntries(userId)
+    })
+    .then(entries => {
+      return res.status(201).json({ entries })
     })
     .catch(err => res.status(500).send(err.message))
 })
@@ -91,8 +93,10 @@ router.patch('/entries/:id', (req, res) => {
   }
   db.updateEntry(id, entryId, updatedEntry)
     .then(() => {
-      res.sendStatus(204)
-      return null
+      return db.getWhareEntries(id)
+    })
+    .then(entries => {
+      return res.status(204).json({ entries })
     })
     .catch(err => res.status(500).send(err.message))
 })

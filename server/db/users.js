@@ -34,7 +34,7 @@ function addWhareEntry (id, section, entry, db = connection) {
 
 function isInDb (id, db = connection) {
   return db('users')
-    .count('id as n').where('auth0Id', id).then(count => {
+    .count('auth0Id as n').where('auth0Id', id).then(count => {
       return count[0].n > 0
     })
 }

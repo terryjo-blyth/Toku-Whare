@@ -1,19 +1,29 @@
 import request from 'superagent'
 
-const whareUrl = '/api/v1/whare'
+const baseUrl = '/api/v1/user'
 
 export function getWhare (user) {
-  return request.get(`${whareUrl}/whare`)
-    .set('authorization', `Bearer ${user.token}`)
+  return request.get(`${baseUrl}/whare`)
+    .set('Authorization', `Bearer ${user.token}`)
     .then((response) => {
       return response.body
     })
     .catch(logError)
 }
 
+export function getWhareData (token) {
+  console.log('getWhareData')
+  return request.get(`${baseUrl}/entries`)
+    .set('Authorization', `Bearer ${token}`)
+    .then(response => {
+      return response.body.entries
+    })
+    .catch(logError)
+}
+
 export function getUser (user) {
-  return request.get(`${whareUrl}/user`)
-    .set('authorization', `Bearer ${user.token}`)
+  return request.get(`${baseUrl}/user`)
+    .set('Authorization', `Bearer ${user.token}`)
     .then((response) => {
       return response.body
     })
@@ -21,7 +31,8 @@ export function getUser (user) {
 }
 
 export async function addUser (user) {
-  return request.post(`${whareUrl}`)
+  console.log('addUser')
+  return request.post(`${baseUrl}`)
     .set('authorization', `Bearer ${user.token}`)
     .send(user)
     .catch(logError)
@@ -29,19 +40,19 @@ export async function addUser (user) {
 
 export function updateAspect (aspect) {
   const { section, entry } = aspect
-  return request.patch(`${whareUrl}/entries/`)
-    .set('authorization', `Bearer ${aspect.token}`)
+  return request.patch(`${baseUrl}/entries`)
+    .set('Authorization', `Bearer ${aspect.token}`)
     .send({ section, entry })
-    .then(res => res.body)
+    .then(res => res.body.entries)
     .catch(logError)
 }
 
 export function addAspect (aspect) {
   const { section, entry } = aspect
-  return request.post(`${whareUrl}/entries`)
+  return request.post(`${baseUrl}/entries`)
     .set('Authorization', `Bearer ${aspect.token}`)
     .send({ section, entry })
-    .then(res => res.body)
+    .then(res => res.body.entries)
     .catch(logError)
 }
 
