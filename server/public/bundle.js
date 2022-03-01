@@ -2843,9 +2843,9 @@ function UserProfile() {
     id: ""
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "My Avatar"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
     id: "chooseAvatar"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Avatar__WEBPACK_IMPORTED_MODULE_3__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Hairstyles__WEBPACK_IMPORTED_MODULE_4__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
     className: "choices"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Face:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Avatar__WEBPACK_IMPORTED_MODULE_3__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Hairstyles__WEBPACK_IMPORTED_MODULE_4__.default, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Face:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
     className: "colourlist"
   }, headColourArr.map(function (colour, i) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
@@ -2863,11 +2863,11 @@ function UserProfile() {
       },
       key: i
     });
-  })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
-    id: "delete"
-  }, "Delete \xD7"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
     id: "save"
-  }, "Save"))));
+  }, "Save"), "\xA0", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    id: "delete"
+  }, "Delete \xD7"))));
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (UserProfile);

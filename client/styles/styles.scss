@@ -423,15 +423,16 @@ footer{
     }
   }
   #chooseAvatar{
-    display:flex;
-    @media (max-width: $mobile) {
-      display:block;
-    }
+
   }
   .avatarContainer{
-    width:50%;
-    padding-bottom:55%;
+    width:40%;
+    padding-bottom:43%;
     box-sizing: border-box;
+    @media (max-width: $tablet) {
+      width:50%;
+      padding-bottom:55%;
+    }
     @media (max-width: $mobile) {
       width:100%;
       padding-bottom:105%;
@@ -450,25 +451,24 @@ footer{
     }
   }
   .choices{
-    display:block;
-    width:100%;
-    border:1px magenta solid;
-    display:none;
+    display:flex;
+    @media (max-width: $mobile) {
+      display:block;
+    }
   }
   .colourlist{
     display:flex;
-    display:block;
     width:100%;
-    border:1px pink solid;
-    margin:0px;
+    margin:0px 0px 10px 0px;
     padding:0px;
     li{
       display:block;
       list-style-type: none;
-      height:100px;
-      width:100px;
+      height:60px;
+      width:60px;
       margin:0px;
       padding:0px;
+      cursor:pointer;
     }
   }
 }

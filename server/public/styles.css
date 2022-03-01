@@ -441,18 +441,16 @@ footer nav a.profLink {
   border-color: #1f7eaa;
   outline: #1f7eaa;
 }
-#userPage #chooseAvatar {
-  display: flex;
-}
-@media (max-width: 582px) {
-  #userPage #chooseAvatar {
-    display: block;
-  }
-}
 #userPage .avatarContainer {
-  width: 50%;
-  padding-bottom: 55%;
+  width: 40%;
+  padding-bottom: 43%;
   box-sizing: border-box;
+}
+@media (max-width: 800px) {
+  #userPage .avatarContainer {
+    width: 50%;
+    padding-bottom: 55%;
+  }
 }
 @media (max-width: 582px) {
   #userPage .avatarContainer {
@@ -473,26 +471,27 @@ footer nav a.profLink {
   pointer-events: none;
 }
 #userPage .choices {
-  display: block;
-  width: 100%;
-  border: 1px magenta solid;
-  display: none;
+  display: flex;
+}
+@media (max-width: 582px) {
+  #userPage .choices {
+    display: block;
+  }
 }
 #userPage .colourlist {
   display: flex;
-  display: block;
   width: 100%;
-  border: 1px pink solid;
-  margin: 0px;
+  margin: 0px 0px 10px 0px;
   padding: 0px;
 }
 #userPage .colourlist li {
   display: block;
   list-style-type: none;
-  height: 100px;
-  width: 100px;
+  height: 60px;
+  width: 60px;
   margin: 0px;
   padding: 0px;
+  cursor: pointer;
 }
 
 /* Aspect Page */
