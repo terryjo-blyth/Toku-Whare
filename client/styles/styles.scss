@@ -70,8 +70,10 @@ header{
     bottom:-26px;
     text-align:center;
     z-index:10;
-    @media (max-width: $mobile) {
+    @media (max-width: $tablet) {
       font-size:70px;
+    }
+    @media (max-width: $mobile) {
       width:208px;
       line-height:60px;
     }
@@ -80,7 +82,7 @@ header{
     position:absolute;
     text-decoration: none;
     right:70px;
-    top:38px;
+    top:20px;
     border:3px $lightBlue solid;
     font-family:lfl;
     color:$darkBlue;
@@ -91,15 +93,16 @@ header{
     z-index:10;
     .avatarContainer{
       height:38px;
+      margin-left:10px;
       width:calc(38px * 0.95);
-      float:left;
     }
     .loginText{
-      margin-left:6px;
       position:relative;
-      top:6px;
+      top:0px;
+      width:100%;
+      display:block;
       @media (max-width: $tablet) {
-        display:none;
+        // display:none;
       }
     }
     @media (max-width: $tablet) {
@@ -133,17 +136,25 @@ main{
   cursor:pointer;
   padding:8px;
   border-radius:6px;
-  @media (max-width: $mobile) {
+  @media (max-width: calc(200px + $tablet)) {
     width:100%;
     margin:0px 0px 10px 0px;
   }
 }
 #delete{
   background-color:$whareRed;
+  transition: background-color 0.3s;
+  &:hover{
+    background-color:red;
+  }
 }
 #save{
   background-color:#2b8f17;
   margin-left:10px;
+  transition: background-color 0.3s;
+  &:hover{
+    background-color:#22ac06;
+  }
   @media (max-width: $mobile) {
     margin-left:0px;
   }
@@ -179,6 +190,19 @@ footer{
           border:0px;
         }
       }
+    }
+    a.profLink{
+      text-transform:uppercase;
+      @media (min-width: $mobile) {
+        height:100%;
+        display:inline-block;
+        padding:8px;
+        background-color:$yellow;
+        color:#053f5a;
+      }
+      @media (max-width: $mobile) {}
+        color:$yellow;
+        background-color:#053f5a;
     }
   }
 }
@@ -399,15 +423,16 @@ footer{
     }
   }
   #chooseAvatar{
-    display:flex;
-    @media (max-width: $mobile) {
-      display:block;
-    }
+
   }
   .avatarContainer{
-    width:50%;
-    padding-bottom:55%;
+    width:40%;
+    padding-bottom:43%;
     box-sizing: border-box;
+    @media (max-width: $tablet) {
+      width:50%;
+      padding-bottom:55%;
+    }
     @media (max-width: $mobile) {
       width:100%;
       padding-bottom:105%;
@@ -421,30 +446,29 @@ footer{
       width:33%;
       cursor:pointer;
       svg,title,path{
-        pointer-events: none;
+       // pointer-events: none;
       }
     }
   }
   .choices{
-    display:block;
-    width:100%;
-    border:1px magenta solid;
-    display:none;
+    display:flex;
+    @media (max-width: $mobile) {
+      display:block;
+    }
   }
   .colourlist{
     display:flex;
-    display:block;
     width:100%;
-    border:1px pink solid;
-    margin:0px;
+    margin:0px 0px 10px 0px;
     padding:0px;
     li{
       display:block;
       list-style-type: none;
-      height:100px;
-      width:100px;
+      height:60px;
+      width:60px;
       margin:0px;
       padding:0px;
+      cursor:pointer;
     }
   }
 }
@@ -480,10 +504,14 @@ footer{
     margin:0px;
     line-height:38px;
     text-align: center;
+    text-transform: capitalize;
     small{
       font-size:0.8em;
     }
   }
+}
+#save{
+  margin-left:0px;
 }
 .aspectSection{
   box-sizing: border-box;
@@ -537,7 +565,7 @@ footer{
     textarea {
       width:100%;
       resize: vertical;
-      background-color:#aeeaef;
+      background-color:#fff;
       border:3px #aeeaef solid;
       margin-top:10px;
       font-size:30px;
@@ -597,11 +625,105 @@ footer{
   #player{
     max-width:100%;
   }
+  .submittedEntries{
+    margin-top:20px;
+    width:100%;
+  }
+  .deleteIdea{
+    width:40px;
+    height:40px;
+    border-radius: 20px;
+    font-size:30px;
+    background-color:$whareRed;
+    color:#fff;
+    font-family:Arial, Helvetica, sans-serif;
+    display:block;
+    border:0px;
+    outline:0px;
+    margin-left:20px;
+    cursor:pointer;
+    transition: background-color 0.3s;
+    &:hover{
+      background-color:red;
+    }
+  }
+  .submittedEntry{
+    width:100%;
+    display:flex;
+    align-items: center;
+    margin-bottom:10px;
+    &:last-child{
+      margin-bottom:0px;
+    }
+  }
+  .entryWrap{
+    width:calc(100% - 40px);
+    box-sizing: border-box;
+    padding:10px 20px;
+    background-color:$lightBlue;
+    border-radius: 8px;
+    color:#053f5a;
+    font-size:30px;
+    margin:0px;
+    display:flex;
+    align-items: center;
+    @media (max-width: 1320px) {
+      display:block;
+    }
+    @media (max-width: $mobile) {
+      width:calc(100% - 20px);
+    }
+    .ideaWrap{
+      width:calc(100% - 200px);
+      padding:0px 10px;
+      @media (max-width:  1320px) {
+        padding:0px;
+      }
+      h4{
+        font-size:16px;
+        margin:0px;
+
+      }
+      p{
+        margin-top:0px;
+      }
+    }
+    .playButton{
+      font-size:60px;
+      cursor:pointer;
+      width:100px;
+      text-align: right;
+      transition: color  0.3s;
+      &:hover{
+        color:#05628d;
+      }
+      @media (max-width:  1320px) {
+        text-align: left;
+        line-height:40px;
+      }
+    }
+    .feelingWrap{
+      width:100px;
+      height:calc(100px * 0.68);
+      path{
+        fill:#053f5a;
+      }
+    }
+    .ideaWrap,.playButton,.feelingWrap{
+      display:block;
+    }
+    .ideaWrap,.playButton{
+      @media (max-width:  1320px) {
+        width:100%;
+      }
+    }
+  }
 }
 #aspectLinks{
   width:25%;
   color:$darkBlue;
   padding:0px 26px;
+  word-break: break-all;
   @media (max-width: calc(200px + $tablet))  {
     text-align:center;
     margin-top:40px;
@@ -662,13 +784,13 @@ footer{
   z-index:6;
 }
 
-.head svg path{
+.faceColour{
 /*   face colour */
   fill:#d29367;
 }
 
 .hair{
-  fill:aqua;
+  fill:rgb(41, 29, 20);
 }
 
 
