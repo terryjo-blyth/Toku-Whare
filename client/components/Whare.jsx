@@ -6,10 +6,10 @@ import { useAuth0 } from '@auth0/auth0-react'
 
 function Home () {
   const user = useSelector(state => state.user)
-  const whare = useSelector(state => state.whare)
+
   const dispatch = useDispatch()
-  console.log(user)
-  console.log(whare)
+  // console.log(user)
+  // console.log(whare)
 
   // useEffect(() => {
   //   dispatch(fetchUser(user))
@@ -19,8 +19,11 @@ function Home () {
   return (
     <>
       <div>This is the HomePage</div>
-      Taha tinana: {whare.tahaTinana}
-      <Link to='tahaTinana'>This link takes you to the particular aspect</Link>
+      <Link to='tahaTinana'>Taha Tinana</Link>
+      <Link to='tahaWairua'>Taha Wairua</Link>
+      <Link to='tahaWhanau'>Taha Whanau</Link>
+      <Link to='tahaHinengaro'>Taha Hinengaro</Link>
+      <Link to='whenua'>Whenua</Link>
       {/* {user.taha_tinana} {user.taha_whanau} {user.taha_hinengaro} {user.taha_wairua} {user.whenua} */}
     </>
   )
