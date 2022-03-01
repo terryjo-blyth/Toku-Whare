@@ -108,3 +108,5 @@ bundle.*
 
 # dev.sqlite3
 dev.sqlite3
+
+.prettierignore

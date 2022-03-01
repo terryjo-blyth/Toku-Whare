@@ -1,12 +1,6 @@
 import { SET_WHARE_SUCCESS } from '../actions'
 
-const initialState = {
-  tahaTinana: '1',
-  tahaWairua: '2',
-  tahaWhanau: '3',
-  tahaHinengaro: '4',
-  whenua: '5'
-}
+const initialState = []
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
