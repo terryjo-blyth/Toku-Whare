@@ -1,10 +1,6 @@
 import { SET_USER_SUCCESS } from '../actions'
 
-const initialState = {
-  auth0Id: '',
-  email: '',
-  token: ''
-}
+const initialState = {}
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {

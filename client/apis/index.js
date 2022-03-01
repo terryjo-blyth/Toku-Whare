@@ -12,7 +12,6 @@ export function getWhare (user) {
 }
 
 export function getWhareData (token) {
-  console.log('getWhareData')
   return request.get(`${baseUrl}/entries`)
     .set('Authorization', `Bearer ${token}`)
     .then(response => {
@@ -31,7 +30,6 @@ export function getUser (user) {
 }
 
 export async function addUser (user) {
-  console.log('addUser')
   return request.post(`${baseUrl}`)
     .set('authorization', `Bearer ${user.token}`)
     .send(user)
@@ -44,6 +42,16 @@ export function updateAspect (aspect) {
     .set('Authorization', `Bearer ${aspect.token}`)
     .send({ section, entry })
     .then(res => res.body.entries)
+    .catch(logError)
+}
+
+export function addUserInfo (userData) {
+  console.log('api', userData)
+  const { name, dob, email } = userData
+  return request.patch(`${baseUrl}/info`)
+    .set('Authorization', `Bearer ${userData.token}`)
+    .send({ name, dob, email })
+    .then(res => res.body.user)
     .catch(logError)
 }
 

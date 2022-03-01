@@ -100,3 +100,22 @@ router.patch('/entries/:id', (req, res) => {
     })
     .catch(err => res.status(500).send(err.message))
 })
+
+router.patch('/info', checkJwt, async (req, res) => {
+  console.log('postroute')
+  const id = req.user?.sub
+  const { name, dob, email } = req.body
+  const moreInfo = {
+    name: name,
+    dob: dob,
+    email: email
+  }
+  db.addUserInfo(id, moreInfo)
+    .then(() => {
+      return db.getUser(id)
+    })
+    .then(user => {
+      return res.status(204).json({ user })
+    })
+    .catch(err => res.status(500).send(err.message))
+})

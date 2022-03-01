@@ -1,4 +1,4 @@
-import { getWhare, addUser, addAspect, getUser, getWhareData } from '../apis'
+import { getWhare, addUser, addAspect, getUser, getWhareData, addUserInfo } from '../apis'
 
 export const SET_WHARE_PENDING = 'SET_WHARE_PENDING'
 export const SET_USER_SUCCESS = 'SET_USER_SUCCESS'
@@ -37,7 +37,6 @@ export function fetchWhareData (token) {
   return dispatch => {
     return getWhareData(token)
       .then(whareData => {
-        console.log(whareData)
         return dispatch(setWhareSuccess(whareData))
       })
       .catch(err => {
@@ -75,18 +74,21 @@ export function addUserData (newData) {
   }
 }
 
-// export function addAspectData (newData, token) {
-//   return dispatch => {
-//     return updateAspect(newData, token)
-//       .then(() => {
-//         dispatch(setUserSuccess(newData))
-//         return null
-//       })
-//       .catch(err => {
-//         dispatch(setError(err.message))
-//       })
-//   }
-// }
+export function saveUserInfo (newData) {
+  return (dispatch, getState) => {
+    const { user } = getState()
+    const token = user?.token
+    const { name, dob, email } = newData
+    return addUserInfo({ name, dob, email, token })
+      .then(() => {
+        dispatch(setUserSuccess(newData))
+        return null
+      })
+      .catch(err => {
+        dispatch(setError(err.message))
+      })
+  }
+}
 
 export function addWhareDataSuccess (newData) {
   return {

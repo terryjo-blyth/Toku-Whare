@@ -47,11 +47,23 @@ function createUser (user, db = connection) {
     })
 }
 
+function addUserInfo (id, info, db = connection) {
+  const { name, dob, email } = info
+  return db('users')
+    .where({ auth0Id: id })
+    .update({
+      name,
+      dob,
+      email
+    })
+}
+
 module.exports = {
   getUser,
   getUsers,
   isInDb,
   createUser,
   getWhareEntries,
-  addWhareEntry
+  addWhareEntry,
+  addUserInfo
 }

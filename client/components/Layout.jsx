@@ -31,7 +31,7 @@ function Layout () {
   return (
     <>
       <Header />
-      {/* <nav>
+      <nav>
         <ul>
           <li>About</li>
           <li>Contact</li>
@@ -45,7 +45,7 @@ function Layout () {
           <li><Link to='/'>Whare</Link></li>
           <li><Link to='/userprofile'>Profile</Link></li>
         </ul>
-      </nav> */}
+      </nav>
       <div className="outlet-container">
         <Outlet />
       </div>
