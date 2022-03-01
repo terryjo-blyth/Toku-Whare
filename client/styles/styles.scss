@@ -70,8 +70,10 @@ header{
     bottom:-26px;
     text-align:center;
     z-index:10;
-    @media (max-width: $mobile) {
+    @media (max-width: $tablet) {
       font-size:70px;
+    }
+    @media (max-width: $mobile) {
       width:208px;
       line-height:60px;
     }
@@ -80,7 +82,7 @@ header{
     position:absolute;
     text-decoration: none;
     right:70px;
-    top:38px;
+    top:20px;
     border:3px $lightBlue solid;
     font-family:lfl;
     color:$darkBlue;
@@ -91,15 +93,16 @@ header{
     z-index:10;
     .avatarContainer{
       height:38px;
+      margin-left:10px;
       width:calc(38px * 0.95);
-      float:left;
     }
     .loginText{
-      margin-left:6px;
       position:relative;
-      top:6px;
+      top:0px;
+      width:100%;
+      display:block;
       @media (max-width: $tablet) {
-        display:none;
+        // display:none;
       }
     }
     @media (max-width: $tablet) {
@@ -179,6 +182,19 @@ footer{
           border:0px;
         }
       }
+    }
+    a.profLink{
+      text-transform:uppercase;
+      @media (min-width: $mobile) {
+        height:100%;
+        display:inline-block;
+        padding:8px;
+        background-color:$yellow;
+        color:#053f5a;
+      }
+      @media (max-width: $mobile) {}
+        color:$yellow;
+        background-color:#053f5a;
     }
   }
 }
@@ -668,7 +684,7 @@ footer{
 }
 
 .hair{
-  fill:aqua;
+  fill:rgb(41, 29, 20);
 }
 
 

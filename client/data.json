@@ -1,5 +1,32 @@
 {
   "tahaTinana": {
-    "description": "some long description here"   
+    "question": "What are some ways you can use your tinana (body) to feel good? Do you like to dance, or play sports? How about eating your favourite healthly kai? What are your ideas?",
+    "description": "Taha tinana is about how your body feels and how you care for it. Refuelling your body helps you to feel mentally well. Sometimes your tinana might not be where you’d like it to be and this might be beyond your control. What’s important is that you do what you can to nurture it.",   
+    "usefulLinks": ["https://sparklers.org.nz/activities/"],
+    "translation": "our body"
+  },
+  "tahaWairua": {
+    "question": "",
+    "description": "Taha wairua is about taking notice and appreciating the beauty around us. It’s about rediscovering things that make us feel awe, hope, strength, unity and connection. For some, wairua is faith or a higher power. Sometimes our wairua isn’t strong and we encourage you to think about what wairua means to you and ways to strengthen it. When your wairua is strong, it’s easier to feel good, cope with challenges and build strong whānau relationships.",   
+    "usefulLinks": "",
+    "translation": "spiritual"
+  },
+  "tahaHinengaro": {
+    "question": "There are so many different ways we can feel - happy, sad, angry, grumpy, or silly. When you are feeling sad, what can you think about that makes you smile? Is there something you like to do - kōrero with a friend, or reading a favourite pukapuka (book)? Do you like to do a crazy dance, or jump on the trampoline?",
+    "description": "Taha hinengaro is your mind, heart, conscience, thoughts and feelings. Just like your physical health, your hinengaro needs to be nurtured. Hinengaro is what you do to stimulate and refresh your mind so you can better cope with the ups and downs of life.",   
+    "usefulLinks": "",
+    "translation": "mind and emotions"
+  },
+  "tahaWhanau": {
+    "question": "Who are the people who are special to you? What do you like to do together? Give them a hug, play games together, bake something yummy, or read a story? What are your ideas?",
+    "description": "Taha whānau is the people we care about, who recharge us and make us feel we belong. Whānau isn’t just our immediate relatives. It includes our friends, hoamahi/colleagues, iwi or community – the people who are close to our hearts.",   
+    "usefulLinks": "",
+    "translation": "family and friends"
+  },
+  "whenua": {
+    "question": "Where is a place you love to be? Do you like the beach, or the park? Maybe a secret place that's just for you? Or a place that is special to your family?",
+    "description": "Whenua is our connection to the land. It’s soil, plants, animals and people – tangata whenua. It’s the earth through which you are connected to your tūpuna/ancestors. Whenua is a place of belonging and it’s comforting that it is never too far away.",   
+    "usefulLinks": "",
+    "translation": "land/roots"
   }
 }

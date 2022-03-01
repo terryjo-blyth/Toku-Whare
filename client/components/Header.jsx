@@ -29,7 +29,7 @@ function Header () {
       <IfNotAuthenticated>
         <a href="/" onClick={handleSignIn} className="login">
           <span className="loginImg">
-            <Avatar />
+            {/* <Avatar /> */}
           </span>
           <span className="loginText">Login</span>
         </a>

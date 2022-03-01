@@ -54,9 +54,13 @@ header h1 {
   text-align: center;
   z-index: 10;
 }
-@media (max-width: 582px) {
+@media (max-width: 800px) {
   header h1 {
     font-size: 70px;
+  }
+}
+@media (max-width: 582px) {
+  header h1 {
     width: 208px;
     line-height: 60px;
   }
@@ -65,7 +69,7 @@ header .login {
   position: absolute;
   text-decoration: none;
   right: 70px;
-  top: 38px;
+  top: 20px;
   border: 3px #66cbe4 solid;
   font-family: lfl;
   color: #1f7eaa;
@@ -77,18 +81,14 @@ header .login {
 }
 header .login .avatarContainer {
   height: 38px;
+  margin-left: 10px;
   width: 36.1px;
-  float: left;
 }
 header .login .loginText {
-  margin-left: 6px;
   position: relative;
-  top: 6px;
-}
-@media (max-width: 800px) {
-  header .login .loginText {
-    display: none;
-  }
+  top: 0px;
+  width: 100%;
+  display: block;
 }
 @media (max-width: 800px) {
   header .login {
@@ -178,7 +178,20 @@ footer nav a {
     border: 0px;
   }
 }
-
+footer nav a.profLink {
+  text-transform: uppercase;
+  color: #fbe02b;
+  background-color: #053f5a;
+}
+@media (min-width: 582px) {
+  footer nav a.profLink {
+    height: 100%;
+    display: inline-block;
+    padding: 8px;
+    background-color: #fbe02b;
+    color: #053f5a;
+  }
+}
 /* Home Page */
 .aspectsNav {
   position: absolute;
@@ -714,7 +727,7 @@ footer nav a {
 }
 
 .hair {
-  fill: aqua;
+  fill: #291d14;
 }
 
 /* face w/gradient: */

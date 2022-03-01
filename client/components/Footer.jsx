@@ -5,8 +5,11 @@ function Footer () {
   return (
     <footer>
       <nav>
+        {/* we'll want a conditional to show this link only when logged in: */}
+        <Link class="profLink" to='/userprofile'>My Profile</Link>
+
         <Link to='/'>Home</Link>
-        <Link to='/userprofile'>Contact us</Link>
+        <a href="#">Contact us</a>
         <a href="#">Privacy policy</a>
         <a href="#">&copy; Copyright Tohora 2022</a>
       </nav>
