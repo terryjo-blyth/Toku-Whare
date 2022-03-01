@@ -30,6 +30,22 @@ function UserProfile () {
     '59331a'
   ]
 
+  function hairColour (e) {
+    const newColor = `#${e.target.id}`
+    const hair = document.getElementsByClassName('chooseHair')
+    for (let i = 0; i < hair.length; i++) {
+      hair.item(i).style.fill = newColor
+    }
+  }
+
+  function faceColour (e) {
+    const newColor = `#${e.target.id}`
+    const faces = document.getElementsByClassName('faceColour')
+    for (let i = 0; i < faces.length; i++) {
+      faces.item(i).style.fill = newColor
+    }
+  }
+
   return (
     <>
       {/* <div>This is where user inputs personal info</div>
@@ -61,7 +77,7 @@ function UserProfile () {
             <ul className="colourlist">
               {headColourArr.map((colour, i) => {
                 return (
-                  <li style={{ backgroundColor: `#${colour}` }} key={i}></li>
+                  <li id={colour} onClick={(e) => faceColour(e)} style={{ backgroundColor: `#${colour}` }} key={i}></li>
                 )
               })}
             </ul>
@@ -69,7 +85,7 @@ function UserProfile () {
             <ul className="colourlist">
               {hairColorArr.map((colour, i) => {
                 return (
-                  <li style={{ backgroundColor: `#${colour}` }} key={i}></li>
+                  <li id={colour} onClick={(e) => hairColour(e)} style={{ backgroundColor: `#${colour}` }} key={i}></li>
                 )
               })}
             </ul>

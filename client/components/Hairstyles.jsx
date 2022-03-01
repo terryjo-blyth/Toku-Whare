@@ -10,7 +10,7 @@ const hairstylesArr = [
 ]
 
 function changeHair (e) {
-  alert(e.target.innerHTML)
+  alert(e.target.getAttribute('d'))
 }
 
 function Hairstyles () {
@@ -21,9 +21,9 @@ function Hairstyles () {
 
         {hairstylesArr.map((style, i) => {
           return (
-            <div onClick={(e) => changeHair(e)} className="hairstyle" key={i}>
+            <div className="hairstyle" key={i}>
               <svg className="hair" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 253.9">
-                <path d={style} />
+                <path onClick={(e) => changeHair(e)} d={style} />
               </svg>
             </div>
           )
