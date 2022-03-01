@@ -6,7 +6,7 @@ function Footer () {
     <footer>
       <nav>
         {/* we'll want a conditional to show this link only when logged in: */}
-        <Link class="profLink" to='/userprofile'>My Profile</Link>
+        <Link className="profLink" to='/userprofile'>My Profile</Link>
 
         <Link to='/'>Home</Link>
         <a href="#">Contact us</a>
