@@ -352,7 +352,7 @@ footer{
 #userPage{
   display: flex;
   box-sizing: border-box;
-  padding:0px 70px;
+  padding:0px 70px 30px 70px;
   font-family:lfl;
   @media (max-width: $mobile) {
     padding:20px;
@@ -423,6 +423,28 @@ footer{
       svg,title,path{
         pointer-events: none;
       }
+    }
+  }
+  .choices{
+    display:block;
+    width:100%;
+    border:1px magenta solid;
+    display:none;
+  }
+  .colourlist{
+    display:flex;
+    display:block;
+    width:100%;
+    border:1px pink solid;
+    margin:0px;
+    padding:0px;
+    li{
+      display:block;
+      list-style-type: none;
+      height:100px;
+      width:100px;
+      margin:0px;
+      padding:0px;
     }
   }
 }
@@ -614,21 +636,6 @@ footer{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* default avatar styling */
 .avatarContainer{
   height:210px;
@@ -661,7 +668,7 @@ footer{
 }
 
 .hair{
-  fill:brown;
+  fill:aqua;
 }
 
 

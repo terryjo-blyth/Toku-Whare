@@ -371,7 +371,7 @@ footer nav a {
 #userPage {
   display: flex;
   box-sizing: border-box;
-  padding: 0px 70px;
+  padding: 0px 70px 30px 70px;
   font-family: lfl;
 }
 @media (max-width: 582px) {
@@ -450,6 +450,28 @@ footer nav a {
 }
 #userPage #chooseHair .hairBox .hairstyle svg, #userPage #chooseHair .hairBox .hairstyle title, #userPage #chooseHair .hairBox .hairstyle path {
   pointer-events: none;
+}
+#userPage .choices {
+  display: block;
+  width: 100%;
+  border: 1px magenta solid;
+  display: none;
+}
+#userPage .colourlist {
+  display: flex;
+  display: block;
+  width: 100%;
+  border: 1px pink solid;
+  margin: 0px;
+  padding: 0px;
+}
+#userPage .colourlist li {
+  display: block;
+  list-style-type: none;
+  height: 100px;
+  width: 100px;
+  margin: 0px;
+  padding: 0px;
 }
 
 /* Aspect Page */
@@ -692,7 +714,7 @@ footer nav a {
 }
 
 .hair {
-  fill: brown;
+  fill: aqua;
 }
 
 /* face w/gradient: */

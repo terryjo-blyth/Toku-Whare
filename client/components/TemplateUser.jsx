@@ -33,6 +33,24 @@ function TemplateUser () {
         <section id="chooseAvatar">
           <Avatar />
           <Hairstyles />
+          <section className="choices">
+            <h3>Face:</h3>
+            <ul className="colourlist">
+              {headColourArr.map((colour, i) => {
+                return (
+                  <li style={{ backgroundColor: `#${colour}` }} key={i}></li>
+                )
+              })}
+            </ul>
+            <h3>hair:</h3>
+            <ul className="colourlist">
+              {hairColorArr.map((colour, i) => {
+                return (
+                  <li style={{ backgroundColor: `#${colour}` }} key={i}></li>
+                )
+              })}
+            </ul>
+          </section>
         </section>
         <button id="delete">Delete &times;</button>
         <button id="save">Save</button>
