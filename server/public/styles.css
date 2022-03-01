@@ -122,7 +122,7 @@ main {
   padding: 8px;
   border-radius: 6px;
 }
-@media (max-width: 582px) {
+@media (max-width: 1000px) {
   #delete, #save {
     width: 100%;
     margin: 0px 0px 10px 0px;
@@ -657,13 +657,13 @@ footer nav a.profLink {
   width: 100%;
 }
 #userAspect .deleteIdea {
-  width: 60px;
-  height: 60px;
-  border-radius: 30px;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  font-size: 30px;
   background-color: #ac2124;
   color: #fff;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 40px;
   display: block;
   border: 0px;
   outline: 0px;
@@ -676,7 +676,7 @@ footer nav a.profLink {
   align-items: center;
 }
 #userAspect .entryWrap {
-  width: calc(100% - 100px);
+  width: calc(100% - 40px);
   box-sizing: border-box;
   padding: 10px 20px;
   background-color: #66cbe4;
@@ -687,12 +687,24 @@ footer nav a.profLink {
   display: flex;
   align-items: center;
 }
-#userAspect .entryWrap .ideaWrap, #userAspect .entryWrap .playButton, #userAspect .entryWrap .feelingWrap {
-  display: block;
+@media (max-width: 1320px) {
+  #userAspect .entryWrap {
+    display: block;
+  }
+}
+@media (max-width: 582px) {
+  #userAspect .entryWrap {
+    width: calc(100% - 20px);
+  }
 }
 #userAspect .entryWrap .ideaWrap {
   width: calc(100% - 200px);
   padding: 0px 10px;
+}
+@media (max-width: 1320px) {
+  #userAspect .entryWrap .ideaWrap {
+    padding: 0px;
+  }
 }
 #userAspect .entryWrap .ideaWrap h4 {
   font-size: 16px;
@@ -707,6 +719,12 @@ footer nav a.profLink {
   width: 100px;
   text-align: right;
 }
+@media (max-width: 1320px) {
+  #userAspect .entryWrap .playButton {
+    text-align: left;
+    line-height: 40px;
+  }
+}
 #userAspect .entryWrap .feelingWrap {
   width: 100px;
   height: 68px;
@@ -714,11 +732,20 @@ footer nav a.profLink {
 #userAspect .entryWrap .feelingWrap path {
   fill: #053f5a;
 }
+#userAspect .entryWrap .ideaWrap, #userAspect .entryWrap .playButton, #userAspect .entryWrap .feelingWrap {
+  display: block;
+}
+@media (max-width: 1320px) {
+  #userAspect .entryWrap .ideaWrap, #userAspect .entryWrap .playButton {
+    width: 100%;
+  }
+}
 
 #aspectLinks {
   width: 25%;
   color: #1f7eaa;
   padding: 0px 26px;
+  word-break: break-all;
 }
 @media (max-width: 1000px) {
   #aspectLinks {

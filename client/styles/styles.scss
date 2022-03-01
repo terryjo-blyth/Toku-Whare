@@ -136,7 +136,7 @@ main{
   cursor:pointer;
   padding:8px;
   border-radius:6px;
-  @media (max-width: $mobile) {
+  @media (max-width: calc(200px + $tablet)) {
     width:100%;
     margin:0px 0px 10px 0px;
   }
@@ -619,13 +619,13 @@ footer{
     width:100%;
   }
   .deleteIdea{
-    width:60px;
-    height:60px;
-    border-radius: 30px;
+    width:40px;
+      height:40px;
+      border-radius: 20px;
+      font-size:30px;
     background-color:$whareRed;
     color:#fff;
     font-family:Arial, Helvetica, sans-serif;
-    font-size:40px;
     display:block;
     border:0px;
     outline:0px;
@@ -638,7 +638,7 @@ footer{
     align-items: center;
   }
   .entryWrap{
-    width:calc(100% - 100px);
+    width:calc(100% - 40px);
     box-sizing: border-box;
     padding:10px 20px;
     background-color:$lightBlue;
@@ -648,12 +648,18 @@ footer{
     margin:0px;
     display:flex;
     align-items: center;
-    .ideaWrap,.playButton,.feelingWrap{
+    @media (max-width: 1320px) {
       display:block;
+    }
+    @media (max-width: $mobile) {
+      width:calc(100% - 20px);
     }
     .ideaWrap{
       width:calc(100% - 200px);
       padding:0px 10px;
+      @media (max-width:  1320px) {
+        padding:0px;
+      }
       h4{
         font-size:16px;
         margin:0px;
@@ -668,6 +674,10 @@ footer{
       cursor:pointer;
       width:100px;
       text-align: right;
+      @media (max-width:  1320px) {
+        text-align: left;
+        line-height:40px;
+      }
     }
     .feelingWrap{
       width:100px;
@@ -676,12 +686,21 @@ footer{
         fill:#053f5a;
       }
     }
+    .ideaWrap,.playButton,.feelingWrap{
+      display:block;
+    }
+    .ideaWrap,.playButton{
+      @media (max-width:  1320px) {
+        width:100%;
+      }
+    }
   }
 }
 #aspectLinks{
   width:25%;
   color:$darkBlue;
   padding:0px 26px;
+  word-break: break-all;
   @media (max-width: calc(200px + $tablet))  {
     text-align:center;
     margin-top:40px;
