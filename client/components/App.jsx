@@ -8,6 +8,9 @@ import Aspect from './Aspect'
 import { cacheUser } from '../auth0-utils'
 import { useAuth0 } from '@auth0/auth0-react'
 import { fetchWhareData } from '../actions'
+import TemplateAspect from './TemplateAspect'
+import TemplateUser from './TemplateUser'
+import TemplateHome from './TemplateHome'
 
 function App () {
   const dispatch = useDispatch()
@@ -28,6 +31,9 @@ function App () {
             <Route index element={<Whare />}/>
             <Route path=":aspect" element={<Aspect />} />
             <Route path="userprofile" element={<UserProfile />} />
+            <Route path="template-aspect" element={<TemplateAspect />} />
+            <Route path="template-user" element={<TemplateUser />} />
+            <Route path="template-home" element={<TemplateHome />} />
           </Route>
         </Routes>
       </div>
