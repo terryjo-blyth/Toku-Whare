@@ -2,10 +2,8 @@ const connection = require('./connection')
 
 module.exports = {
   getUsers,
-  // getWhare,
-  // getSingleUser,
-  // addData
   getUser,
+  getWhare,
   updateEntry,
   createUser,
   isInDb,
@@ -22,6 +20,20 @@ function getUsers (db = connection) {
 
 function getUser (id, db = connection) {
   return db('users')
+    .select()
+    // .select(
+    //   'tahaTinana',
+    //   'tahaWairua',
+    //   'tahaWhanau',
+    //   'tahaHinengaro',
+    //   'whenua'
+    // )
+    .where('auth0Id', id)
+    .first()
+}
+
+function getWhare (id, db = connection) {
+  return db('users')
     .select(
       'tahaTinana',
       'tahaWairua',
@@ -29,22 +41,9 @@ function getUser (id, db = connection) {
       'tahaHinengaro',
       'whenua'
     )
-    .where({ id })
+    .where('auth0Id', id)
     .first()
 }
-function createUser (user, db = connection) {
-  return db('users')
-    .insert({ email: user.email, auth0_id: user.auth0_id })
-}
-/* function getEachWhare (id, db = connection) {
-  return db('users').select('taha_tinana as tahaTinana', 'taha_wairua as tahaWairua', 'taha_whanau as tahaWhanau', 'taha_hinengaro as tahaHinengaro', 'whenua').where([id]).first()
-} */
-
-// function getSingleUser (id, db = connection) {
-//   return db('users').select()
-//     .where({ id })
-//     .first()
-// }
 
 function isInDb (id, db = connection) {
   return db('users')

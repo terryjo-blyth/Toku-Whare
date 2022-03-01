@@ -17,7 +17,6 @@ function App () {
             <Route index element={<Whare />}/>
             <Route path=":aspect" element={<Aspect />} />
             <Route path="userprofile" element={<UserProfile />} />
-
           </Route>
         </Routes>
       </div>
