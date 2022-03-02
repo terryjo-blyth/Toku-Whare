@@ -649,7 +649,7 @@ footer nav a.profLink {
   display: block;
   cursor: pointer;
 }
-#userAspect .userEntry .radioWrap svg g .st0 {
+#userAspect .userEntry .radioWrap svg g path {
   fill: #1f7eaa;
   transition: fill 0.3s;
 }
@@ -662,7 +662,7 @@ footer nav a.profLink {
 #userAspect .userEntry .radioWrap.active label, #userAspect .userEntry .radioWrap:hover label {
   color: #fbe02b;
 }
-#userAspect .userEntry .radioWrap.active svg g .st0, #userAspect .userEntry .radioWrap:hover svg g .st0 {
+#userAspect .userEntry .radioWrap.active svg g path, #userAspect .userEntry .radioWrap:hover svg g path {
   fill: #fbe02b;
 }
 #userAspect .userEntry .radioWrap svg {

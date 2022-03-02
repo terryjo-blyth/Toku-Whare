@@ -605,7 +605,7 @@ footer{
     .radioWrap{
       display:block;
       cursor:pointer;
-      svg g .st0{
+      svg g path{
         fill: $darkBlue;
         transition:fill 0.3s;
       }
@@ -619,7 +619,7 @@ footer{
         label{
           color: $yellow;
         }
-        svg g .st0{
+        svg g path{
           fill: $yellow;
         }
       }
