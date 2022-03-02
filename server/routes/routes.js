@@ -6,17 +6,6 @@ const checkJwt = require('../auth0')
 
 module.exports = router
 
-// be careful, this lets any user get ALL of the information of all other users
-// router.get('/', async (req, res) => {
-//   try {
-//     const users = await db.getUsers()
-//     res.json({ users })
-//   } catch (err) {
-//     console.error(err)
-//     res.status(500).send(err.message)
-//   }
-// })
-
 router.post('/', checkJwt, async (req, res) => {
   const newUser = req.body
   const auth0Id = req.user?.sub
@@ -38,7 +27,6 @@ router.post('/', checkJwt, async (req, res) => {
   }
 })
 
-// use checkJwt
 router.get('/', checkJwt, async (req, res) => {
   const id = req.user?.sub
   db.getUser(id)
@@ -53,8 +41,6 @@ router.get('/', checkJwt, async (req, res) => {
 
 router.get('/entries', checkJwt, async (req, res) => {
   const id = req.user?.sub
-  console.log(id)
-  // const id = 'auth0|1234'
   db.getWhareEntries(id)
     .then(entries => {
       res.json({ entries })
@@ -102,7 +88,6 @@ router.patch('/entries/:id', (req, res) => {
 })
 
 router.patch('/info', checkJwt, async (req, res) => {
-  console.log('postroute')
   const id = req.user?.sub
   const { name, dob, email, svgAvatar } = req.body
   const moreInfo = {
@@ -119,4 +104,22 @@ router.patch('/info', checkJwt, async (req, res) => {
       return res.status(204).json({ user })
     })
     .catch(err => res.status(500).send(err.message))
+})
+
+router.delete('/entries/:id', checkJwt, (req, res) => {
+  const auth0Id = req.user?.sub
+  db.getEntry(req.params.id)
+    .then((entry) => {
+      if (entry.userAuth0Id !== auth0Id) {
+        return res.sendStatus(401)
+      }
+
+      return db.deleteEntry(req.params.id)
+    })
+    .then(() => db.getWhareEntries(auth0Id))
+    .then((entries) => res.status(200).json({ entries }))
+    .catch(err => {
+      res.status(500).send(err.message)
+      console.log(err)
+    })
 })
