@@ -51,8 +51,8 @@ export function addAspectData (newData) {
   return (dispatch, getState) => {
     const { user } = getState()
     const token = user?.token
-    const { section, entry } = newData
-    return addAspect({ section, entry, token })
+    const { section, entry, feeling } = newData
+    return addAspect({ section, entry, feeling, token })
       .then(whareData => {
         console.log(whareData)
         return dispatch(setWhareSuccess(whareData))

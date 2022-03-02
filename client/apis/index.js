@@ -55,10 +55,10 @@ export function addUserInfo (userData) {
 }
 
 export function addAspect (aspect) {
-  const { section, entry } = aspect
+  const { section, entry, feeling } = aspect
   return request.post(`${baseUrl}/entries`)
     .set('Authorization', `Bearer ${aspect.token}`)
-    .send({ section, entry })
+    .send({ section, entry, feeling })
     .then(res => res.body.entries)
     .catch(logError)
 }
