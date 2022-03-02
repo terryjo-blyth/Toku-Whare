@@ -17,7 +17,7 @@ function getWhareEntries (id, db = connection) {
     .where({
       auth0Id: id
     })
-    .select('users.auth0Id', 'section', 'feeling', 'text', 'createdAt', 'updatedAt', 'imageUrl', 'audioUrl')
+    .select('id', 'users.auth0Id', 'section', 'feeling', 'text', 'createdAt', 'updatedAt', 'imageUrl', 'audioUrl')
 }
 
 function addWhareEntry (id, section, entry, db = connection) {
@@ -60,6 +60,14 @@ function addUserInfo (id, info, db = connection) {
     })
 }
 
+function getEntry (id, db = connection) {
+  return db('whare').select().where({ id }).first()
+}
+
+function deleteEntry (id, db = connection) {
+  return db('whare').del().where({ id: id })
+}
+
 module.exports = {
   getUser,
   getUsers,
@@ -67,5 +75,7 @@ module.exports = {
   createUser,
   getWhareEntries,
   addWhareEntry,
-  addUserInfo
+  addUserInfo,
+  getEntry,
+  deleteEntry
 }
