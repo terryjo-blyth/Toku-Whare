@@ -7,19 +7,9 @@ import Hairstyles from './Hairstyles'
 
 function UserProfile () {
   const user = useSelector(state => state.user)
-  console.log('user profile from auth', user)
   const [formData, setFormData] = useState({})
 
   const dispatch = useDispatch()
-
-  useEffect(() => {
-    dispatch(fetchUser(user))
-    // userDb.token = user.token
-    // const blah = dispatch(fetchUser(user)).then(() => {
-    //   console.log('fetch user from user profile ', user)
-    //   return null
-    // }).catch(err => console.log(err.message))
-  }, [])
 
   function submitClickHandler (event) {
     event.preventDefault()
@@ -32,7 +22,6 @@ function UserProfile () {
     const dob = document.getElementById('dob').name
     const avatar = document.getElementById('saveAvatar')
     const svgAvatar = 'svgAvatar'
-    console.log(avatar.innerHTML)
 
     setFormData({
       ...formData,
@@ -47,6 +36,7 @@ function UserProfile () {
       dob: d,
       svgAvatar: avatar.innerHTML
     }))
+    dispatch(fetchUser(user))
   }
 
   const hairColorArr = [
@@ -110,7 +100,7 @@ function UserProfile () {
           <h3>My Avatar</h3>
           <section id="chooseAvatar">
             <section className="choices">
-              <Avatar id={'saveAvatar'}/>
+              <Avatar id={'saveAvatar'} userAvatar={user.svgAvatar}/>
               <Hairstyles />
             </section>
             <h3>Face:</h3>
