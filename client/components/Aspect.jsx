@@ -148,6 +148,7 @@ function Aspect () {
             <section className="submittedEntries">
               {entries.map((entry, i) => {
                 // console.log(entry)
+                const date = new Date(entry.createdAt)
                 return (
                   <section id={`entry-${i}`} key={i} className="submittedEntry">
                     <div className="entryWrap">
@@ -159,7 +160,7 @@ function Aspect () {
                         </svg>
                       </div>
                       <div className="ideaWrap">
-                        <h4>Posted on: 10/10/22</h4>
+                        <h4>Posted on: {date.getDate()}/{date.getMonth() + 1}/{date.getYear() - 100}</h4>
                         <p>{entry.text}</p>
                       </div>
                       <div className="playButton">
