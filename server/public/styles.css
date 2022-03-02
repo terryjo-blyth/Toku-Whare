@@ -139,6 +139,11 @@ header .login .loginText {
 .outlet-container {
   padding-bottom: 100px;
 }
+@media (max-width: 800px) {
+  .outlet-container {
+    padding-bottom: 0px;
+  }
+}
 
 main {
   min-height: calc(100% - 222px);
