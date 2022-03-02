@@ -77,6 +77,16 @@ header{
       width:208px;
       line-height:60px;
     }
+    .avatarContainer{
+      width:80px;
+      height:65px;
+      position:relative;
+      display:inline-block;
+      top:-20px;
+      @media (max-width: $tablet) {
+        display:none;
+      }
+    }
   }
   .login{
     position:absolute;
@@ -425,9 +435,8 @@ footer{
   #confirmation{
     opacity: 0;
     transition: opacity 0.5s;
-  }
-  #chooseAvatar{
-
+    font-size:30px;
+    margin:0px;
   }
   .avatarContainer{
     width:40%;

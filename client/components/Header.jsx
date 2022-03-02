@@ -2,6 +2,7 @@ import React from 'react'
 import { useAuth0 } from '@auth0/auth0-react'
 import { Link } from 'react-router-dom'
 import Avatar from './Avatar'
+import WhareImage from './WhareImage'
 import { useSelector } from 'react-redux'
 import { IfAuthenticated, IfNotAuthenticated } from './Authenticated'
 
@@ -25,10 +26,10 @@ function Header () {
 
   return (
     <header>
-      <a href="/"><h1>Tōku Whare</h1></a>
 
       {/* Logged out: */}
       <IfNotAuthenticated>
+        <a className="headerLink" href="/"><h1>Tōku Whare </h1></a>
         <a href="/" onClick={handleSignIn} className="login">
           <span className="loginImg">
             {/* <Avatar /> */}
@@ -39,6 +40,7 @@ function Header () {
 
       {/* Logged in: */}
       <IfAuthenticated>
+        <a className="headerLink" href="/"><h1>Tōku <Avatar id={'avatarHeader'} userAvatar={user.svgAvatar}/> Whare </h1></a>
         <a href="/" onClick={handleLogoff} className="login">
           <span className="loginImg">
             <Avatar id={'avatarId'} userAvatar={user.svgAvatar}/>

@@ -65,6 +65,18 @@ header h1 {
     line-height: 60px;
   }
 }
+header h1 .avatarContainer {
+  width: 80px;
+  height: 65px;
+  position: relative;
+  display: inline-block;
+  top: -20px;
+}
+@media (max-width: 800px) {
+  header h1 .avatarContainer {
+    display: none;
+  }
+}
 header .login {
   position: absolute;
   text-decoration: none;
@@ -444,6 +456,8 @@ footer nav a.profLink {
 #userPage #confirmation {
   opacity: 0;
   transition: opacity 0.5s;
+  font-size: 30px;
+  margin: 0px;
 }
 #userPage .avatarContainer {
   width: 40%;
