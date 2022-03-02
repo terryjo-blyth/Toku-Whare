@@ -53,3 +53,44 @@ describe('POST /entries', () => {
       })
   })
 })
+
+describe('PATCH /info', () => {
+  it('Updates selected opportunity status and returns selected opportunity', () => {
+    const fakeUser = {
+      auth0Id: 'auth0|1234',
+      isSupporter: false,
+      name: 'Sarah',
+      dob: '2001-04-23',
+      email: 'cheese@gmail.com',
+      svgAvatar: ''
+    }
+    userDb.getUser.mockReturnValue(Promise.resolve(fakeUser))
+    const fakeUpdateUser = {
+      name: 'name',
+      dob: 'dob',
+      email: 'email',
+      svgAvatar: 'svgAvatar'
+    }
+    userDb.addUserInfo.mockReturnValue(Promise.resolve(fakeUpdateUser))
+    expect.assertions(2)
+    return request(server)
+      .patch('/api/v1/user/info')
+      .send(fakeUpdateUser)
+      .then((res) => {
+        console.log(res.body)
+        expect(userDb.addUserInfo).toHaveBeenCalledWith('auth0|1234', fakeUpdateUser)
+        expect(res.body.user).toEqual(fakeUser)
+        return null
+      })
+  })
+  it('Error message is correct for database response', () => {
+    userDb.addUserInfo.mockImplementation(() => Promise.reject(new Error()))
+    expect.assertions(1)
+    return request(server)
+      .patch('/api/v1/user/info')
+      .then(res => {
+        expect(res.status).toBe(500)
+        return null
+      })
+  })
+})
