@@ -18,8 +18,8 @@ function Aspect () {
   function submitClickHandler (e) {
     e.preventDefault()
     // const { name, value } = e.target
-    const value = document.getElementById('aspectDescr').value
-    const name = document.getElementById('aspectDescr').name
+    const value = document.getElementById('userEntry').value
+    const name = document.getElementById('userEntry').name
     const feeling = document.querySelector('input[name="userFeeling"]:checked').id
 
     setFormData({
@@ -122,7 +122,7 @@ function Aspect () {
           <section className="userEntry">
             <form action="">
               <label htmlFor="userEntry">My Idea:</label>
-              <textarea name="userEntry" placeholder="This is my idea..." id="userEntry" cols="30" rows="3"></textarea>
+              <textarea defaultValue="" name={aspect} id="userEntry" cols="30" rows="3"></textarea>
               <label htmlFor="userRecording">Record:</label><br />
               <audio id="player" controls></audio>
               <fieldset>
