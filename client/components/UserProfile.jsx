@@ -37,6 +37,9 @@ function UserProfile () {
       svgAvatar: avatar.innerHTML
     }))
     dispatch(fetchUser(user))
+    const confirmation = document.getElementById('confirmation')
+    confirmation.style.opacity = '1'
+    setTimeout(() => { confirmation.style.opacity = '0' }, 3000)
   }
 
   const hairColorArr = [
@@ -121,6 +124,7 @@ function UserProfile () {
             </ul>
           </section>
           <button onClick={(e) => submitClickHandler(e)} id="save">Save</button>&nbsp;
+          <p id='confirmation'>User information saved!!</p>
         </form>
       </section>
     </>

@@ -441,6 +441,10 @@ footer nav a.profLink {
   border-color: #1f7eaa;
   outline: #1f7eaa;
 }
+#userPage #confirmation {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
 #userPage .avatarContainer {
   width: 40%;
   padding-bottom: 43%;
