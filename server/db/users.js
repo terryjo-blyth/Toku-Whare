@@ -20,7 +20,7 @@ function getWhareEntries (id, db = connection) {
     .select('id', 'users.auth0Id', 'section', 'feeling', 'text', 'createdAt', 'updatedAt', 'imageUrl', 'audioUrl')
 }
 
-function addWhareEntry (id, section, entry, db = connection) {
+function addWhareEntry (id, section, entry, feeling, db = connection) {
   const { text, createdAt, updatedAt } = entry
   return db('whare')
     .insert({
@@ -28,7 +28,8 @@ function addWhareEntry (id, section, entry, db = connection) {
       section,
       text,
       createdAt,
-      updatedAt
+      updatedAt,
+      feeling
     })
 }
 

@@ -53,13 +53,13 @@ router.get('/entries', checkJwt, async (req, res) => {
 
 router.post('/entries', checkJwt, (req, res) => {
   const userId = req.user?.sub
-  const { section, entry } = req.body
+  const { section, entry, feeling } = req.body
   const newEntry = {
     text: entry,
     createdAt: Date.now(),
     updatedAt: Date.now()
   }
-  db.addWhareEntry(userId, section, newEntry)
+  db.addWhareEntry(userId, section, newEntry, feeling)
     .then(() => {
       return db.getWhareEntries(userId)
     })
