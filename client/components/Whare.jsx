@@ -14,7 +14,7 @@ function Home () {
   }
   return (
     <>
-      <WhareImage/>
+      <WhareImage isAspect={false} aspect={''}/>
       <nav className="aspectsNav">
         <IfAuthenticated>
           <Link className="wairua" to='tahaWairua'>Taha Wairua <br /><small>Spiritual</small></Link>

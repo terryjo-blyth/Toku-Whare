@@ -109,7 +109,7 @@ function Aspect () {
     <>
       <section id="aspectPage">
         <section className="aspectSection" id="aboutAspect">
-          <WhareImage/>
+          <WhareImage isAspect={true} aspect={aspect}/>
           <section className="description">
             <p>{aspectMetaData.description}</p>
           </section>

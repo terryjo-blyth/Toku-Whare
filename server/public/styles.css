@@ -426,6 +426,9 @@ footer nav a.profLink {
   display: inline;
   fill: #089447;
 }
+.whareContainer #paepae.dormant, .whareContainer #maihi-l.dormant, .whareContainer #maihi-r.dormant, .whareContainer #po-l.dormant, .whareContainer #po-r.dormant, .whareContainer #tekoteko.dormant, .whareContainer #kuwaha.dormant, .whareContainer #matapihi.dormant {
+  fill: #cad2d4;
+}
 
 /* User page */
 #userPage {
@@ -826,7 +829,7 @@ footer nav a.profLink {
 #aspectLinks {
   width: 25%;
   color: #1f7eaa;
-  padding: 0px 26px;
+  padding: 0px 0px 0px 40px;
   word-break: break-all;
 }
 @media (max-width: 1000px) {
