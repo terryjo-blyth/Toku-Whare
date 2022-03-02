@@ -85,6 +85,10 @@ header{
       display:inline-block;
       top:-20px;
       @media (max-width: $tablet) {
+        width:60px;
+        height:45px;
+      }
+      @media (max-width: $mobile) {
         display:none;
       }
     }
@@ -99,13 +103,24 @@ header{
     color:$darkBlue;
     background-color: #fff;
     font-size:24px;
-    padding:8px 14px;
+    padding:8px;
     box-sizing: border-box;
     z-index:10;
+    @media (max-width: $tablet) {
+      font-size:18px;
+      padding:3px;
+    }
     .avatarContainer{
       height:38px;
       margin-left:10px;
       width:calc(38px * 0.95);
+      @media (max-width: $tablet) {
+        margin-left:5px;
+      }
+      @media (max-width: $mobile) {
+        height:30px;
+        width:calc(30px * 0.95);
+      }
     }
     .loginText{
       position:relative;
@@ -535,6 +550,7 @@ footer{
     line-height:38px;
     text-align: center;
     text-transform: capitalize;
+    margin-bottom:20px;
     small{
       font-size:0.8em;
     }
@@ -709,7 +725,7 @@ footer{
       @media (max-width:  1320px) {
         padding:0px;
       }
-      h4{
+      h3{
         font-size:16px;
         margin:0px;
 

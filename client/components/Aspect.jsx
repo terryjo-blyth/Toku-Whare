@@ -128,16 +128,12 @@ function Aspect () {
               <fieldset>
                 {feelings.map((feeling, i) => {
                   return (
-                    <div dangerouslySetInnerHTML={parseHTML(`${feeling.svg} <label htmlFor=${feeling.name}>${feeling.name}</label> <input type="radio" name="userFeeling" id=${feeling.name} />`)} key={i} onClick={(e) => checkBox(e)} className="radioWrap">
-                      {/* <label htmlFor={feeling.name}>{feeling.name}</label>
-                      <input type="radio" name="userFeeling" id={feeling.name} /> */}
+                    <div dangerouslySetInnerHTML={parseHTML(`${feeling.svg} <label for=${feeling.name}>${feeling.name}</label> <input type="radio" name="userFeeling" id=${feeling.name} />`)} key={i} onClick={(e) => checkBox(e)} className="radioWrap">
                     </div>
                   )
                 })}
               </fieldset>
-              {/* <button id="delete">Delete &times;</button> */}
               <button onClick={(e) => submitClickHandler(e)} id="save">Submit</button>
-              {/* <div>{JSON.stringify(aspectData)}</div> */}
             </form>
 
             <section className="submittedEntries">
@@ -152,7 +148,7 @@ function Aspect () {
                         <Feeling feeling={entry.feeling} />
                       </div>
                       <div className="ideaWrap">
-                        <h4>Posted on: {date.getDate()}/{date.getMonth() + 1}/{date.getYear() - 100}</h4>
+                        <h3>Posted on: {date.getDate()}/{date.getMonth() + 1}/{date.getYear() - 100}</h3>
                         <p>{entry.text}</p>
                       </div>
                       <div className="playButton">
@@ -170,6 +166,14 @@ function Aspect () {
           </section>
         </section>
         <section className="aspectSection" id="aspectLinks">
+          <h3>Tōku Whare</h3>
+          <ul>
+            <li><a href="/tahaWairua">Taha Wairua</a></li>
+            <li><a href="/tahaTinana">Taha Tinana</a></li>
+            <li><a href="/tahaHinengaro">Taha Hinegaro</a></li>
+            <li><a href="/tahaWhanau">Taha Whānau</a></li>
+            <li><a href="/whenua">Whenua</a></li>
+          </ul>
           <h3>Useful Links</h3>
           <ul>
             {aspectMetaData.usefulLinks.map((link, i) => {

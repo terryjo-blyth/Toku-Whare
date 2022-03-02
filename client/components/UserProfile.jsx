@@ -78,26 +78,14 @@ function UserProfile () {
 
   return (
     <>
-      {/* <div>This is where user inputs personal info</div>
-      <form action="">
-        <label htmlFor="name">Name:</label><br />
-        <input id="name" defaultValue={user.name} type="text" name="name" /><br />
-        <label htmlFor="email">Email:</label><br />
-        <input id="email" defaultValue={user.email} type="email" name="email" /><br />
-        <label htmlFor="dob">Birthday:</label><br />
-        <input id="dob"defaultValue={user.dob} type="date" name="dob" />
-        <button onClick={(e) => submitClickHandler(e)}>Submit</button>
-      </form>
-        <input defaultValue={user.dob} type="date" name="dob" />
-      </form> */}
       <section id="userPage">
         <form>
           <h2>My Info</h2>
-          <label htmlFor="name">My Name</label>
+          <label for="name">My Name</label>
           <input id="name" defaultValue={user.name} type="text" name="name" />
-          <label htmlFor="name">My Email</label>
+          <label for="email">My Email</label>
           <input id="email" defaultValue={user.email} type="email" name="email" />
-          <label htmlFor="dob">My Birthday</label>
+          <label for="dob">My Birthday</label>
           <input id="dob" defaultValue={user.dob} type="date" name="dob" />
 
           <h3>My Avatar</h3>

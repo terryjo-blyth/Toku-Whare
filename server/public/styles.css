@@ -74,6 +74,12 @@ header h1 .avatarContainer {
 }
 @media (max-width: 800px) {
   header h1 .avatarContainer {
+    width: 60px;
+    height: 45px;
+  }
+}
+@media (max-width: 582px) {
+  header h1 .avatarContainer {
     display: none;
   }
 }
@@ -87,14 +93,31 @@ header .login {
   color: #1f7eaa;
   background-color: #fff;
   font-size: 24px;
-  padding: 8px 14px;
+  padding: 8px;
   box-sizing: border-box;
   z-index: 10;
+}
+@media (max-width: 800px) {
+  header .login {
+    font-size: 18px;
+    padding: 3px;
+  }
 }
 header .login .avatarContainer {
   height: 38px;
   margin-left: 10px;
   width: 36.1px;
+}
+@media (max-width: 800px) {
+  header .login .avatarContainer {
+    margin-left: 5px;
+  }
+}
+@media (max-width: 582px) {
+  header .login .avatarContainer {
+    height: 30px;
+    width: 28.5px;
+  }
 }
 header .login .loginText {
   position: relative;
@@ -570,6 +593,7 @@ footer nav a.profLink {
   line-height: 38px;
   text-align: center;
   text-transform: capitalize;
+  margin-bottom: 20px;
 }
 #aspectPage h2 small {
   font-size: 0.8em;
@@ -760,7 +784,7 @@ footer nav a.profLink {
     padding: 0px;
   }
 }
-#userAspect .entryWrap .ideaWrap h4 {
+#userAspect .entryWrap .ideaWrap h3 {
   font-size: 16px;
   margin: 0px;
 }
