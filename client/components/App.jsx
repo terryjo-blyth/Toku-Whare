@@ -7,7 +7,7 @@ import UserProfile from './UserProfile'
 import Aspect from './Aspect'
 import { cacheUser } from '../auth0-utils'
 import { useAuth0 } from '@auth0/auth0-react'
-import { fetchWhareData } from '../actions'
+import { fetchWhareData, fetchUser } from '../actions'
 import TemplateAspect from './TemplateAspect'
 import TemplateUser from './TemplateUser'
 import TemplateHome from './TemplateHome'
@@ -20,6 +20,7 @@ function App () {
   useEffect(() => {
     if (user.token) {
       dispatch(fetchWhareData(user.token))
+      dispatch(fetchUser(user))
     }
   }, [user.token])
 

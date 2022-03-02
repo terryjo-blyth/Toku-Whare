@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchWhare, saveUserInfo } from '../actions'
+import { fetchUser, saveUserInfo } from '../actions'
+import { getUser } from '../apis'
 import Avatar from './Avatar'
 import Hairstyles from './Hairstyles'
 
@@ -21,7 +22,6 @@ function UserProfile () {
     const dob = document.getElementById('dob').name
     const avatar = document.getElementById('saveAvatar')
     const svgAvatar = 'svgAvatar'
-    console.log(avatar.innerHTML)
 
     setFormData({
       ...formData,
@@ -36,6 +36,10 @@ function UserProfile () {
       dob: d,
       svgAvatar: avatar.innerHTML
     }))
+    dispatch(fetchUser(user))
+    const confirmation = document.getElementById('confirmation')
+    confirmation.style.opacity = '1'
+    setTimeout(() => { confirmation.style.opacity = '0' }, 3000)
   }
 
   const hairColorArr = [
@@ -99,7 +103,7 @@ function UserProfile () {
           <h3>My Avatar</h3>
           <section id="chooseAvatar">
             <section className="choices">
-              <Avatar id={'saveAvatar'}/>
+              <Avatar id={'saveAvatar'} userAvatar={user.svgAvatar}/>
               <Hairstyles />
             </section>
             <h3>Face:</h3>
@@ -120,6 +124,7 @@ function UserProfile () {
             </ul>
           </section>
           <button onClick={(e) => submitClickHandler(e)} id="save">Save</button>&nbsp;
+          <p id='confirmation'>User information saved!!</p>
         </form>
       </section>
     </>

@@ -2,10 +2,12 @@ import React from 'react'
 import { useAuth0 } from '@auth0/auth0-react'
 import { Link } from 'react-router-dom'
 import Avatar from './Avatar'
+import { useSelector } from 'react-redux'
 import { IfAuthenticated, IfNotAuthenticated } from './Authenticated'
 
 function Header () {
   const { logout, loginWithRedirect } = useAuth0()
+  const user = useSelector(state => state.user)
   const redirect = {
     redirectUri: `${window.location.origin}`
   }
@@ -39,7 +41,7 @@ function Header () {
       <IfAuthenticated>
         <a href="/" onClick={handleLogoff} className="login">
           <span className="loginImg">
-            <Avatar id={'avatarId'}/>
+            <Avatar id={'avatarId'} userAvatar={user.svgAvatar}/>
           </span>
           <span className="loginText">Log off</span>
         </a>

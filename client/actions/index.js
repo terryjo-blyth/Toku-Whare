@@ -8,9 +8,11 @@ export const SET_ERROR = 'SET_ERROR'
 export function fetchUser (user) {
   return (dispatch, getState) => {
     dispatch(setWharePending())
+    const token = user.token
     return getUser(user)
       .then(userData => {
-        dispatch(setUserSuccess(userData))
+        userData.user.token = token
+        dispatch(setUserSuccess(userData.user))
         return null
       })
       .catch(err => {

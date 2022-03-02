@@ -21,7 +21,7 @@ export function getWhareData (token) {
 }
 
 export function getUser (user) {
-  return request.get(`${baseUrl}/user`)
+  return request.get(`${baseUrl}`)
     .set('Authorization', `Bearer ${user.token}`)
     .then((response) => {
       return response.body
@@ -46,7 +46,6 @@ export function updateAspect (aspect) {
 }
 
 export function addUserInfo (userData) {
-  console.log('api', userData)
   const { name, dob, email, svgAvatar } = userData
   return request.patch(`${baseUrl}/info`)
     .set('Authorization', `Bearer ${userData.token}`)
