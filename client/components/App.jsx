@@ -11,6 +11,7 @@ import { fetchWhareData, fetchUser } from '../actions'
 import TemplateAspect from './TemplateAspect'
 import TemplateUser from './TemplateUser'
 import TemplateHome from './TemplateHome'
+import WellbeingChart from './WellbeingChart'
 
 function App () {
   const dispatch = useDispatch()
@@ -35,6 +36,7 @@ function App () {
             <Route path="template-aspect" element={<TemplateAspect />} />
             <Route path="template-user" element={<TemplateUser />} />
             <Route path="template-home" element={<TemplateHome />} />
+            <Route path="print-version" element={<WellbeingChart />} />
           </Route>
         </Routes>
       </div>

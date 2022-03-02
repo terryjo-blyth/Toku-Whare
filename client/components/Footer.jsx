@@ -12,9 +12,8 @@ function Footer () {
         </IfAuthenticated>
 
         <Link to='/'>Home</Link>
-        <a href="#">Contact us</a>
-        <a href="#">Privacy policy</a>
-        <a href="#">&copy; Copyright Tohora 2022</a>
+        <a href="/print-version">Print Version</a>
+        <a href="/">&copy; Copyright Tohora 2022</a>
       </nav>
     </footer>
 
