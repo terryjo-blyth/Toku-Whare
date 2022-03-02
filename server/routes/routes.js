@@ -69,24 +69,6 @@ router.post('/entries', checkJwt, (req, res) => {
     .catch(err => res.status(500).send(err.message))
 })
 
-router.patch('/entries/:id', (req, res) => {
-  const id = req.user?.sub
-  const entryId = req.params.id
-  const { entry } = req.body
-  const updatedEntry = {
-    text: entry,
-    updatedAt: Date.now()
-  }
-  db.updateEntry(id, entryId, updatedEntry)
-    .then(() => {
-      return db.getWhareEntries(id)
-    })
-    .then(entries => {
-      return res.status(204).json({ entries })
-    })
-    .catch(err => res.status(500).send(err.message))
-})
-
 router.patch('/info', checkJwt, async (req, res) => {
   const id = req.user?.sub
   const { name, dob, email, svgAvatar } = req.body
