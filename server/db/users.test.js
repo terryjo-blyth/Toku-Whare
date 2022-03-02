@@ -31,23 +31,23 @@ describe('getUser', () => {
 //   })
 // })
 
-describe('addWhareEntry', () => {
-  test('add a WhareEntry', () => {
-    const WhareEntry = {
-      text: 'Go to the gym',
-      createdAt: Date.now(),
-      updatedAt: Date.now()
-    }
-    const section = 'tahaTinana'
-    const userAuth0Id = 'auth0|621d6d074b6ed30071870996'
+// describe('addWhareEntry', () => {
+//   test('add a WhareEntry', () => {
+//     const WhareEntry = {
+//       text: 'Go to the gym',
+//       createdAt: Date.now(),
+//       updatedAt: Date.now()
+//     }
+//     const section = 'tahaTinana'
+//     const userAuth0Id = 'auth0|621d6d074b6ed30071870996'
 
-    return db.addWhareEntry(userAuth0Id, section, WhareEntry, testDb)
-      .then(newWhareEntry => {
-        expect(newWhareEntry[0]).toBe(2005)
-        return null
-      })
-  })
-})
+//     return db.addWhareEntry(userAuth0Id, section, WhareEntry, testDb)
+//       .then(newWhareEntry => {
+//         expect(newWhareEntry[0]).toBe(2005)
+//         return null
+//       })
+//   })
+// })
 
 describe('Remove Whare Entry', () => {
   it('should remove a single whare entry', () => {
