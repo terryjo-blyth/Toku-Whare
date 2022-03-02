@@ -649,7 +649,7 @@ footer nav a.profLink {
   display: block;
   cursor: pointer;
 }
-#userAspect .userEntry .radioWrap svg g .st0 {
+#userAspect .userEntry .radioWrap svg g path {
   fill: #1f7eaa;
   transition: fill 0.3s;
 }
@@ -662,7 +662,7 @@ footer nav a.profLink {
 #userAspect .userEntry .radioWrap.active label, #userAspect .userEntry .radioWrap:hover label {
   color: #fbe02b;
 }
-#userAspect .userEntry .radioWrap.active svg g .st0, #userAspect .userEntry .radioWrap:hover svg g .st0 {
+#userAspect .userEntry .radioWrap.active svg g path, #userAspect .userEntry .radioWrap:hover svg g path {
   fill: #fbe02b;
 }
 #userAspect .userEntry .radioWrap svg {
@@ -858,297 +858,44 @@ footer nav a.profLink {
   fill: #291d14;
 }
 
-/* face w/gradient: */
-.a {
-  fill: none;
-}
-
-.b {
-  clip-path: url(#a);
-}
-
-.c {
-  fill: #464243;
-}
-
-.d {
-  fill: #454142;
-}
-
-.e {
-  fill: #444041;
-}
-
-.f {
-  fill: #433f40;
-}
-
-.g {
-  fill: #423e3f;
-}
-
-.h {
-  fill: #413d3e;
-}
-
-.i {
-  fill: #403c3d;
-}
-
-.j {
-  fill: #3f3b3c;
-}
-
-.k {
-  fill: #3e3a3b;
-}
-
-.l {
-  fill: #3d393a;
-}
-
-.m {
-  fill: #3c3839;
-}
-
-.n {
-  fill: #3b3738;
-}
-
-.o {
-  fill: #3a3737;
-}
-
-.p {
-  fill: #393636;
-}
-
-.q {
-  fill: #383535;
-}
-
-.r {
-  fill: #373434;
-}
-
-.s {
-  fill: #363333;
-}
-
-.t {
-  fill: #353232;
-}
-
-.u {
-  fill: #343132;
-}
-
-.v {
-  fill: #333031;
-}
-
-.w {
-  fill: #322f30;
-}
-
-.x {
-  fill: #312e2f;
-}
-
-.y {
-  fill: #302d2e;
-}
-
-.z {
-  fill: #2f2c2d;
-}
-
-.aa {
-  fill: #2e2b2c;
-}
-
-.ab {
-  fill: #2d2a2b;
-}
-
-.ac {
-  fill: #2c292a;
-}
-
-.ad {
-  fill: #2b2829;
-}
-
-.ae {
-  fill: #2a2728;
-}
-
-.af {
-  fill: #292627;
-}
-
-.ag {
-  fill: #282526;
-}
-
-.ah {
-  fill: #272425;
-}
-
-.ai {
-  fill: #262324;
-}
-
-.aj {
-  fill: #252223;
-}
-
-.ak {
-  fill: #242122;
-}
-
-.al {
-  fill: #222121;
-}
-
-.am {
-  fill: #212020;
-}
-
-.an {
-  fill: #201f1f;
-}
-
-.ao {
-  fill: #1f1e1e;
-}
-
-.ap {
-  fill: #1e1d1d;
-}
-
-.aq {
-  fill: #1d1c1c;
-}
-
-.ar {
-  fill: #1c1b1b;
-}
-
-.as {
-  fill: #1b1a1a;
-}
-
-.at {
-  fill: #1a1919;
-}
-
-.au {
-  fill: #191818;
-}
-
-.av {
-  fill: #181717;
-}
-
-.aw {
-  fill: #171616;
-}
-
-.ax {
-  fill: #161515;
-}
-
-.ay {
-  fill: #151414;
-}
-
-.az {
-  fill: #141313;
-}
-
-.ba {
-  fill: #131212;
-}
-
-.bb {
-  fill: #121111;
-}
-
-.bc {
-  fill: #111011;
-}
-
-.bd {
-  fill: #100f10;
-}
-
-.be {
-  fill: #0f0e0f;
-}
-
-.bf {
-  fill: #0e0d0e;
-}
-
-.bg {
-  fill: #0d0c0d;
-}
-
-.bh {
-  fill: #0c0b0c;
-}
-
-.bi {
-  fill: #0b0b0b;
-}
-
-.bj {
-  fill: #0a0a0a;
-}
-
-.bk {
-  fill: #090909;
-}
-
-.bl {
-  fill: #080808;
-}
-
-.bm {
-  fill: #070707;
-}
-
-.bn {
-  fill: #060606;
-}
-
-.bo {
-  fill: #050505;
-}
-
-.bp {
-  fill: #040404;
-}
-
-.bq {
-  fill: #030303;
-}
-
-.br {
-  fill: #020202;
-}
-
-.bs {
-  fill: #010101;
-}
-
-.bt {
-  clip-path: url(#b);
-}
-
-.bu {
-  clip-path: url(#c);
+/* wellbeingChart */
+#wellbeingChart {
+  width: 100%;
+  background-color: #fff;
+  color: #000;
+  font-family: lfl;
+  border: 3px #000 solid;
+  box-sizing: border-box;
+  padding: 60px;
+}
+#wellbeingChart h1 {
+  font-size: 60px;
+  margin: 0px;
+}
+#wellbeingChart h2 {
+  font-size: 40px;
+}
+#wellbeingChart h4 {
+  margin: 0px 0px 0px 10px;
+}
+#wellbeingChart .feelingWrap {
+  width: 80px;
+  height: 60px;
+}
+#wellbeingChart .entryWrap {
+  width: 100%;
+  margin-bottom: 20px;
+  border: 1px #000 solid;
+  box-sizing: border-box;
+  padding: 20px;
+}
+#wellbeingChart .entry {
+  display: flex;
+  width: 100%;
+}
+#wellbeingChart p {
+  font-size: 26px;
+  margin: 0px;
 }
 
 /*# sourceMappingURL=styles.css.map */
