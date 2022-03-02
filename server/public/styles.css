@@ -54,7 +54,7 @@ header h1 {
   text-align: center;
   z-index: 10;
 }
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   header h1 {
     font-size: 70px;
   }
@@ -399,6 +399,10 @@ footer nav a.profLink {
   display: inline;
   fill: #3e53a4;
 }
+.whareContainer #matapihi {
+  display: inline;
+  fill: #089447;
+}
 
 /* User page */
 #userPage {
@@ -463,17 +467,33 @@ footer nav a.profLink {
   width: 40%;
   padding-bottom: 43%;
   box-sizing: border-box;
+  margin-bottom: 20px;
 }
 @media (max-width: 800px) {
   #userPage .avatarContainer {
     width: 50%;
     padding-bottom: 55%;
+    margin-bottom: 0px;
   }
 }
 @media (max-width: 582px) {
   #userPage .avatarContainer {
-    width: 100%;
+    width: 80%;
     padding-bottom: 105%;
+  }
+}
+#userPage #chooseHair {
+  width: 60%;
+  padding-left: 30px;
+}
+@media (max-width: 800px) {
+  #userPage #chooseHair {
+    width: 50%;
+  }
+}
+@media (max-width: 582px) {
+  #userPage #chooseHair {
+    width: 100%;
   }
 }
 #userPage #chooseHair .hairBox {

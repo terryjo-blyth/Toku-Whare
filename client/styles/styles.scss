@@ -37,6 +37,7 @@ $whareGreen:#73bf44;
 $whareDarkblue:#3e53a4;
 $wharePurple:#994d9e;
 $whareRed:#ac2124;
+$whareDarkGreen:#089447;
 
 /* Headings */
 h1,h2,h3,h4{
@@ -70,7 +71,7 @@ header{
     bottom:-26px;
     text-align:center;
     z-index:10;
-    @media (max-width: $tablet) {
+    @media (max-width: 900px) {
       font-size:70px;
     }
     @media (max-width: $mobile) {
@@ -380,6 +381,10 @@ footer{
     display: inline;
     fill: $whareDarkblue;
   }
+  #matapihi{
+    display: inline;
+    fill: $whareDarkGreen;
+  }
 }
 
 /* User page */
@@ -442,13 +447,25 @@ footer{
     width:40%;
     padding-bottom:43%;
     box-sizing: border-box;
+    margin-bottom:20px;
     @media (max-width: $tablet) {
       width:50%;
       padding-bottom:55%;
+      margin-bottom:0px;
+    }
+    @media (max-width: $mobile) {
+      width:80%;
+      padding-bottom:105%;
+    }
+  }
+  #chooseHair{
+    width:60%;
+    padding-left:30px;
+    @media (max-width: $tablet) {
+     width:50%;
     }
     @media (max-width: $mobile) {
       width:100%;
-      padding-bottom:105%;
     }
   }
   #chooseHair .hairBox{
