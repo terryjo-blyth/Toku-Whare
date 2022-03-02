@@ -83,7 +83,9 @@ router.patch('/info', checkJwt, async (req, res) => {
       return db.getUser(id)
     })
     .then(user => {
-      return res.status(204).json({ user })
+      console.log(user)
+      res.status(200).json({ user })
+      return null
     })
     .catch(err => res.status(500).send(err.message))
 })

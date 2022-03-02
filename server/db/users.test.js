@@ -33,7 +33,6 @@ describe('getUser', () => {
 
 describe('addWhareEntry', () => {
   test('add a WhareEntry', () => {
-    // expect.assertions(1)
     const WhareEntry = {
       text: 'Go to the gym',
       createdAt: Date.now(),
@@ -45,6 +44,17 @@ describe('addWhareEntry', () => {
     return db.addWhareEntry(userAuth0Id, section, WhareEntry, testDb)
       .then(newWhareEntry => {
         expect(newWhareEntry[0]).toBe(2005)
+        return null
+      })
+  })
+})
+
+describe('Remove Whare Entry', () => {
+  it('should remove a single whare entry', () => {
+    expect.assertions(1)
+    return db.deleteEntry(2001, testDb)
+      .then(numberDeleted => {
+        expect(numberDeleted).toEqual(1)
         return null
       })
   })
